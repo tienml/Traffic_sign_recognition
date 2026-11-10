@@ -1,0 +1,13 @@
+# Bỏ qua thư mục dữ liệu nặng
+data/*
+!data/.gitkeep
+
+# Python cache & môi trường ảo
+__pycache__/
+*.py[cod]
+venv/
+.env/
+.ipynb_checkpoints/
+
+# File tạm của Word
+~$*.docx
