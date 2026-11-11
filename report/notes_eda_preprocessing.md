@@ -27,7 +27,6 @@ không dùng hình thay cho kết luận.
 - [3. Tiền xử lý và các trường hợp đặc biệt](#3-tiền-xử-lý-và-cách-chia-dữ-liệu)
 - [4. Ablation: kết quả, giải thích và giới hạn](#4-minh-chứng-tác-động-ablation-tiền-xử-lý)
 - [5. Tái lập và bằng chứng kiểm tra](#5-tái-lập-log-và-minh-bạch-ai)
-- [6. Kết luận bàn giao và việc cần làm tiếp](#6-kết-luận-bàn-giao-và-việc-cần-làm-tiếp)
 
 ## 1. Bài toán, nguồn và giả định
 
