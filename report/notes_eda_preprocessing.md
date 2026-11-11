@@ -1,10 +1,9 @@
 # Báo cáo EDA và tiền xử lý GTSRB
 
-**Phạm vi:** Thành viên 1 — khám phá dữ liệu, giải thích quyết định tiền xử lý và
+**Phạm vi:** Khám phá dữ liệu, giải thích quyết định tiền xử lý và
 bàn giao cho phần đặc trưng/mô hình/đánh giá. Bổ sung diễn giải ngày **2026-11-12**;
 số liệu và hình lấy từ hai notebook đã thực thi ngày **2026-11-11**, không phải
-một lượt huấn luyện mới. Đây là báo cáo Markdown, chưa phải chương LaTeX hoặc
-kết quả mô hình cuối cùng.
+một lượt huấn luyện mới.
 
 ## Tóm tắt
 
