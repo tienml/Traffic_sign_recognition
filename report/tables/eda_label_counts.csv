@@ -1,0 +1,44 @@
+﻿ClassId,Train,Test,Tên lớp
+0,210,60,Speed limit 20
+1,2220,720,Speed limit 30
+2,2250,750,Speed limit 50
+3,1410,450,Speed limit 60
+4,1980,660,Speed limit 70
+5,1860,630,Speed limit 80
+6,420,150,End of speed limit 80
+7,1440,450,Speed limit 100
+8,1410,450,Speed limit 120
+9,1470,480,No passing
+10,2010,660,No passing for vehicles over 3.5 tons
+11,1320,420,Right-of-way at next intersection
+12,2100,690,Priority road
+13,2160,720,Yield
+14,780,270,Stop
+15,630,210,No vehicles
+16,420,150,Vehicles over 3.5 tons prohibited
+17,1110,360,No entry
+18,1200,390,General caution
+19,210,60,Dangerous curve left
+20,360,90,Dangerous curve right
+21,330,90,Double curve
+22,390,120,Bumpy road
+23,510,150,Slippery road
+24,270,90,Road narrows on the right
+25,1500,480,Road work
+26,600,180,Traffic signals
+27,240,60,Pedestrians
+28,540,150,Children crossing
+29,270,90,Bicycles crossing
+30,450,150,Beware of ice/snow
+31,780,270,Wild animals crossing
+32,240,60,End of all speed and passing limits
+33,689,210,Turn right ahead
+34,420,120,Turn left ahead
+35,1200,390,Ahead only
+36,390,120,Go straight or right
+37,210,60,Go straight or left
+38,2070,690,Keep right
+39,300,90,Keep left
+40,360,90,Roundabout mandatory
+41,240,60,End of no passing
+42,240,90,End of no passing by vehicles over 3.5 tons

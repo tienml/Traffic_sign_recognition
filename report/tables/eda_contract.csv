@@ -1,0 +1,3 @@
+﻿Tập,shape,dtype,min,max,Số lớp
+Train,"(39209, 32, 32, 3)",float32,0.0,1.0,43
+Test,"(12630, 32, 32, 3)",float32,0.0,1.0,43
