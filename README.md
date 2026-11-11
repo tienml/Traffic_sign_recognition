@@ -78,7 +78,7 @@ Ba cách biểu diễn ảnh 32×32×3 đã chuẩn hóa `[0, 1]`:
 | :--- | :--- | ---: |
 | `pixel` | Baseline: duỗi vector pixel thô | 3072 |
 | `hog` | HOG 9 hướng, ô 8×8, block 2×2, `L2-Hys`, chuẩn hóa StandardScaler | 324 |
-| `hog_pca` | HOG như trên rồi PCA giữ 95% phương sai | 107 (lấy trên mẫu 8.000 ảnh) |
+| `hog_pca` | HOG như trên rồi PCA giữ 95% phương sai | 107 (xác nhận trên cả 39.209 ảnh train, 95,03% phương sai) |
 
 - Scaler và PCA **chỉ fit trên tập train**, tập test chỉ `transform`; PCA dùng
   `random_state=42`. `FeatureExtractor.fit/transform` tách riêng để không thể fit nhầm.
