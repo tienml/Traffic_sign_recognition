@@ -14,4 +14,5 @@ Nhóm khai báo việc sử dụng AI theo từng thành viên ở bảng dướ
 
 - Trợ lý AI đã hỗ trợ thực thi kiểm thử/notebook trên dữ liệu local; bằng chứng nằm trong output notebook và `logs/`. Không coi đó là bằng chứng người học đã tự thực hiện các bước.
 - **Nguồn tham khảo:** GTSRB/IJCNN 2011 và các trang tải được dẫn ở README, mục 0 notebook EDA. Giấy phép bản dữ liệu local còn cần xác minh; không tự khẳng định quyền tái phân phối.
-- **Giới hạn:** KNN trong EDA/ablation là thăm dò test con, không phải kết quả cuối; giữ nguyên mô-đun đặc trưng, mô hình và đánh giá của thành viên khác.
+- **Giới hạn:** KNN trong EDA/ablation là thăm dò test con, không phải kết quả cuối; giữ nguyên mô-đun đặc trưng, mô hình và đánh giá 
+- **Bổ sung ngày 2026-11-12:** hệ thống hóa 3 giả thuyết từ kết quả đã có, diễn giải các hình và trường hợp đặc biệt, làm rõ việc giữ nhãn/hướng biển trái–phải và không lật ảnh. Không chạy thí nghiệm mới để chứng minh lợi ích của việc không lật; không coi phần diễn giải này là kiểm chứng cá nhân của thành viên.

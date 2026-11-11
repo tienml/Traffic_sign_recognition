@@ -21,7 +21,7 @@
    python main.py
    ```
 
-## 3. Tiền xử lý & EDA 
+## 3. Tiền xử lý & EDA (Thành viên 1)
 
 ### Dữ liệu và tiền xử lý
 
@@ -64,8 +64,8 @@ Script chỉ kiểm tra `main.py` tới đầu `build_features` rồi dừng, **
 
 - Hai notebook đã lưu output; hình tại [report/figures/](report/figures/), bảng tại
   [report/tables/](report/tables/), log và môi trường tại [logs/](logs/).
-- Phân tích chi tiết: [ghi chú báo cáo](report/notes_eda_preprocessing.md).
-  Khai báo AI: [AI_USAGE.md](AI_USAGE.md); prompt: [docs/prompts/](docs/prompts/).
+- [Báo cáo EDA đầy đủ](report/notes_eda_preprocessing.md): 3 giả thuyết, hình minh họa,
+  các trường hợp đặc biệt và lý do không lật biển trái/phải. Khai báo AI: [AI_USAGE.md](AI_USAGE.md).
 - EDA/ablation là **thăm dò test con, không phải điểm cuối**. Giữ cấu hình hiện tại;
   xác nhận lựa chọn bằng CV theo `(ClassId, TrackId)` trên train để giảm rò rỉ.
 - Chỉ phân loại biển đã định vị, chưa phát hiện biển trong toàn cảnh. Không commit ảnh gốc/cache.
