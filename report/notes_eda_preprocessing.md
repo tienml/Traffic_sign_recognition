@@ -1,10 +1,9 @@
 # Báo cáo EDA và tiền xử lý GTSRB
 
-**Phạm vi:** Thành viên 1 — khám phá dữ liệu, giải thích quyết định tiền xử lý và
+**Phạm vi:** Khám phá dữ liệu, giải thích quyết định tiền xử lý và
 bàn giao cho phần đặc trưng/mô hình/đánh giá. Bổ sung diễn giải ngày **2026-11-12**;
 số liệu và hình lấy từ hai notebook đã thực thi ngày **2026-11-11**, không phải
-một lượt huấn luyện mới. Đây là báo cáo Markdown, chưa phải chương LaTeX hoặc
-kết quả mô hình cuối cùng.
+một lượt huấn luyện mới.
 
 ## Tóm tắt
 
@@ -27,7 +26,6 @@ không dùng hình thay cho kết luận.
 - [3. Tiền xử lý và các trường hợp đặc biệt](#3-tiền-xử-lý-và-cách-chia-dữ-liệu)
 - [4. Ablation: kết quả, giải thích và giới hạn](#4-minh-chứng-tác-động-ablation-tiền-xử-lý)
 - [5. Tái lập và bằng chứng kiểm tra](#5-tái-lập-log-và-minh-bạch-ai)
-- [6. Kết luận bàn giao và việc cần làm tiếp](#6-kết-luận-bàn-giao-và-việc-cần-làm-tiếp)
 
 ## 1. Bài toán, nguồn và giả định
 
