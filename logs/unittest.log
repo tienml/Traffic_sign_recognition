@@ -1,0 +1,53 @@
+test_cache_cleanup_failure (test_preprocessing.PreprocessingTests.test_cache_cleanup_failure)
+Lỗi ghi và xóa tệp cache tạm chỉ cảnh báo, không mất dữ liệu. ... ok
+test_cache_concurrent_writers (test_preprocessing.PreprocessingTests.test_cache_concurrent_writers)
+Hai lượt ghi đồng thời dùng file tạm riêng, không xóa lẫn nhau. ... ok
+test_cache_corrupt_deflate (test_preprocessing.PreprocessingTests.test_cache_corrupt_deflate)
+Luồng DEFLATE hỏng trong NPZ phải được bỏ qua và cảnh báo. ... ok
+test_cache_directory_unavailable (test_preprocessing.PreprocessingTests.test_cache_directory_unavailable)
+Không tạo được thư mục cache vẫn trả các mảng đã tiền xử lý. ... ok
+test_cache_disabled (test_preprocessing.PreprocessingTests.test_cache_disabled)
+Tắt cache không tạo file và vẫn trả đúng hợp đồng. ... ok
+test_cache_invalidation (test_preprocessing.PreprocessingTests.test_cache_invalidation)
+Cấu hình size/ROI, CSV đổi và cache hỏng đều buộc đọc lại. ... ok
+test_cache_malformed_metadata (test_preprocessing.PreprocessingTests.test_cache_malformed_metadata)
+Cache có IMAGE_SIZE dạng scalar phải bị bỏ thay vì gây TypeError. ... ok
+test_clipped_and_invalid_roi (test_preprocessing.PreprocessingTests.test_clipped_and_invalid_roi)
+Kẹp ngoài biên và bỏ qua ROI đảo cận, NaN hoặc không giao ảnh. ... ok
+test_grayscale_and_augmentation (test_preprocessing.PreprocessingTests.test_grayscale_and_augmentation)
+Grayscale một kênh; augmentation tắt và tái lập đúng seed. ... ok
+test_logging_directory_unavailable (test_preprocessing.PreprocessingTests.test_logging_directory_unavailable)
+Thư mục log không ghi được chỉ cảnh báo một lần, loader vẫn chạy. ... ok
+test_logging_error_counts_fail_fast (test_preprocessing.PreprocessingTests.test_logging_error_counts_fail_fast)
+Ảnh lỗi dừng ngay, ghi loaded/errors/skipped, không báo hoàn tất. ... ok
+test_logging_failure_with_warnings_as_errors (test_preprocessing.PreprocessingTests.test_logging_failure_with_warnings_as_errors)
+Bộ lọc warning thành exception không làm lỗi log phá loader. ... ok
+test_logging_metadata_failure (test_preprocessing.PreprocessingTests.test_logging_metadata_failure)
+CSV thiếu cũng có thời gian và trạng thái lỗi của lượt pipeline. ... ok
+test_logging_reuses_handlers_without_root_changes (test_preprocessing.PreprocessingTests.test_logging_reuses_handlers_without_root_changes)
+Gọi lặp hoặc đồng thời không thêm handler, không đổi root logger. ... ok
+test_logging_source_cache_hit_and_disabled (test_preprocessing.PreprocessingTests.test_logging_source_cache_hit_and_disabled)
+Mỗi lượt có cấu hình, metadata, trạng thái cache và thời gian. ... ok
+test_logging_write_failure (test_preprocessing.PreprocessingTests.test_logging_write_failure)
+Lỗi stream sau khi mở file không phá loader hoặc spam cảnh báo. ... ok
+test_missing_and_corrupt_image (test_preprocessing.PreprocessingTests.test_missing_and_corrupt_image)
+Ảnh thiếu/hỏng phải báo lỗi kèm tên file, không bỏ qua mẫu. ... ok
+test_official_split_and_cache_hit (test_preprocessing.PreprocessingTests.test_official_split_and_cache_hit)
+Nhãn hai tập không bị chia lại; cache không đọc lại ảnh. ... ok
+test_resize_invalid_size (test_preprocessing.PreprocessingTests.test_resize_invalid_size)
+Từ chối size sai cấu trúc, boolean, phân số, âm hoặc vượt int32. ... ok
+test_resize_options_and_default_equality (test_preprocessing.PreprocessingTests.test_resize_options_and_default_equality)
+Đổi size/nội suy cho ablation nhưng mặc định khớp từng pixel cũ. ... ok
+test_resize_runtime_default (test_preprocessing.PreprocessingTests.test_resize_runtime_default)
+IMAGE_SIZE lấy lúc gọi, tương thích các test patch cấu hình. ... ok
+test_rgb_roi_and_dtype (test_preprocessing.PreprocessingTests.test_rgb_roi_and_dtype)
+ROI đóng giữ đủ biên, màu RGB không bị đảo thành BGR. ... ok
+test_split_validation (test_preprocessing.PreprocessingTests.test_split_validation)
+Giữ nhãn gốc và từ chối nhãn phân số hay Path vượt thư mục. ... ok
+test_unicode_filename_collision (test_preprocessing.PreprocessingTests.test_unicode_filename_collision)
+Không đọc nhầm file có tên là bản chuyển mã lỗi của tên Unicode. ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.892s
+
+OK

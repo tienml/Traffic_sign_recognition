@@ -1,0 +1,182 @@
+{
+  "random_state": 42,
+  "python": "3.13.2",
+  "integrity": {
+    "Train": {
+      "Số dòng": 39209,
+      "Số lớp": 43,
+      "NaN": 0,
+      "Dòng trùng": 0,
+      "Path trùng": 0,
+      "Path thiếu": 0
+    },
+    "Test": {
+      "Số dòng": 12630,
+      "Số lớp": 43,
+      "NaN": 0,
+      "Dòng trùng": 0,
+      "Path trùng": 0,
+      "Path thiếu": 0
+    },
+    "Meta": {
+      "Số dòng": 43,
+      "Số lớp": 43,
+      "NaN": 1,
+      "Dòng trùng": 0,
+      "Path trùng": 0,
+      "Path thiếu": 0
+    }
+  },
+  "tracks": {
+    "count": 1307,
+    "min": 29,
+    "median": 30.0,
+    "max": 30
+  },
+  "labels": {
+    "Train": {
+      "min": 210,
+      "max": 2250,
+      "ratio": 10.714285714285714,
+      "min_classes": [
+        0,
+        19,
+        37
+      ],
+      "max_classes": [
+        2
+      ]
+    },
+    "Test": {
+      "min": 60,
+      "max": 750,
+      "ratio": 12.5,
+      "min_classes": [
+        0,
+        19,
+        27,
+        32,
+        37,
+        41
+      ],
+      "max_classes": [
+        2
+      ]
+    }
+  },
+  "sizes": {
+    "Train": {
+      "Width_min": 25.0,
+      "Width_median": 43.0,
+      "Width_max": 243.0,
+      "Height_min": 25.0,
+      "Height_median": 43.0,
+      "Height_max": 225.0,
+      "Tỉ lệ W/H min": 0.36813186813186816,
+      "Tỉ lệ W/H median": 1.0,
+      "Tỉ lệ W/H max": 1.417808219178082,
+      "Cả hai chiều <32": 4766,
+      "Ít nhất một chiều <32": 6505
+    },
+    "Test": {
+      "Width_min": 25.0,
+      "Width_median": 43.0,
+      "Width_max": 266.0,
+      "Height_min": 25.0,
+      "Height_median": 43.0,
+      "Height_max": 232.0,
+      "Tỉ lệ W/H min": 0.39285714285714285,
+      "Tỉ lệ W/H median": 1.0,
+      "Tỉ lệ W/H max": 1.4375,
+      "Cả hai chiều <32": 1632,
+      "Ít nhất một chiều <32": 2292
+    }
+  },
+  "channels_sample": [
+    {
+      "Số kênh": 3,
+      "dtype": "uint8",
+      "Số ảnh": 500
+    }
+  ],
+  "quality": {
+    "sample_size": 2000,
+    "brightness": {
+      "count": 2000.0,
+      "mean": 0.31815722572244703,
+      "std": 0.1843536376290325,
+      "min": 0.03406341373920441,
+      "25%": 0.17043760791420937,
+      "50%": 0.2906404584646225,
+      "75%": 0.4418594315648079,
+      "max": 0.9538732767105103
+    },
+    "contrast": {
+      "count": 2000.0,
+      "mean": 0.1637975214831531,
+      "std": 0.09525565359837192,
+      "min": 0.009926700964570045,
+      "25%": 0.07989176362752914,
+      "50%": 0.15941501408815384,
+      "75%": 0.2374516911804676,
+      "max": 0.4228496849536896
+    },
+    "roi_train_median": 0.6034271725826194,
+    "roi_test_median": 0.600625
+  },
+  "knn": {
+    "train_size": 5000,
+    "test_size": 2000,
+    "results": {
+      "RGB": {
+        "Số chiều": 3072,
+        "Accuracy": 0.4295,
+        "Macro-F1": 0.36912911470772664,
+        "Thời gian (s)": 1.274551300004532
+      },
+      "Grayscale": {
+        "Số chiều": 1024,
+        "Accuracy": 0.4035,
+        "Macro-F1": 0.3438021936285397,
+        "Thời gian (s)": 0.36108129999774974
+      }
+    }
+  },
+  "contract": {
+    "Train": {
+      "shape": "(39209, 32, 32, 3)",
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "Số lớp": 43
+    },
+    "Test": {
+      "shape": "(12630, 32, 32, 3)",
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "Số lớp": 43
+    }
+  },
+  "figures": [
+    "eda_label_distribution.png",
+    "eda_image_sizes.png",
+    "eda_samples_grid.png",
+    "eda_samples_grid_2.png",
+    "eda_samples_grid_3.png",
+    "eda_quality.png",
+    "eda_color.png",
+    "eda_before_after.png",
+    "eda_augmentation.png",
+    "eda_forbidden_flip_classes.png",
+    "eda_mean_images.png"
+  ],
+  "limitations": [
+    "KNN chỉ thăm dò trên 5.000 train / 2.000 test, không tuning.",
+    "Test con đã dùng cho EDA; cần xác nhận bằng CV theo track trên train.",
+    "Không kiểm tra trùng nội dung bằng hash toàn bộ ảnh.",
+    "ROI có sẵn giả định đầu vào đã định vị biển, không phải detection.",
+    "Resize vuông có thể méo ảnh/mất chi tiết; không sửa mờ, phơi sáng.",
+    "Cache kiểm tra CSV/cấu hình, không băm ảnh; sửa ảnh cần tạo lại cache."
+  ]
+}
