@@ -69,3 +69,34 @@ Script chỉ kiểm tra `main.py` tới đầu `build_features` rồi dừng, **
 - EDA/ablation là **thăm dò test con, không phải điểm cuối**. Giữ cấu hình hiện tại;
   xác nhận lựa chọn bằng CV theo `(ClassId, TrackId)` trên train để giảm rò rỉ.
 - Chỉ phân loại biển đã định vị, chưa phát hiện biển trong toàn cảnh. Không commit ảnh gốc/cache.
+
+## 4. Biểu diễn đặc trưng (`src/features.py`)
+
+Ba cách biểu diễn ảnh 32×32×3 đã chuẩn hóa `[0, 1]`:
+
+| Phương pháp | Cách làm | Số chiều (32×32) |
+| :--- | :--- | ---: |
+| `pixel` | Baseline: duỗi vector pixel thô | 3072 |
+| `hog` | HOG 9 hướng, ô 8×8, block 2×2, `L2-Hys`, chuẩn hóa StandardScaler | 324 |
+| `hog_pca` | HOG như trên rồi PCA giữ 95% phương sai | 107 (lấy trên mẫu 8.000 ảnh) |
+
+- Scaler và PCA **chỉ fit trên tập train**, tập test chỉ `transform`; PCA dùng
+  `random_state=42`. `FeatureExtractor.fit/transform` tách riêng để không thể fit nhầm.
+- Baseline `pixel` giữ nguyên giá trị `[0, 1]`, không chuẩn hóa thêm.
+- Chạy thử mô-đun và kiểm thử:
+
+```bash
+python -m src.features
+python -m unittest src.tests.test_features -v
+```
+
+- Chạy thí nghiệm so sánh trên mẫu ablation 8.000/3.000 (cần cache tiền xử lý):
+
+```bash
+python scripts/feature_ablation.py
+```
+
+Kết quả ghi ở [report/tables/feature_ablation.csv](report/tables/feature_ablation.csv),
+[biểu đồ](report/figures/feature_ablation.png) và log `logs/features_ablation.log`.
+K-NN (k=3, euclidean) ở đây chỉ là **đầu dò** để đo tác động của biểu diễn,
+không phải mô hình cuối của nhóm.
