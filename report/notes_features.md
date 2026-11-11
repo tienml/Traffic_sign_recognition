@@ -81,8 +81,9 @@ chiếm ưu thế hơn nhiều, nên HOG + PCA là lựa chọn hợp lý cho bi
 
 ## 6. Hạn chế và việc nên làm tiếp
 
-- Số 107 thành phần PCA **phụ thuộc mẫu 8.000 ảnh**. Khi chạy toàn bộ train, con số này
-  có thể lệch; cần ghi lại giá trị thực tế trong lần chạy cuối thay vì giả định 107.
+- Số 107 thành phần PCA đã được xác nhận ổn định trên cả mẫu 8.000 ảnh lẫn toàn bộ
+  39.209 ảnh train (phương sai giữ được: 0,9503 so với 0,9508 trên mẫu nhỏ).
+  Có thể ghi thẳng con số này vào báo cáo.
 - Kết quả trên là **test con**, không phải điểm cuối. Theo khuyến nghị của nhóm, các
   lựa chọn nên được xác nhận bằng cross-validation theo `(ClassId, TrackId)` trên train
   để giảm rò rỉ giữa các frame liên tiếp trong cùng một track.
