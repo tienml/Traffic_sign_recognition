@@ -160,11 +160,14 @@ def plot_results(
     axes[0].set_ylabel("Accuracy (K-NN k=3)")
     axes[0].set_title("Độ chính xác theo cách biểu diễn")
     axes[0].tick_params(axis="x", rotation=12)
-    for patch, value in zip(axes[0].patches, results["Accuracy"]):
+    dimensions = results["Số chiều"].to_numpy()
+    for patch, accuracy, n_dims in zip(
+        axes[0].patches, results["Accuracy"], dimensions
+    ):
         axes[0].text(
             patch.get_x() + patch.get_width() / 2,
-            value + 0.02,
-            f"{value:.3f}\n({int(results.loc[results['Accuracy'].eq(value), 'Số chiều'].iloc[0])} chiều)",
+            accuracy + 0.02,
+            f"{accuracy:.3f}\n({int(n_dims)} chiều)",
             ha="center",
             va="bottom",
             fontsize=9,

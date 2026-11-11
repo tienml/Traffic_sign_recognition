@@ -122,6 +122,24 @@ class FeatureExtractionTests(unittest.TestCase):
             ))
         self.assertFalse(feat.logging.getLogger().handlers)
 
+    def test_extract_hog_uses_defaults_when_no_params_given(self) -> None:
+        """Gọi thẳng extract_hog không tham số phải dùng HOG_DEFAULTS, không crash."""
+        features = feat.extract_hog(self.train)
+        self.assertEqual(features.shape, (len(self.train), 324))
+        explicit = feat.extract_hog(self.train, **feat.HOG_DEFAULTS)
+        np.testing.assert_array_equal(features, explicit)
+
+    def test_extract_hog_merges_partial_overrides(self) -> None:
+        """Chỉ đổi một tham số vẫn giữ mặc định cho các tham số còn lại."""
+        # 32×32 → 4×4 ô; block 2×2 → 3×3 block; 9 block × 4 ô × 12 hướng.
+        features = feat.extract_hog(self.train, orientations=12)
+        self.assertEqual(features.shape, (len(self.train), 9 * 4 * 12))
+        explicit = feat.extract_hog(
+            self.train,
+            **{**feat.HOG_DEFAULTS, "orientations": 12},
+        )
+        np.testing.assert_array_equal(features, explicit)
+
     def test_pca_variance_curve_is_cumulative_and_capped(self) -> None:
         cumulative, pca = feat.pca_variance_curve(
             self.train, max_components=8

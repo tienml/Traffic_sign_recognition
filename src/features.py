@@ -127,10 +127,10 @@ def extract_hog(
     vectors = [
         hog(
             image,
-            orientations=orientations,
-            pixels_per_cell=pixels_per_cell,
-            cells_per_block=cells_per_block,
-            block_norm=block_norm,
+            orientations=params["orientations"],
+            pixels_per_cell=params["pixels_per_cell"],
+            cells_per_block=params["cells_per_block"],
+            block_norm=params["block_norm"],
             channel_axis=-1,
             feature_vector=True,
         )
