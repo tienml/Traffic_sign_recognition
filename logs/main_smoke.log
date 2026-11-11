@@ -1,0 +1,9 @@
+2026-11-11 22:27:17 INFO [MainThread] Bắt đầu load_and_preprocess: seed=42 IMAGE_SIZE=(32, 32) USE_ROI=True USE_CACHE=True
+2026-11-11 22:27:21 INFO [MainThread] cache=hit file=cache/gtsrb_32.npz
+2026-11-11 22:27:21 INFO [MainThread] Train: X shape=(39209, 32, 32, 3) dtype=float32 min=0.000000 max=1.000000; y shape=(39209,) dtype=int64 min=0 max=42 classes=43
+2026-11-11 22:27:21 INFO [MainThread] Test: X shape=(12630, 32, 32, 3) dtype=float32 min=0.000000 max=1.000000; y shape=(12630,) dtype=int64 min=0 max=42 classes=43
+2026-11-11 22:27:21 INFO [MainThread] Hoàn tất load_and_preprocess: Train=39209 Test=12630 class_names=43 errors=0 skipped=0 elapsed=4.004s
+[Người 2] Đang trích xuất đặc trưng bằng phương pháp: pixel...
+
+reached_features=True; exit=1
+Chủ động dừng trước huấn luyện; CHƯA chạy GridSearchCV/đánh giá đầy đủ.

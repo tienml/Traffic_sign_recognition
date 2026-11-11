@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-11-11T15:08:43.596814+00:00",
+  "python": "3.13.2",
+  "platform": "Windows",
+  "cli_skipped": true,
+  "status": "passed",
+  "steps": {
+    "02_preprocessing_ablation.ipynb": {
+      "notebook": "02_preprocessing_ablation.ipynb",
+      "code_cells": 6,
+      "errors": 0,
+      "seconds": 394.22638050000387
+    }
+  },
+  "finished_utc": "2026-11-11T15:15:18.191027+00:00"
+}

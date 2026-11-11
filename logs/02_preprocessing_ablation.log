@@ -1,0 +1,48 @@
+cell=50a55bbe; execution_count=1
+{
+  "python": "3.13.2",
+  "platform": "Windows",
+  "random_state": 42,
+  "threads": 2,
+  "packages": {
+    "numpy": "2.2.4",
+    "pandas": "2.3.3",
+    "opencv-python": "5.0.0.93",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.10.9",
+    "threadpoolctl": "3.7.0",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0"
+  }
+}
+
+cell=2f0c8826; execution_count=2
+Cỡ mẫu: {'Train': 8000, 'Test': 3000}
+Số lớp test thực có: 43
+
+cell=d7b1b205; execution_count=3
+cell=6464490d; execution_count=4
+baseline: Accuracy=0.4767, Macro-F1=0.4076, fit+predict=2.59s
+
+no_roi: Accuracy=0.3403, Macro-F1=0.2949, fit+predict=2.80s
+
+size24: Accuracy=0.4800, Macro-F1=0.4084, fit+predict=1.46s
+
+size48: Accuracy=0.4747, Macro-F1=0.4055, fit+predict=5.62s
+
+grayscale: Accuracy=0.4547, Macro-F1=0.3955, fit+predict=0.83s
+
+linear: Accuracy=0.4737, Macro-F1=0.4060, fit+predict=2.61s
+
+Toàn bộ chuẩn bị + 6 phương án: 23.44s
+
+cell=6728aab5; execution_count=5
+cell=fc6b30f0; execution_count=6
+CẢNH BÁO: mốc không cao nhất trên test con; KHÔNG tự đổi config.
+
+Cấu hình bàn giao giữ nguyên: ROI=True, 32×32, RGB, INTER_AREA, float32/255.
+Đề xuất xác nhận các lựa chọn bằng CV theo track trên train, không tuning test.
+report\tables\ablation_preprocessing.csv
+report\figures\eda_ablation.png
+report\tables\ablation_sample_manifest.csv
+report\tables\ablation_predictions.csv

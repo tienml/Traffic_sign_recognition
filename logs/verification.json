@@ -1,0 +1,48 @@
+{
+  "started_utc": "2026-11-11T15:24:37.887876+00:00",
+  "python": "3.13.2",
+  "platform": "Windows",
+  "cli_skipped": false,
+  "status": "passed",
+  "steps": {
+    "freeze": {
+      "log": "pip_freeze.txt",
+      "exit_code": 0,
+      "seconds": 5.12193130000378
+    },
+    "pip_check": {
+      "log": "pip_check.log",
+      "exit_code": 0,
+      "seconds": 2.2415801000024658
+    },
+    "tests": {
+      "log": "unittest.log",
+      "exit_code": 0,
+      "seconds": 4.986518300000171
+    },
+    "preprocessing": {
+      "log": "preprocessing_cli.log",
+      "exit_code": 0,
+      "seconds": 6.672124600001553
+    },
+    "01_eda.ipynb": {
+      "notebook": "01_eda.ipynb",
+      "code_cells": 9,
+      "errors": 0,
+      "seconds": 93.42509750000318
+    },
+    "02_preprocessing_ablation.ipynb": {
+      "notebook": "02_preprocessing_ablation.ipynb",
+      "code_cells": 6,
+      "errors": 0,
+      "seconds": 37.22388140000112
+    },
+    "main_smoke": {
+      "reached_features": true,
+      "intentionally_stopped": true,
+      "process_exit_code": 1,
+      "seconds": 14.163077600001998
+    }
+  },
+  "finished_utc": "2026-11-11T15:27:22.273528+00:00"
+}
