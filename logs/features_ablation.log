@@ -1,0 +1,2 @@
+2026-11-12 00:29:16 INFO Mẫu ablation: train=8000 test=3000 seed=42 pca_variance=0.95
+2026-11-12 00:29:29 INFO Hoàn tất ablation đặc trưng trong 14.5s; PCA 95% = 107 thành phần.
