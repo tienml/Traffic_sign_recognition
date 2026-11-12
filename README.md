@@ -4,7 +4,7 @@
 | Thành viên | Nhánh GitHub | Phụ trách |
 | :--- | :--- | :--- |
 | Vũ Khánh Hùng | `feat/hung` | EDA & Tiền xử lý ảnh (`src/preprocessing.py`) |
-| Thành viên 2 (Sơn) | `son` | Trích xuất đặc trưng Pixel, HOG, PCA & Baseline (`src/features.py`) |
+| Tạ Công Sơn | `son` | Trích xuất đặc trưng Pixel, HOG, PCA & Baseline (`src/features.py`) |
 | Thành viên 3 | `feat/3-modeling` | Huấn luyện & Tối ưu K-NN, Decision Tree (`src/models.py`) |
 | Thành viên 4 | `feat/4-evaluation` | Đánh giá, Confusion Matrix & Phân tích lỗi (`src/evaluate.py`) |
 
