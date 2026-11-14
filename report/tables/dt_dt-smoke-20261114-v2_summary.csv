@@ -1,0 +1,4 @@
+method,candidate_index,cv_f1_macro,cv_f1_std,cv_accuracy,pca_refit_dimensions,tree_depth,tree_nodes,tree_leaves,train_images,model_file,model_sha256,status,dt__criterion,dt__max_depth,dt__min_samples_split
+pixel,0,0.14208735259248273,0.025401152787813113,0.1591731266149871,,10,215,108,3870,pixel.joblib,fed648eb145384a1670a1cc4bdd744ec3fc93842fcf5bcb422fa8efeb7953b2b,smoke_only,gini,10,2
+hog,0,0.3110156576609825,0.010954175685032118,0.3328165374677003,,10,183,92,3870,hog.joblib,f9cd16e29466df7ca9a6729ae656d18d3917d2710ad7a1a65dd7c4564f6f51d2,smoke_only,gini,10,2
+hog_pca,0,0.2982743246593878,0.019410948304861366,0.3160206718346253,103.0,10,335,168,3870,hog_pca.joblib,2af841996938fd2008689601ba0126acd5cdf0e80bc5b04d7fa244d7a56f7fef,smoke_only,gini,10,2

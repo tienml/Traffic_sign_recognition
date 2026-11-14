@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "winner": "hog",
+  "methods": [
+    {
+      "method": "pixel",
+      "candidate_index": 1,
+      "params": {
+        "knn__metric": "euclidean",
+        "knn__n_neighbors": 3,
+        "knn__weights": "distance"
+      },
+      "cv_f1_macro": 0.4361821465429483,
+      "cv_f1_std": 0.026911917072035472,
+      "cv_accuracy": 0.501048898929548,
+      "pca_refit_dimensions": null,
+      "model_file": "pixel.joblib",
+      "train_images": 39209,
+      "model_sha256": "98d30483cac6d09d526ddee1e3b8f03db1b5a290de472657a8b57522c74729ff"
+    },
+    {
+      "method": "hog",
+      "candidate_index": 11,
+      "params": {
+        "knn__metric": "manhattan",
+        "knn__n_neighbors": 7,
+        "knn__weights": "distance"
+      },
+      "cv_f1_macro": 0.8097182084596563,
+      "cv_f1_std": 0.016980606183450233,
+      "cv_accuracy": 0.8223100233020295,
+      "pca_refit_dimensions": null,
+      "model_file": "hog.joblib",
+      "train_images": 39209,
+      "model_sha256": "02c9abe0386e707118be1c587164236219b7ddbc547435a4d07c84afb6ecf137"
+    },
+    {
+      "method": "hog_pca",
+      "candidate_index": 5,
+      "params": {
+        "knn__metric": "euclidean",
+        "knn__n_neighbors": 7,
+        "knn__weights": "distance"
+      },
+      "cv_f1_macro": 0.7847720453855068,
+      "cv_f1_std": 0.011892626519490542,
+      "cv_accuracy": 0.8051723684584156,
+      "pca_refit_dimensions": 107,
+      "model_file": "hog_pca.joblib",
+      "train_images": 39209,
+      "model_sha256": "94cc9b7f1115266749c9ca49b9b651966b7c633109a7d7e92585b35f1ff1f7d0"
+    }
+  ],
+  "tie_break": "first ParameterGrid candidate, then pixel/hog/hog_pca",
+  "train_sha256": "4e00ce71e4bdd9fc424d93f81ff82056c6b5cb9bbc48269741e628a134c4712b",
+  "dataset_root": "C:\\btlcotrang\\Traffic_sign_recognition\\data",
+  "model_dir": "C:\\btlcotrang\\Traffic_sign_recognition\\data\\models\\knn\\full-knn-01",
+  "run_id": "full-knn-01",
+  "test_previously_explored": true,
+  "warning": "Earlier EDA inspected a test subset; do not describe test as never seen."
+}

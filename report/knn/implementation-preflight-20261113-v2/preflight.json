@@ -1,0 +1,24 @@
+{
+  "train_images": 39209,
+  "classes": 43,
+  "tracks": 1307,
+  "folds": 3,
+  "candidates_per_method": 12,
+  "cv_fits_full": 108,
+  "official_test_read": false,
+  "versions": {
+    "python": "3.13.2",
+    "executable": "C:\\btlcotrang\\Traffic_sign_recognition\\.venv\\Scripts\\python.exe",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "opencv-python": "5.0.0.93",
+      "scikit-image": "0.26.0",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0",
+      "scipy": "1.18.1",
+      "threadpoolctl": "3.8.0",
+      "tqdm": null
+    }
+  }
+}

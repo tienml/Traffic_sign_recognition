@@ -1,0 +1,15 @@
+Command: python scripts/summarize_knn.py
+{
+  "tables": [
+    "knn_summary.csv",
+    "knn_candidates.csv",
+    "knn_timings.csv",
+    "knn_class_summary.csv",
+    "knn_error_pairs.csv"
+  ],
+  "figure": "C:\\btlcotrang\\Traffic_sign_recognition\\report\\figures\\knn_cv_test.png",
+  "verified_prediction_rows_per_method": 12630,
+  "winner_unchanged": "hog"
+}
+
+Exit code: 0

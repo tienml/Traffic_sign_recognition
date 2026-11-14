@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "algorithm": "decision_tree",
+  "status": "frozen",
+  "methods": [
+    {
+      "method": "pixel",
+      "candidate_index": 9,
+      "params": {
+        "dt__criterion": "entropy",
+        "dt__max_depth": null,
+        "dt__min_samples_split": 5
+      },
+      "cv_f1_macro": 0.5039886129796397,
+      "cv_f1_std": 0.013121802741794687,
+      "cv_accuracy": 0.5914440925745236,
+      "pca_refit_dimensions": null,
+      "tree_depth": 17,
+      "tree_nodes": 5267,
+      "tree_leaves": 2634,
+      "train_images": 39209,
+      "model_file": "pixel.joblib",
+      "model_sha256": "a8a29c20490b4538f4f9b200aeedd71174e4e3a974861ccf1b88a37e2fe2c243"
+    },
+    {
+      "method": "hog",
+      "candidate_index": 13,
+      "params": {
+        "dt__criterion": "entropy",
+        "dt__max_depth": 20,
+        "dt__min_samples_split": 5
+      },
+      "cv_f1_macro": 0.6148977189075638,
+      "cv_f1_std": 0.01190665266720969,
+      "cv_accuracy": 0.6587687449516447,
+      "pca_refit_dimensions": null,
+      "tree_depth": 20,
+      "tree_nodes": 6523,
+      "tree_leaves": 3262,
+      "train_images": 39209,
+      "model_file": "hog.joblib",
+      "model_sha256": "75dd6af89af63aeb43319c290f91b22d855597ab03bd630d836803c72670e62a"
+    },
+    {
+      "method": "hog_pca",
+      "candidate_index": 5,
+      "params": {
+        "dt__criterion": "gini",
+        "dt__max_depth": 20,
+        "dt__min_samples_split": 5
+      },
+      "cv_f1_macro": 0.5506993835742225,
+      "cv_f1_std": 0.0066641295906275525,
+      "cv_accuracy": 0.6026696222025348,
+      "pca_refit_dimensions": 107,
+      "tree_depth": 20,
+      "tree_nodes": 5193,
+      "tree_leaves": 2597,
+      "train_images": 39209,
+      "model_file": "hog_pca.joblib",
+      "model_sha256": "ac04d6a83af72b2567f81f6d480071011b1bfa255bd3d36da1313f25a37f7771"
+    }
+  ],
+  "winner": "hog",
+  "tie_break": "first ParameterGrid candidate then pixel/hog/hog_pca",
+  "dataset_root": "C:\\btlcotrang\\Traffic_sign_recognition\\data",
+  "train_sha256": "4e00ce71e4bdd9fc424d93f81ff82056c6b5cb9bbc48269741e628a134c4712b",
+  "fold_manifest_sha256": "c5453353dbe7fdf77013f978e61a20b5c55a95f299eacac70a33676b0c43a1fb",
+  "model_dir": "C:\\btlcotrang\\Traffic_sign_recognition\\data\\models\\dt\\full-dt-01",
+  "run_id": "full-dt-01",
+  "test_previously_explored": true
+}

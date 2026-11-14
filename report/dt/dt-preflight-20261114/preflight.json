@@ -1,0 +1,9 @@
+{
+  "train_images": 39209,
+  "tracks": 1307,
+  "folds": 3,
+  "candidates_per_method": 16,
+  "cv_fits_full": 144,
+  "official_test_read": false,
+  "full_train_float32_MiB": 459.48046875
+}

@@ -1,0 +1,7 @@
+README/AI_USAGE persons 1/2 preserved exactly; only person3 row/name and appended sections changed.
+All links added by person3 and all notes_knn local links exist.
+Pre-existing README data/cache link has no local directory; left unchanged to preserve others content.
+git diff --check: PASS
+No model retraining, official test inference or selection changes performed.
+Historical task-console copy blocked by permission system; omitted. Existing run loader logs exported instead.
+PNG generated, but image preview tool returned empty; visual inspection unavailable.
