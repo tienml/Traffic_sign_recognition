@@ -1,0 +1,9 @@
+Đọc Train: count=39209 seed=42 IMAGE_SIZE=(32, 32) USE_ROI=True
+Train: 5000/39209 ảnh
+Train: 10000/39209 ảnh
+Train: 15000/39209 ảnh
+Train: 20000/39209 ảnh
+Train: 25000/39209 ảnh
+Train: 30000/39209 ảnh
+Train: 35000/39209 ảnh
+Đã nạp Train: count=39209 errors=0 skipped=0 elapsed=713.927s

@@ -1,0 +1,4 @@
+Đọc Test: count=12630 seed=42 IMAGE_SIZE=(32, 32) USE_ROI=True
+Test: 5000/12630 ảnh
+Test: 10000/12630 ảnh
+Đã nạp Test: count=12630 errors=0 skipped=0 elapsed=255.358s

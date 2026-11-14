@@ -1,0 +1,16 @@
+Run output: C:\btlcotrang\Traffic_sign_recognition\report\dt\dt-smoke-20261114-v2
+Fitting 3 folds for each of 1 candidates, totalling 3 fits
+[CV] END dt__criterion=gini, dt__max_depth=10, dt__min_samples_split=2; total time=   3.5s
+[CV] END dt__criterion=gini, dt__max_depth=10, dt__min_samples_split=2; total time=   3.4s
+[CV] END dt__criterion=gini, dt__max_depth=10, dt__min_samples_split=2; total time=   3.5s
+pixel: 16.059s, CV macro-F1=0.142087
+Fitting 3 folds for each of 1 candidates, totalling 3 fits
+[CV] END dt__criterion=gini, dt__max_depth=10, dt__min_samples_split=2; total time=   0.7s
+[CV] END dt__criterion=gini, dt__max_depth=10, dt__min_samples_split=2; total time=   0.6s
+[CV] END dt__criterion=gini, dt__max_depth=10, dt__min_samples_split=2; total time=   0.6s
+hog: 3.407s, CV macro-F1=0.311016
+Fitting 3 folds for each of 1 candidates, totalling 3 fits
+[CV] END dt__criterion=gini, dt__max_depth=10, dt__min_samples_split=2; total time=   0.2s
+[CV] END dt__criterion=gini, dt__max_depth=10, dt__min_samples_split=2; total time=   0.2s
+[CV] END dt__criterion=gini, dt__max_depth=10, dt__min_samples_split=2; total time=   0.2s
+hog_pca: 1.319s, CV macro-F1=0.298274

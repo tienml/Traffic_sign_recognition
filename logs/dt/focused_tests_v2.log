@@ -1,0 +1,47 @@
+test_exact_saved_folds_and_whole_track_smoke (src.tests.test_decision_tree.DecisionTreeTests.test_exact_saved_folds_and_whole_track_smoke) ... ok
+test_export_saved_only_and_no_overwrite (src.tests.test_decision_tree.DecisionTreeTests.test_export_saved_only_and_no_overwrite) ... ok
+test_fold_local_transforms_and_roundtrip_all_methods (src.tests.test_decision_tree.DecisionTreeTests.test_fold_local_transforms_and_roundtrip_all_methods) ... ok
+test_grid_defaults_and_tie_break (src.tests.test_decision_tree.DecisionTreeTests.test_grid_defaults_and_tie_break) ... ok
+test_new_run_exclusive_and_namespace_preservation (src.tests.test_decision_tree.DecisionTreeTests.test_new_run_exclusive_and_namespace_preservation) ... ok
+test_smoke_gate_before_official_test_access (src.tests.test_decision_tree.DecisionTreeTests.test_smoke_gate_before_official_test_access) ... ok
+test_training_selection_is_json_serializable_and_smoke_only (src.tests.test_decision_tree.DecisionTreeTests.test_training_selection_is_json_serializable_and_smoke_only) ... {
+  "tables": [
+    "C:\\Users\\pc\\AppData\\Local\\Temp\\tmpl0226pyy\\report\\tables\\dt_run_summary.csv",
+    "C:\\Users\\pc\\AppData\\Local\\Temp\\tmpl0226pyy\\report\\tables\\dt_run_candidates.csv",
+    "C:\\Users\\pc\\AppData\\Local\\Temp\\tmpl0226pyy\\report\\tables\\dt_run_timings.csv"
+  ],
+  "figure": "C:\\Users\\pc\\AppData\\Local\\Temp\\tmpl0226pyy\\report\\figures\\dt_run_cv_test.png"
+}
+pixel: 0.018s, CV macro-F1=0.011635
+hog: 0.023s, CV macro-F1=0.011635
+hog_pca: 0.028s, CV macro-F1=0.015622
+ok
+test_group_identity_alignment_and_fail_closed (src.tests.test_models.GroupTests.test_group_identity_alignment_and_fail_closed) ... ok
+test_shared_folds_reproducible_complete_and_disjoint (src.tests.test_models.GroupTests.test_shared_folds_reproducible_complete_and_disjoint) ... ok
+test_smoke_selects_whole_tracks_all_classes (src.tests.test_models.GroupTests.test_smoke_selects_whole_tracks_all_classes) ... ok
+test_direct_archive_ambiguous_and_explicit (src.tests.test_models.LayoutTests.test_direct_archive_ambiguous_and_explicit) ... ok
+test_smoke_selection_rejected_before_test_access (src.tests.test_models.LayoutTests.test_smoke_selection_rejected_before_test_access) ... ok
+test_bundle_roundtrip_and_no_overwrite (src.tests.test_models.PipelineTests.test_bundle_roundtrip_and_no_overwrite) ... ok
+test_candidates_ties_metrics_and_batches (src.tests.test_models.PipelineTests.test_candidates_ties_metrics_and_batches) ... ok
+test_grid_fold_local_scaler_and_error_propagation (src.tests.test_models.PipelineTests.test_grid_fold_local_scaler_and_error_propagation) ... ok
+test_person2_equivalence_and_validation_cannot_mutate_fit (src.tests.test_models.PipelineTests.test_person2_equivalence_and_validation_cannot_mutate_fit) ... ok
+test_existing_artifacts_export_without_mutation (src.tests.test_knn_summary.SummaryTests.test_existing_artifacts_export_without_mutation) ... ok
+test_future_loader_log_is_under_logs (src.tests.test_knn_summary.SummaryTests.test_future_loader_log_is_under_logs) ... ok
+test_metrics_keep_all_43_labels (src.tests.test_knn_summary.SummaryTests.test_metrics_keep_all_43_labels) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.979s
+
+OK
+{
+  "tables": [
+    "knn_summary.csv",
+    "knn_candidates.csv",
+    "knn_timings.csv",
+    "knn_class_summary.csv",
+    "knn_error_pairs.csv"
+  ],
+  "figure": "C:\\Users\\pc\\AppData\\Local\\Temp\\tmpxhcndyxt\\report\\figures\\knn_cv_test.png",
+  "verified_prediction_rows_per_method": 12630,
+  "winner_unchanged": "hog"
+}

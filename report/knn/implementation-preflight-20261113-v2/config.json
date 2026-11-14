@@ -1,0 +1,93 @@
+{
+  "run_id": "implementation-preflight-20261113-v2",
+  "mode": "preflight",
+  "dataset_root": "C:\\btlcotrang\\Traffic_sign_recognition\\data",
+  "train_sha256": "4e00ce71e4bdd9fc424d93f81ff82056c6b5cb9bbc48269741e628a134c4712b",
+  "seed": 42,
+  "versions": {
+    "python": "3.13.2",
+    "executable": "C:\\btlcotrang\\Traffic_sign_recognition\\.venv\\Scripts\\python.exe",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "opencv-python": "5.0.0.93",
+      "scikit-image": "0.26.0",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0",
+      "scipy": "1.18.1",
+      "threadpoolctl": "3.8.0",
+      "tqdm": null
+    }
+  },
+  "batch_size": 128,
+  "n_jobs": 1,
+  "numeric_threads": 2,
+  "hog_params": {
+    "orientations": 9,
+    "pixels_per_cell": [
+      8,
+      8
+    ],
+    "cells_per_block": [
+      2,
+      2
+    ],
+    "block_norm": "L2-Hys"
+  },
+  "pca_variance": 0.95,
+  "class_names": [
+    "Speed limit 20",
+    "Speed limit 30",
+    "Speed limit 50",
+    "Speed limit 60",
+    "Speed limit 70",
+    "Speed limit 80",
+    "End of speed limit 80",
+    "Speed limit 100",
+    "Speed limit 120",
+    "No passing",
+    "No passing for vehicles over 3.5 tons",
+    "Right-of-way at next intersection",
+    "Priority road",
+    "Yield",
+    "Stop",
+    "No vehicles",
+    "Vehicles over 3.5 tons prohibited",
+    "No entry",
+    "General caution",
+    "Dangerous curve left",
+    "Dangerous curve right",
+    "Double curve",
+    "Bumpy road",
+    "Slippery road",
+    "Road narrows on the right",
+    "Road work",
+    "Traffic signals",
+    "Pedestrians",
+    "Children crossing",
+    "Bicycles crossing",
+    "Beware of ice/snow",
+    "Wild animals crossing",
+    "End of all speed and passing limits",
+    "Turn right ahead",
+    "Turn left ahead",
+    "Ahead only",
+    "Go straight or right",
+    "Go straight or left",
+    "Keep right",
+    "Keep left",
+    "Roundabout mandatory",
+    "End of no passing",
+    "End of no passing by vehicles over 3.5 tons"
+  ],
+  "image_contract": {
+    "size": [
+      32,
+      32
+    ],
+    "color": "RGB",
+    "roi": true,
+    "scale": "divide255",
+    "augmentation": false
+  }
+}

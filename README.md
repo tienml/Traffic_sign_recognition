@@ -5,7 +5,7 @@
 | :--- | :--- | :--- |
 | Vũ Khánh Hùng | `feat/hung` | EDA & Tiền xử lý ảnh (`src/preprocessing.py`) |
 | Tạ Công Sơn | `son` | Trích xuất đặc trưng Pixel, HOG, PCA & Baseline (`src/features.py`) |
-| Thành viên 3 | `feat/3-modeling` | Huấn luyện & Tối ưu K-NN, Decision Tree (`src/models.py`) |
+| Nguyễn Hoàng | `feat/3-modeling` | Huấn luyện & Tối ưu K-NN, Decision Tree (`src/models.py`) |
 | Thành viên 4 | `feat/4-evaluation` | Đánh giá, Confusion Matrix & Phân tích lỗi (`src/evaluate.py`) |
 
 ## 2. Hướng dẫn cài đặt và chạy chương trình
@@ -100,3 +100,38 @@ Kết quả ghi ở [report/tables/feature_ablation.csv](report/tables/feature_a
 [biểu đồ](report/figures/feature_ablation.png) và log `logs/features_ablation.log`.
 K-NN (k=3, euclidean) ở đây chỉ là **đầu dò** để đo tác động của biểu diễn,
 không phải mô hình cuối của nhóm.
+
+## 5. K-NN theo track — Nguyễn Hoàng (Thành viên 3)
+
+- Entry point riêng: [scripts/train_knn.py](scripts/train_knn.py), không thay `main.py` hoặc pipeline người 1/2. Dữ liệu local hiện nằm trực tiếp `data/Train.csv`, `data/Test.csv`, `data/Meta.csv`; CLI nhận cả layout này và `data/archive/`. Hướng dẫn `main.py` ở trên vẫn dùng archive. Khi cả hai layout tồn tại phải truyền `--dataset-dir` rõ ràng.
+- Full train: 39.209 ảnh, 43 lớp, 1.307 track; cùng grouped CV 3 folds seed 42 cho Pixel/HOG/HOG+PCA, scaler/PCA chỉ fit fold-train. Mỗi biểu diễn 12 candidates; winner theo macro-F1 CV được khóa trước test, không chọn lại bằng test.
+- Winner **HOG + StandardScaler + KNN(k=7, distance, Manhattan)**: CV macro-F1 **0,809718 ± 0,016981**; official test 12.630 ảnh: Accuracy **0,818369**, macro-F1 **0,789750**. Test Pixel: Accuracy 0,557245 / F1 0,493948; HOG+PCA: 0,796675 / 0,763063. Test đã từng được EDA thăm dò, không mô tả là hoàn toàn chưa xem.
+- [Báo cáo đầy đủ, hạn chế và trường hợp đặc biệt](report/notes_knn.md), [bảng kết quả](report/tables/knn_summary.csv), [36 candidates](report/tables/knn_candidates.csv), [hình CV/test](report/figures/knn_cv_test.png), [logs và provenance](logs/knn/).
+
+Từ root repo, tái xuất bảng/hình **chỉ từ artifact đã lưu**, không chạy lại train/test:
+
+```powershell
+& ./.venv/Scripts/python.exe scripts/summarize_knn.py
+$env:PYTHONIOENCODING = "utf-8"
+& ./.venv/Scripts/python.exe -m unittest src.tests.test_models src.tests.test_knn_summary -v
+```
+
+Các chế độ `preflight`, `smoke`, `tune`, `test` và điều kiện an toàn được ghi trong báo cáo. **Không chạy lại official test cho selection đã có claim**, không xóa claim để lấy log. Helper xuất `knn_*` vào `report/tables`, hình vào `report/figures`; run gốc giữ ở `report/knn`; loader log của lượt CLI mới vào `logs/knn/<run-id>/`. Không ghi đè bảng/hình của thành viên khác.
+
+Kiểm thử do trợ lý chạy: 12/12 focused pass; full suite 49/50 pass, còn lỗi sai số float32 cumulative PCA tại `src/tests/test_features.py:149` (giữ nguyên code/test người 2). Chi tiết và log trong báo cáo. Việc sao chép console train/test lịch sử từ thư mục tạm bị hệ thống quyền chặn; không giả lập console hoặc chạy lại mô hình. Phạm vi đã hoàn thành là KNN, không tuyên bố đã tối ưu Decision Tree hoặc hoàn thành phân tích lỗi của người 4. Khai báo hỗ trợ AI tại [AI_USAGE.md](AI_USAGE.md).
+
+## 6. Decision Tree — Nguyễn Hoàng (Thành viên 3), đã hoàn tất full run
+
+- Bổ sung riêng [src/decision_tree.py](src/decision_tree.py), [scripts/train_dt.py](scripts/train_dt.py), [scripts/summarize_dt.py](scripts/summarize_dt.py) và [8 tests DT](src/tests/test_decision_tree.py); không thay pipeline hoặc kết quả KNN/người khác.
+- **Đã chạy đủ144 CV fits +3 refit** trên39.209 ảnh/1.307 tracks,16 candidates mỗi Pixel/HOG/HOG+PCA, seed42, chính xác frozen3fold manifest KNN. Scaler/PCA fold-local, chọn macro-F1 CV và deterministic first tie; không sampling hoặc retune theo test.
+- Winner **HOG + StandardScaler + DT(entropy, depth20, min_samples_split5)**: CV macro-F1 **0,614898 ±0,011907**; official test12.630 ảnh: Accuracy **0,656770**, macro-F1 **0,594987**. Test Pixel Accuracy0,635313/F1 0,563179; HOG+PCA0,591607/0,536760. KNN HOG F1 0,789750 cao hơn DT HOG trong protocol này; không khẳng định ý nghĩa thống kê. Test từng được EDA thăm dò.
+- Kiểm thử **20/20 focused pass**, full **57/58** (cùng lỗi float32 người2 giữ nguyên). Đã sửa test gate kiểm tra HOG/image contract drift trước claim/Test.csv, regression cả HOG cùng dimensions và ROI drift. Smoke đầu lỗi JSON int64 đã sửa, giữ run lỗi; không chạy lại official test để lấy logs.
+- [Báo cáo DT: kết quả, so sánh, trường hợp lỗi và timing](report/notes_dt.md); [full selection](report/dt/full-dt-01/selection.json), [test metrics](report/dt/test-dt-01/test_metrics.json), [bảng full](report/tables/dt_full-dt-01_summary.csv), [hình](report/figures/dt_full-dt-01_cv_test.png), [logs](logs/dt/). Exporter đã kiểm tra12.630 predictions/method, alignment và tính lại metrics; không fit/predict hoặc ghi đè. Hình sinh được nhưng viewer trả rỗng, chưa xác nhận trực quan layout.
+
+```powershell
+& ./.venv/Scripts/python.exe -m unittest src.tests.test_decision_tree src.tests.test_models src.tests.test_knn_summary -v
+# Tái xuất full artifacts đã lưu; export-id phải mới, không inference lại:
+& ./.venv/Scripts/python.exe scripts/summarize_dt.py --tune-dir report/dt/full-dt-01 --test-dir report/dt/test-dt-01 --export-id full-dt-review-02
+```
+
+Full tune/test đã hoàn tất; **không chạy lại official test cho selection đã có claim hoặc xóa claim**. Tổng search+refit13246,755s (~3,68h), tuần tự1 job/2 numeric threads; timing chưa gồm I/O/extraction và chưa đo peak RAM. Khai báo AI ở cuối [AI_USAGE.md](AI_USAGE.md).

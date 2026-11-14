@@ -1,0 +1,33 @@
+Command: python -m unittest src.tests.test_models src.tests.test_knn_summary -v
+Encoding: PYTHONIOENCODING=utf-8
+{
+  "tables": [
+    "knn_summary.csv",
+    "knn_candidates.csv",
+    "knn_timings.csv",
+    "knn_class_summary.csv",
+    "knn_error_pairs.csv"
+  ],
+  "figure": "C:\\Users\\pc\\AppData\\Local\\Temp\\tmp2f5oi0im\\report\\figures\\knn_cv_test.png",
+  "verified_prediction_rows_per_method": 12630,
+  "winner_unchanged": "hog"
+}
+test_group_identity_alignment_and_fail_closed (src.tests.test_models.GroupTests.test_group_identity_alignment_and_fail_closed) ... ok
+test_shared_folds_reproducible_complete_and_disjoint (src.tests.test_models.GroupTests.test_shared_folds_reproducible_complete_and_disjoint) ... ok
+test_smoke_selects_whole_tracks_all_classes (src.tests.test_models.GroupTests.test_smoke_selects_whole_tracks_all_classes) ... ok
+test_direct_archive_ambiguous_and_explicit (src.tests.test_models.LayoutTests.test_direct_archive_ambiguous_and_explicit) ... ok
+test_smoke_selection_rejected_before_test_access (src.tests.test_models.LayoutTests.test_smoke_selection_rejected_before_test_access) ... ok
+test_bundle_roundtrip_and_no_overwrite (src.tests.test_models.PipelineTests.test_bundle_roundtrip_and_no_overwrite) ... ok
+test_candidates_ties_metrics_and_batches (src.tests.test_models.PipelineTests.test_candidates_ties_metrics_and_batches) ... ok
+test_grid_fold_local_scaler_and_error_propagation (src.tests.test_models.PipelineTests.test_grid_fold_local_scaler_and_error_propagation) ... ok
+test_person2_equivalence_and_validation_cannot_mutate_fit (src.tests.test_models.PipelineTests.test_person2_equivalence_and_validation_cannot_mutate_fit) ... ok
+test_existing_artifacts_export_without_mutation (src.tests.test_knn_summary.SummaryTests.test_existing_artifacts_export_without_mutation) ... ok
+test_future_loader_log_is_under_logs (src.tests.test_knn_summary.SummaryTests.test_future_loader_log_is_under_logs) ... ok
+test_metrics_keep_all_43_labels (src.tests.test_knn_summary.SummaryTests.test_metrics_keep_all_43_labels) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.554s
+
+OK
+
+Exit code: 0
