@@ -5,7 +5,7 @@
 | :--- | :--- | :--- |
 | Vũ Khánh Hùng | `feat/hung` | EDA & Tiền xử lý ảnh (`src/preprocessing.py`) |
 | Tạ Công Sơn | `son` | Trích xuất đặc trưng Pixel, HOG, PCA & Baseline (`src/features.py`) |
-| Nguyễn Hoàng | `feat/3-modeling` | Huấn luyện & Tối ưu K-NN, Decision Tree (`src/models.py`) |
+| Nguyễn Hoàng | `hoang` | Huấn luyện & Tối ưu K-NN, Decision Tree (`src/models.py`) |
 | Thành viên 4 | `feat/4-evaluation` | Đánh giá, Confusion Matrix & Phân tích lỗi (`src/evaluate.py`) |
 
 ## 2. Hướng dẫn cài đặt và chạy chương trình
