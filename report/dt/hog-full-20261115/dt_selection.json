@@ -1,0 +1,50 @@
+{
+  "algorithm": "dt",
+  "baseline": {
+    "candidate_id": "dt_baseline",
+    "params": {
+      "criterion": "entropy",
+      "max_depth": 20,
+      "min_samples_split": 5,
+      "min_samples_leaf": 1,
+      "class_weight": null,
+      "ccp_alpha": 0.0
+    },
+    "mean_f1_macro": 0.6148977189075638,
+    "mean_accuracy": 0.6587687449516447,
+    "mean_precision_macro": 0.6351850997193339,
+    "mean_recall_macro": 0.6065616037270537,
+    "std_f1_macro": 0.01190665266720969,
+    "cv_seconds_sum": 307.71790409996174,
+    "timing_scope": "fit_and_train_valid_predict_excludes_shared_scaler",
+    "mean_train_f1_macro": 0.958215720960529
+  },
+  "selected": {
+    "candidate_id": "dt_alpha_5e-4",
+    "params": {
+      "criterion": "entropy",
+      "max_depth": 20,
+      "min_samples_split": 5,
+      "min_samples_leaf": 1,
+      "class_weight": null,
+      "ccp_alpha": 0.0005
+    },
+    "mean_f1_macro": 0.6219977335330696,
+    "mean_accuracy": 0.6669298846703727,
+    "mean_precision_macro": 0.6440547561619852,
+    "mean_recall_macro": 0.6119298431876082,
+    "std_f1_macro": 0.013418141617450774,
+    "cv_seconds_sum": 320.4172030999616,
+    "timing_scope": "fit_and_train_valid_predict_excludes_shared_scaler",
+    "mean_train_f1_macro": 0.8700776813710904
+  },
+  "delta_cv_f1_macro": 0.007100014625505802,
+  "cv_wall_seconds": 3410.9512931000063,
+  "refit_seconds": 149.24823680000554,
+  "model_file": "data/models/model3_upgrade/upgrade-full-20261115/hog_dt.joblib",
+  "model_sha256": "027ede62770339e5c729582d05fd596e34c3fda841fd72258d6154b25d03632f",
+  "model_bytes": 118665,
+  "n_train": 39209,
+  "n_tracks": 1307,
+  "candidate_count": 11
+}

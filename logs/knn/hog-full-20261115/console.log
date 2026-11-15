@@ -1,0 +1,177 @@
+Run: upgrade-full-20261115; mode=tune; official test access DISABLED
+HOG train 256/39209; elapsed=3.2s
+HOG train 5376/39209; elapsed=82.3s
+HOG train 10496/39209; elapsed=149.5s
+HOG train 15616/39209; elapsed=216.2s
+HOG train 20736/39209; elapsed=283.1s
+HOG train 25856/39209; elapsed=342.7s
+HOG train 30976/39209; elapsed=405.4s
+HOG train 36096/39209; elapsed=466.3s
+HOG train 39209/39209; elapsed=506.8s
+START knn: 39209 images, 3 frozen track folds
+knn fold=0 scaler
+knn fold=0 metric=manhattan shared_neighbors
+knn fold=0 metric=manhattan candidate=knn_baseline complete
+knn fold=0 metric=manhattan candidate=knn_k3_uniform_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k3_distance_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k5_uniform_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k5_distance_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k7_uniform_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k11_uniform_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k11_distance_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k15_uniform_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k15_distance_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k21_uniform_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k21_distance_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k31_uniform_manhattan complete
+knn fold=0 metric=manhattan candidate=knn_k31_distance_manhattan complete
+knn fold=0 metric=euclidean shared_neighbors
+knn fold=0 metric=euclidean candidate=knn_k3_uniform_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k3_distance_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k5_uniform_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k5_distance_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k7_uniform_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k7_distance_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k11_uniform_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k11_distance_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k15_uniform_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k15_distance_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k21_uniform_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k21_distance_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k31_uniform_euclidean complete
+knn fold=0 metric=euclidean candidate=knn_k31_distance_euclidean complete
+knn fold=1 scaler
+knn fold=1 metric=manhattan shared_neighbors
+knn fold=1 metric=manhattan candidate=knn_baseline complete
+knn fold=1 metric=manhattan candidate=knn_k3_uniform_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k3_distance_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k5_uniform_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k5_distance_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k7_uniform_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k11_uniform_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k11_distance_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k15_uniform_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k15_distance_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k21_uniform_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k21_distance_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k31_uniform_manhattan complete
+knn fold=1 metric=manhattan candidate=knn_k31_distance_manhattan complete
+knn fold=1 metric=euclidean shared_neighbors
+knn fold=1 metric=euclidean candidate=knn_k3_uniform_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k3_distance_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k5_uniform_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k5_distance_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k7_uniform_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k7_distance_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k11_uniform_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k11_distance_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k15_uniform_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k15_distance_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k21_uniform_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k21_distance_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k31_uniform_euclidean complete
+knn fold=1 metric=euclidean candidate=knn_k31_distance_euclidean complete
+knn fold=2 scaler
+knn fold=2 metric=manhattan shared_neighbors
+knn fold=2 metric=manhattan candidate=knn_baseline complete
+knn fold=2 metric=manhattan candidate=knn_k3_uniform_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k3_distance_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k5_uniform_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k5_distance_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k7_uniform_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k11_uniform_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k11_distance_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k15_uniform_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k15_distance_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k21_uniform_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k21_distance_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k31_uniform_manhattan complete
+knn fold=2 metric=manhattan candidate=knn_k31_distance_manhattan complete
+knn fold=2 metric=euclidean shared_neighbors
+knn fold=2 metric=euclidean candidate=knn_k3_uniform_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k3_distance_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k5_uniform_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k5_distance_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k7_uniform_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k7_distance_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k11_uniform_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k11_distance_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k15_uniform_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k15_distance_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k21_uniform_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k21_distance_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k31_uniform_euclidean complete
+knn fold=2 metric=euclidean candidate=knn_k31_distance_euclidean complete
+DONE knn: baseline F1=0.809718, selected F1=0.812096, delta=+0.002378, CV=280.8s
+START dt: 39209 images, 3 frozen track folds
+dt fold=0 scaler
+dt fold=0 candidate=dt_baseline fit
+dt fold=0 candidate=dt_baseline complete
+dt fold=0 candidate=dt_leaf1_balanced fit
+dt fold=0 candidate=dt_leaf1_balanced complete
+dt fold=0 candidate=dt_leaf2_none fit
+dt fold=0 candidate=dt_leaf2_none complete
+dt fold=0 candidate=dt_leaf2_balanced fit
+dt fold=0 candidate=dt_leaf2_balanced complete
+dt fold=0 candidate=dt_leaf5_none fit
+dt fold=0 candidate=dt_leaf5_none complete
+dt fold=0 candidate=dt_leaf5_balanced fit
+dt fold=0 candidate=dt_leaf5_balanced complete
+dt fold=0 candidate=dt_leaf10_none fit
+dt fold=0 candidate=dt_leaf10_none complete
+dt fold=0 candidate=dt_leaf10_balanced fit
+dt fold=0 candidate=dt_leaf10_balanced complete
+dt fold=0 candidate=dt_alpha_1e-4 fit
+dt fold=0 candidate=dt_alpha_1e-4 complete
+dt fold=0 candidate=dt_alpha_5e-4 fit
+dt fold=0 candidate=dt_alpha_5e-4 complete
+dt fold=0 candidate=dt_alpha_1e-3 fit
+dt fold=0 candidate=dt_alpha_1e-3 complete
+dt fold=1 scaler
+dt fold=1 candidate=dt_baseline fit
+dt fold=1 candidate=dt_baseline complete
+dt fold=1 candidate=dt_leaf1_balanced fit
+dt fold=1 candidate=dt_leaf1_balanced complete
+dt fold=1 candidate=dt_leaf2_none fit
+dt fold=1 candidate=dt_leaf2_none complete
+dt fold=1 candidate=dt_leaf2_balanced fit
+dt fold=1 candidate=dt_leaf2_balanced complete
+dt fold=1 candidate=dt_leaf5_none fit
+dt fold=1 candidate=dt_leaf5_none complete
+dt fold=1 candidate=dt_leaf5_balanced fit
+dt fold=1 candidate=dt_leaf5_balanced complete
+dt fold=1 candidate=dt_leaf10_none fit
+dt fold=1 candidate=dt_leaf10_none complete
+dt fold=1 candidate=dt_leaf10_balanced fit
+dt fold=1 candidate=dt_leaf10_balanced complete
+dt fold=1 candidate=dt_alpha_1e-4 fit
+dt fold=1 candidate=dt_alpha_1e-4 complete
+dt fold=1 candidate=dt_alpha_5e-4 fit
+dt fold=1 candidate=dt_alpha_5e-4 complete
+dt fold=1 candidate=dt_alpha_1e-3 fit
+dt fold=1 candidate=dt_alpha_1e-3 complete
+dt fold=2 scaler
+dt fold=2 candidate=dt_baseline fit
+dt fold=2 candidate=dt_baseline complete
+dt fold=2 candidate=dt_leaf1_balanced fit
+dt fold=2 candidate=dt_leaf1_balanced complete
+dt fold=2 candidate=dt_leaf2_none fit
+dt fold=2 candidate=dt_leaf2_none complete
+dt fold=2 candidate=dt_leaf2_balanced fit
+dt fold=2 candidate=dt_leaf2_balanced complete
+dt fold=2 candidate=dt_leaf5_none fit
+dt fold=2 candidate=dt_leaf5_none complete
+dt fold=2 candidate=dt_leaf5_balanced fit
+dt fold=2 candidate=dt_leaf5_balanced complete
+dt fold=2 candidate=dt_leaf10_none fit
+dt fold=2 candidate=dt_leaf10_none complete
+dt fold=2 candidate=dt_leaf10_balanced fit
+dt fold=2 candidate=dt_leaf10_balanced complete
+dt fold=2 candidate=dt_alpha_1e-4 fit
+dt fold=2 candidate=dt_alpha_1e-4 complete
+dt fold=2 candidate=dt_alpha_5e-4 fit
+dt fold=2 candidate=dt_alpha_5e-4 complete
+dt fold=2 candidate=dt_alpha_1e-3 fit
+dt fold=2 candidate=dt_alpha_1e-3 complete
+DONE dt: baseline F1=0.614898, selected F1=0.621998, delta=+0.007100, CV=3411.0s
+Run completed.

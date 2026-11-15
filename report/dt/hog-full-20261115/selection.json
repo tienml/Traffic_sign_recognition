@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "run_id": "upgrade-full-20261115",
+  "mode": "tune",
+  "status": "completed_train_cv",
+  "algorithms": [
+    {
+      "algorithm": "knn",
+      "baseline": {
+        "candidate_id": "knn_baseline",
+        "params": {
+          "n_neighbors": 7,
+          "weights": "distance",
+          "metric": "manhattan"
+        },
+        "mean_f1_macro": 0.8097182084596563,
+        "mean_accuracy": 0.8223100233020295,
+        "mean_precision_macro": 0.8411463227201202,
+        "mean_recall_macro": 0.793688512887278,
+        "std_f1_macro": 0.016980606183450233,
+        "cv_seconds_sum": 0.3865914999769302,
+        "timing_scope": "candidate_only_excludes_shared_scaler_and_neighbors"
+      },
+      "selected": {
+        "candidate_id": "knn_k15_distance_manhattan",
+        "params": {
+          "n_neighbors": 15,
+          "weights": "distance",
+          "metric": "manhattan"
+        },
+        "mean_f1_macro": 0.8120964421959909,
+        "mean_accuracy": 0.8270306517306926,
+        "mean_precision_macro": 0.8494694369172139,
+        "mean_recall_macro": 0.7929489973963549,
+        "std_f1_macro": 0.014241765196545051,
+        "cv_seconds_sum": 0.3627861000422854,
+        "timing_scope": "candidate_only_excludes_shared_scaler_and_neighbors"
+      },
+      "delta_cv_f1_macro": 0.0023782337363346118,
+      "cv_wall_seconds": 280.83538679999765,
+      "refit_seconds": 0.24176099999749567,
+      "model_file": "data/models/model3_upgrade/upgrade-full-20261115/hog_knn.joblib",
+      "model_sha256": "62a81c88052539d2b17187e063d7a53e811c4da5f9b32bff9222326fbb2eb0b3",
+      "model_bytes": 44854945,
+      "n_train": 39209,
+      "n_tracks": 1307,
+      "candidate_count": 28
+    },
+    {
+      "algorithm": "dt",
+      "baseline": {
+        "candidate_id": "dt_baseline",
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 20,
+          "min_samples_split": 5,
+          "min_samples_leaf": 1,
+          "class_weight": null,
+          "ccp_alpha": 0.0
+        },
+        "mean_f1_macro": 0.6148977189075638,
+        "mean_accuracy": 0.6587687449516447,
+        "mean_precision_macro": 0.6351850997193339,
+        "mean_recall_macro": 0.6065616037270537,
+        "std_f1_macro": 0.01190665266720969,
+        "cv_seconds_sum": 307.71790409996174,
+        "timing_scope": "fit_and_train_valid_predict_excludes_shared_scaler",
+        "mean_train_f1_macro": 0.958215720960529
+      },
+      "selected": {
+        "candidate_id": "dt_alpha_5e-4",
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 20,
+          "min_samples_split": 5,
+          "min_samples_leaf": 1,
+          "class_weight": null,
+          "ccp_alpha": 0.0005
+        },
+        "mean_f1_macro": 0.6219977335330696,
+        "mean_accuracy": 0.6669298846703727,
+        "mean_precision_macro": 0.6440547561619852,
+        "mean_recall_macro": 0.6119298431876082,
+        "std_f1_macro": 0.013418141617450774,
+        "cv_seconds_sum": 320.4172030999616,
+        "timing_scope": "fit_and_train_valid_predict_excludes_shared_scaler",
+        "mean_train_f1_macro": 0.8700776813710904
+      },
+      "delta_cv_f1_macro": 0.007100014625505802,
+      "cv_wall_seconds": 3410.9512931000063,
+      "refit_seconds": 149.24823680000554,
+      "model_file": "data/models/model3_upgrade/upgrade-full-20261115/hog_dt.joblib",
+      "model_sha256": "027ede62770339e5c729582d05fd596e34c3fda841fd72258d6154b25d03632f",
+      "model_bytes": 118665,
+      "n_train": 39209,
+      "n_tracks": 1307,
+      "candidate_count": 11
+    }
+  ],
+  "train_images": 39209,
+  "feature_audit_sha256": "2576c4585aa2d286ce4d5d1161133f2d80f79a3d9eb5e1a7f6467cfc32d6400e",
+  "fold_manifest_sha256": "c5453353dbe7fdf77013f978e61a20b5c55a95f299eacac70a33676b0c43a1fb",
+  "official_test_read": false,
+  "official_test_evaluated": false,
+  "selection_caveat": "OOF of candidates selected on these same folds is not nested/unbiased evaluation.",
+  "historical_test_caveat": "Earlier EDA and model reports explored official test; this upgrade does not read it."
+}

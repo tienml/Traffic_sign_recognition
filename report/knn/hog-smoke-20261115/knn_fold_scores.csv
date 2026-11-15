@@ -1,0 +1,4 @@
+candidate_id,fold,fit_seconds,predict_seconds,tie_fallback_rows,timing_scope,shared_neighbor_timing_key,accuracy,precision_macro,recall_macro,f1_macro
+knn_baseline,0,0.0,0.00827180000487715,0,candidate_only_excludes_shared_scaler_and_neighbors,fold=0/metric=manhattan,0.6434108527131783,0.6667920979852415,0.6434108527131782,0.6336904451529407
+knn_baseline,1,0.0,0.01535170002898667,0,candidate_only_excludes_shared_scaler_and_neighbors,fold=1/metric=manhattan,0.6891472868217055,0.7261819720314414,0.6891472868217055,0.6783453407952343
+knn_baseline,2,0.0,0.012288900019484572,0,candidate_only_excludes_shared_scaler_and_neighbors,fold=2/metric=manhattan,0.5829457364341085,0.614341037439702,0.5829457364341086,0.5594225897648603

@@ -1,0 +1,42 @@
+{
+  "algorithm": "knn",
+  "baseline": {
+    "candidate_id": "knn_baseline",
+    "params": {
+      "n_neighbors": 7,
+      "weights": "distance",
+      "metric": "manhattan"
+    },
+    "mean_f1_macro": 0.6238194585710118,
+    "mean_accuracy": 0.6385012919896641,
+    "mean_precision_macro": 0.669105035818795,
+    "mean_recall_macro": 0.6385012919896641,
+    "std_f1_macro": 0.04904917573370322,
+    "cv_seconds_sum": 0.03591240005334839,
+    "timing_scope": "candidate_only_excludes_shared_scaler_and_neighbors"
+  },
+  "selected": {
+    "candidate_id": "knn_baseline",
+    "params": {
+      "n_neighbors": 7,
+      "weights": "distance",
+      "metric": "manhattan"
+    },
+    "mean_f1_macro": 0.6238194585710118,
+    "mean_accuracy": 0.6385012919896641,
+    "mean_precision_macro": 0.669105035818795,
+    "mean_recall_macro": 0.6385012919896641,
+    "std_f1_macro": 0.04904917573370322,
+    "cv_seconds_sum": 0.03591240005334839,
+    "timing_scope": "candidate_only_excludes_shared_scaler_and_neighbors"
+  },
+  "delta_cv_f1_macro": 0.0,
+  "cv_wall_seconds": 2.9894918000063626,
+  "refit_seconds": 0.07285710000724066,
+  "model_file": "data/models/model3_upgrade/upgrade-smoke-20261115/hog_knn.joblib",
+  "model_sha256": "2ff3374466822d82d86c686d90ee5f7366ea358821fce8e9cb09661c7ac4d668",
+  "model_bytes": 4459989,
+  "n_train": 3870,
+  "n_tracks": 129,
+  "candidate_count": 1
+}

@@ -1,0 +1,12 @@
+COMMAND: D:\ML\Traffic_sign_recognition\data\.venv-model3\Scripts\python.exe -B scripts/check_model3_artifacts.py --run-dir D:\ML\Traffic_sign_recognition\report\model3_upgrade\upgrade-full-20261115
+
+knn: candidates, OOF alignment, metrics, source and model hashes passed
+dt: candidates, OOF alignment, metrics, source and model hashes passed
+{
+  "run_id": "upgrade-full-20261115",
+  "train_rows": 39209,
+  "tracks": 1307,
+  "official_test_read": false,
+  "joblib_deserialized": false,
+  "status": "passed"
+}

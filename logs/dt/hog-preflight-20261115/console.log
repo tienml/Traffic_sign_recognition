@@ -1,0 +1,3 @@
+Run: upgrade-preflight-20261115; mode=preflight; official test access DISABLED
+Preflight passed: train/frozen folds match; no images decoded.
+Run completed.

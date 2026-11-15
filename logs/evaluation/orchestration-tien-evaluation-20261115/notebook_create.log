@@ -1,0 +1,3 @@
+COMMAND: D:\ML\Traffic_sign_recognition\data\.venv-model3\Scripts\python.exe -B scripts/create_evaluation_notebook.py --run-dir D:\ML\Traffic_sign_recognition\report\evaluation\tien-evaluation-20261115
+
+D:\ML\Traffic_sign_recognition\notebooks\04_evaluation_tien.ipynb

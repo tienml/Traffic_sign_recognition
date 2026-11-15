@@ -1,0 +1,25 @@
+COMMAND: D:\ML\Traffic_sign_recognition\data\.venv-model3\Scripts\python.exe -B -m unittest src.tests.test_evaluation_saved src.tests.test_evaluation_runner -v
+
+test_all_correct_examples_and_errors_have_expected_empty_schema (src.tests.test_evaluation_saved.SavedEvaluationTests.test_all_correct_examples_and_errors_have_expected_empty_schema) ... ok
+test_canonical_api_keeps_legacy_adapter_available (src.tests.test_evaluation_saved.SavedEvaluationTests.test_canonical_api_keeps_legacy_adapter_available) ... ok
+test_confusion_zero_rows_error_order_and_custom_labels (src.tests.test_evaluation_saved.SavedEvaluationTests.test_confusion_zero_rows_error_order_and_custom_labels) ... ok
+test_error_examples_stable_top_pairs_and_no_mutation (src.tests.test_evaluation_saved.SavedEvaluationTests.test_error_examples_stable_top_pairs_and_no_mutation) ... ok
+test_exact_keys_row_order_and_duplicate_rejection (src.tests.test_evaluation_saved.SavedEvaluationTests.test_exact_keys_row_order_and_duplicate_rejection) ... ok
+test_group_sizes_inclusive_roi_speed_family_and_categories (src.tests.test_evaluation_saved.SavedEvaluationTests.test_group_sizes_inclusive_roi_speed_family_and_categories) ... ok
+test_metrics_match_sklearn_fixed_43_labels (src.tests.test_evaluation_saved.SavedEvaluationTests.test_metrics_match_sklearn_fixed_43_labels) ... ok
+test_oof_accepts_missing_classes_but_requires_frozen_manifest_identity (src.tests.test_evaluation_saved.SavedEvaluationTests.test_oof_accepts_missing_classes_but_requires_frozen_manifest_identity) ... ok
+test_oof_rejects_whole_track_leakage_missing_or_invalid_fold_ids (src.tests.test_evaluation_saved.SavedEvaluationTests.test_oof_rejects_whole_track_leakage_missing_or_invalid_fold_ids) ... ok
+test_paired_counts_and_exact_alignment (src.tests.test_evaluation_saved.SavedEvaluationTests.test_paired_counts_and_exact_alignment) ... ok
+test_path_strings_split_traversal_and_absolute_guards (src.tests.test_evaluation_saved.SavedEvaluationTests.test_path_strings_split_traversal_and_absolute_guards) ... ok
+test_saved_metrics_do_not_infer_or_access_models_files_or_plotting (src.tests.test_evaluation_saved.SavedEvaluationTests.test_saved_metrics_do_not_infer_or_access_models_files_or_plotting) ... ok
+test_strict_integer_labels_and_rows (src.tests.test_evaluation_saved.SavedEvaluationTests.test_strict_integer_labels_and_rows) ... ok
+test_validation_returns_copy_and_checks_split_size_and_empty (src.tests.test_evaluation_saved.SavedEvaluationTests.test_validation_returns_copy_and_checks_split_size_and_empty) ... ok
+test_exact_overlap_hashes_and_split_left_unchanged (src.tests.test_evaluation_runner.EvaluationRunnerTests.test_exact_overlap_hashes_and_split_left_unchanged) ... ok
+test_incomplete_upgrade_rejected_before_evaluation_output (src.tests.test_evaluation_runner.EvaluationRunnerTests.test_incomplete_upgrade_rejected_before_evaluation_output) ... ok
+test_modified_claim_or_saved_metric_is_rejected (src.tests.test_evaluation_runner.EvaluationRunnerTests.test_modified_claim_or_saved_metric_is_rejected) ... ok
+test_saved_only_metrics_claim_and_current_row_alignment (src.tests.test_evaluation_runner.EvaluationRunnerTests.test_saved_only_metrics_claim_and_current_row_alignment) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 3.323s
+
+OK

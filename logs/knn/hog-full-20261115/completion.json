@@ -1,0 +1,16 @@
+{
+  "finished_utc": "2026-11-14T21:34:52.963202+00:00",
+  "run_id": "upgrade-full-20261115",
+  "upgrade_contributor": "\u0110\u1eb7ng Quang Ti\u1ebfn",
+  "member_number": 4,
+  "original_model_contributor": "Nguy\u1ec5n Ho\u00e0ng",
+  "ai_assisted": true,
+  "artifact_check": "passed",
+  "export": "passed",
+  "notebook": "passed",
+  "focused_tests": "passed",
+  "full_suite_exit": 1,
+  "known_baseline_pca_failure_preserved": true,
+  "protected_unchanged": true,
+  "official_test_evaluated": false
+}

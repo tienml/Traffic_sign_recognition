@@ -1,0 +1,59 @@
+[
+  {
+    "fold": 0,
+    "n_train": 2580,
+    "n_valid": 1290,
+    "scaler_fit_samples": 2580,
+    "mean_checksum": "2bc30c685f5781973184bf2cb63b5f6fc2629fe9374de68cfe95b15bd690a9b4",
+    "scaler_fit_seconds": 0.0397854000038933,
+    "scaler_transform_seconds": 0.0055588999966857955,
+    "neighbor_searches": [
+      {
+        "metric": "manhattan",
+        "n_neighbors": 8,
+        "fit_seconds": 0.0010064000089187175,
+        "query_seconds": 0.82477839999774,
+        "query_batches": 6,
+        "timing_scope": "shared_once_per_metric_per_fold"
+      }
+    ]
+  },
+  {
+    "fold": 1,
+    "n_train": 2580,
+    "n_valid": 1290,
+    "scaler_fit_samples": 2580,
+    "mean_checksum": "3161e4a8915abb297478ba2e65af48d7f0ebc6e26bddd54031b5e24778d5ef82",
+    "scaler_fit_seconds": 0.015600899991113693,
+    "scaler_transform_seconds": 0.009909400003380142,
+    "neighbor_searches": [
+      {
+        "metric": "manhattan",
+        "n_neighbors": 8,
+        "fit_seconds": 0.0014460999955190346,
+        "query_seconds": 1.142880699975649,
+        "query_batches": 6,
+        "timing_scope": "shared_once_per_metric_per_fold"
+      }
+    ]
+  },
+  {
+    "fold": 2,
+    "n_train": 2580,
+    "n_valid": 1290,
+    "scaler_fit_samples": 2580,
+    "mean_checksum": "7ac73714af9be7b79b4a51201cfe530b7de4364f5cc11f79c7925a7a37cba396",
+    "scaler_fit_seconds": 0.026068500010296702,
+    "scaler_transform_seconds": 0.007438400003593415,
+    "neighbor_searches": [
+      {
+        "metric": "manhattan",
+        "n_neighbors": 8,
+        "fit_seconds": 0.0011884999985340983,
+        "query_seconds": 0.8291828000219539,
+        "query_batches": 6,
+        "timing_scope": "shared_once_per_metric_per_fold"
+      }
+    ]
+  }
+]

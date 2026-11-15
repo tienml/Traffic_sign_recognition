@@ -1,0 +1,32 @@
+{
+  "rows": 3870,
+  "dimensions": 324,
+  "dtype": "float32",
+  "raw_hog_sha256": "e3a2b21281e53152bc1b37216bb75e25897aabe00b2e6013ae5ea39920f59486",
+  "extraction_seconds": 113.13205049998942,
+  "hog_params": {
+    "orientations": 9,
+    "pixels_per_cell": [
+      8,
+      8
+    ],
+    "cells_per_block": [
+      2,
+      2
+    ],
+    "block_norm": "L2-Hys"
+  },
+  "image_contract": {
+    "size": [
+      32,
+      32
+    ],
+    "color": "RGB",
+    "roi": true,
+    "scale": "divide255",
+    "augmentation": false
+  },
+  "diagnostics_are_model_features": false,
+  "diagnostic_definition": "RGB-weighted gray mean/std on resized ROI32 [0,1]",
+  "official_test_read": false
+}

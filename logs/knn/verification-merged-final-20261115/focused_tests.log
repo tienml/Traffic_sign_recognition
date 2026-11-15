@@ -1,0 +1,36 @@
+COMMAND: D:\ML\Traffic_sign_recognition\data\.venv-model3\Scripts\python.exe -B -m unittest src.tests.test_model_upgrade src.tests.test_model_upgrade_runner -v
+
+test_boundary_tie_fallback_is_exact_for_every_candidate_and_batching (src.tests.test_model_upgrade.UpgradeTests.test_boundary_tie_fallback_is_exact_for_every_candidate_and_batching) ... ok
+test_canonical_api_preserves_historical_parameter_grid_contract (src.tests.test_model_upgrade.UpgradeTests.test_canonical_api_preserves_historical_parameter_grid_contract) ... ok
+test_dt_full_grid_matches_reference_training_scores_and_progress (src.tests.test_model_upgrade.UpgradeTests.test_dt_full_grid_matches_reference_training_scores_and_progress) ... ok
+test_exact_grids_baseline_first_and_smoke (src.tests.test_model_upgrade.UpgradeTests.test_exact_grids_baseline_first_and_smoke) ... ok
+test_invalid_inputs_and_crossing_tracks_fail_before_fitting (src.tests.test_model_upgrade.UpgradeTests.test_invalid_inputs_and_crossing_tracks_fail_before_fitting) ... ok
+test_knn_full_grid_matches_reference_and_queries_are_bounded_and_shared (src.tests.test_model_upgrade.UpgradeTests.test_knn_full_grid_matches_reference_and_queries_are_bounded_and_shared) ... ok
+test_no_dataset_access_extraction_serialization_or_global_logging (src.tests.test_model_upgrade.UpgradeTests.test_no_dataset_access_extraction_serialization_or_global_logging) ... ok
+test_scalers_fit_only_training_rows_frozen_indices_unchanged_and_float_cast (src.tests.test_model_upgrade.UpgradeTests.test_scalers_fit_only_training_rows_frozen_indices_unchanged_and_float_cast) ... ok
+test_selection_finite_stable_and_refit_pipeline_parity (src.tests.test_model_upgrade.UpgradeTests.test_selection_finite_stable_and_refit_pipeline_parity) ... ok
+test_voting_sklearn_parity_zero_distance_and_sorted_ties (src.tests.test_model_upgrade.UpgradeTests.test_voting_sklearn_parity_zero_distance_and_sorted_ties) ... ok
+test_cli_has_no_official_test_mode (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_cli_has_no_official_test_mode) ... usage: python.exe -m unittest [-h] [--dataset-dir DATASET_DIR]
+                              [--fold-manifest FOLD_MANIFEST]
+                              [--run-id RUN_ID] [--batch-size BATCH_SIZE]
+                              {preflight,smoke,tune}
+python.exe -m unittest: error: argument mode: invalid choice: 'test' (choose from preflight, smoke, tune)
+ok
+test_export_validates_oof_no_model_or_test_access (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_export_validates_oof_no_model_or_test_access) ... ok
+test_manifest_validation_reads_only_train_metadata (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_manifest_validation_reads_only_train_metadata) ... ok
+test_preservation_reports_authorized_edits_and_rejects_unlisted_changes (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_preservation_reports_authorized_edits_and_rejects_unlisted_changes) ... ok
+test_relocated_evidence_requires_exact_hash_and_rejects_path_escape (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_relocated_evidence_requires_exact_hash_and_rejects_path_escape) ... ok
+test_run_is_exclusive_and_old_artifacts_untouched (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_run_is_exclusive_and_old_artifacts_untouched) ... ok
+test_shared_run_loader_filters_each_algorithm_and_rejects_audit_drift (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_shared_run_loader_filters_each_algorithm_and_rejects_audit_drift) ... ok
+test_source_audit_distinguishes_verified_history_and_current_refactor (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_source_audit_distinguishes_verified_history_and_current_refactor) ... ok
+test_stream_extraction_calls_unchanged_public_hog (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_stream_extraction_calls_unchanged_public_hog) ... ok
+test_train_runner_writes_selected_algorithm_into_each_existing_area (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_train_runner_writes_selected_algorithm_into_each_existing_area) ... START knn: 258 images, 3 frozen track folds
+DONE knn: baseline F1=1.000000, selected F1=1.000000, delta=+0.000000, CV=0.0s
+START dt: 258 images, 3 frozen track folds
+DONE dt: baseline F1=1.000000, selected F1=1.000000, delta=+0.000000, CV=0.0s
+ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 9.199s
+
+OK

@@ -1,0 +1,14 @@
+{
+  "upgrade_contributor": "Đặng Quang Tiến",
+  "member_number": 4,
+  "contribution_scope": "Nâng cấp KNN/Decision Tree: mở rộng siêu tham số, tối ưu tra cứu KNN, chẩn đoán OOF, kiểm thử, log, báo cáo và notebook bổ sung.",
+  "original_model_contributor": "Nguyễn Hoàng",
+  "original_member_number": 3,
+  "historical_contributions_preserved": true,
+  "ai_assisted": true,
+  "technical_namespace": "model3_upgrade",
+  "namespace_meaning": "Phần mô hình người 3 được nâng cấp; không chỉ số thứ tự của người thực hiện nâng cấp.",
+  "attribution_requested_by_user": true,
+  "training_source_changed_for_attribution": false,
+  "notebook_attribution": "Được ghi trong tiêu đề, phần phân công và metadata của notebook khi tạo từ full-run artifacts."
+}

@@ -142,3 +142,99 @@ Môi trường `.venv`: Python 3.13.2; sklearn 1.9.1; scikit-image 0.26.0; OpenC
 Lượt suite đầu từ đúng repo root: 46 tests, 45 pass, 1 fail có sẵn ở `src/tests/test_features.py:149`: float32 cumulative PCA vs sum chênh 5,9604645e-08 nhưng assertAlmostEqual 7 places thất bại. Giữ nguyên test/source người 2. Sau đó bổ sung test chặn smoke selection trước khi đọc test: suite cuối 47 tests, 46 pass và cùng 1 fail float32 đó (1,575 giây). Chạy riêng 9 tests người 3: tất cả pass (0,545 giây). `git diff --check` sạch; git status xác nhận chỉ models.py là tracked file sửa, ba file mới và report/knn mới; bundles được ignore. Lệnh test ban đầu từ cwd cha thất bại import `src`; đã sửa cách chạy từ root, không sửa module/path thành viên khác.
 
 Preflight đầu cũng phát hiện thiếu tqdm khi ghi versions; CLI đã xử lý version optional là null. Giữ nguyên thư mục run dở `implementation-preflight-20261113` thay vì ghi đè/xóa. Run v2 và smoke mới hoàn tất đúng giao thức.
+
+---
+
+## Tối ưu HOG KNN trên cùng frozen folds — 2026-11-15
+
+Nội dung này là một phần của **công việc mô hình người3**, không tách thành dự án/thư mục nâng cấp riêng.
+Nguyễn Hoàng thực hiện mô hình gốc; **Đặng Quang Tiến (người4)** thực hiện phần tối ưu dưới đây,
+có AI hỗ trợ. Các kết quả official-test và claim phía trên được giữ nguyên.
+
+### Cơ sở dữ liệu và giao thức
+
+- Winner k7 ở biên grid cũ {3,5,7} là lý do mở rộng k; không dùng official-test errors để chọn tham số.
+  EDA H2 cho thấy số frame không tương đương số track độc lập; H3 gợi ý mô tả lỗi theo kích thước
+  và biển tốc độ. H1 RGB–gray chỉ là phép thăm dò pixel, không suy ra nên đổi màu/HOG.
+- Dùng đúng39.209 ảnh/1.307 tracks, frozen3fold seed42, đủ43 lớp mỗi phía và mỗi ảnh validation
+  một lần. RGB→ROI cận đóng→32×32 AREA→/255→HOG324 giữ nguyên người1/2.
+  StandardScaler chỉ fit fold-train; không chạy lại Pixel/PCA, không augmentation/học sâu.
+- Grid28: k={3,5,7,11,15,21,31}, weights={uniform,distance}, metric={euclidean,manhattan}.
+  Baseline k7/distance/Manhattan đứng đầu; chọn mean macro-F1, hòa lấy candidate đầu,
+  không chọn bằng timing/chất lượng/test. Refit selected trên toàn train, chưa official-test inference.
+- HOG được stream theo batch256 để không giữ toàn mảng RGB (~459MiB); audit SHA256 từng ảnh
+  và raw HOG. Một job,2 numeric threads, Python3.12 trong môi trường riêng của lượt chạy.
+
+### Kết quả thực chạy
+
+| Vai trò | CV macro-F1 mean ± SD | Pooled OOF macro-F1 | Accuracy OOF | Cấu hình |
+|---|---:|---:|---:|---|
+| Baseline | 0.809718 ± 0.016981 | 0.812176 | 0.822311 | k7 / distance / Manhattan |
+| Selected | 0.812096 ± 0.014242 | 0.813967 | 0.827030 | k15 / distance / Manhattan |
+
+Chênh mean fold F1 **+0,2378 điểm phần trăm**; từng fold **−0,001500; +0,004002; +0,004633**.
+Không cải thiện mọi fold, chưa có CI/significance. CV wall toàn grid **280,835s**, refit **0,242s**,
+bundle **42,777MiB**. Không so tốc độ với môi trường lịch sử.
+
+KNN tái dùng một bounded neighbor query stream/metric/fold. Zero-distance/class tie khớp sklearn;
+k-boundary ties dùng direct sklearn fallback cho đúng các hàng đó. Candidate timing **không gồm
+shared scaler/query**; shared timing ghi đúng một lần trong transforms, không cộng lặp thành end-to-end.
+
+### OOF và giới hạn
+
+- Mean macro-F1 theo fold khác pooled OOF F1. Selected dùng chính folds để chọn nên có selection bias,
+  không phải nested/unbiased generalization; SD3fold không phải CI.
+- Nhóm nhỏ `min(W,H)<32` lấy từ EDA; ROI size tách riêng. Brightness/contrast đo trên ROI đã resize32,
+  khác brightness toàn ảnh EDA. Quartile chỉ fit fold-train rồi áp validation.
+- Class/track support, cặp nhầm, nhóm lỗi chỉ mô tả, chưa kiểm soát confounding hoặc chứng minh nhân quả;
+  chưa blur/repeated/nested CV. Test đã từng được EDA xem, không gọi holdout hoàn toàn mù.
+- Smoke3.870 ảnh/129 tracks chỉ baseline1candidate; selected=baseline theo thiết kế, không suy kết quả full.
+  Bản smoke layout-v2 ghi rõ metric không được thử; không dùng smoke như hình kết quả chính.
+
+### Source và bằng chứng
+
+- Logic trực tiếp trong [src/models.py](../src/models.py), CLI [train_models.py](../scripts/train_models.py).
+  APIs gốc/grid cũ vẫn tương thích; không sửa source/test người1/2, main/config/requirements.
+- [Run KNN](knn/hog-full-20261115/), [candidates](knn/hog-full-20261115/knn_candidates.csv),
+  [fold scores](knn/hog-full-20261115/knn_fold_scores.csv),
+  [OOF selected](knn/hog-full-20261115/oof_knn_selected.csv),
+  [console](../logs/knn/hog-full-20261115/console.log), [notebook03](../notebooks/03_models.ipynb).
+- Bảng so sánh KNN/DT dùng chung tiền tố `models_hog-full-20261115_*` tại tables/figures,
+  không tạo folder riêng và không ghi đè kết quả benchmark cũ.
+- Việc gộp chỉ chuyển đường dẫn, không chạy lại mô hình; bytes kết quả/config/provenance/model giữ nguyên.
+  [Bản đồ đường dẫn](../logs/integration/20261115-models/relocations.json) phân biệt source archive với source hiện tại;
+  không sửa hash cũ để làm như source mới tạo ra kết quả cũ.
+- Trước tối ưu suite57/58; lúc full-run model14/14 và evaluation16/16, suite87/88.
+  Sau tích hợp core model17/17, evaluation18/18, suite92/93; đều chỉ lỗi PCA float32 có sẵn
+  tại src/tests/test_features.py:149. Sau gộp folders: model20/20, evaluation18/18, suite95/96;
+  notebook03/04 chạy7/9cells,0 lỗi. Log mỗi thời điểm được giữ nguyên.
+
+[Bảng tổng hợp](tables/models_hog-full-20261115_summary.csv) ·
+[candidates chung](tables/models_hog-full-20261115_candidates.csv) ·
+[delta folds](tables/models_hog-full-20261115_fold_deltas.csv) ·
+[OOF lớp](tables/models_hog-full-20261115_oof_classes.csv) ·
+[OOF nhóm](tables/models_hog-full-20261115_oof_groups.csv) ·
+[cặp nhầm](tables/models_hog-full-20261115_oof_error_pairs.csv) ·
+[ngưỡng train-fold](tables/models_hog-full-20261115_quality_thresholds.csv).
+
+![Baseline/selected — SD không phải CI](figures/models_hog-full-20261115_cv_comparison.png)
+
+![KNN theo k](figures/models_hog-full-20261115_knn_k_curve.png)
+
+![OOF theo kích thước — mô tả, không nhân quả](figures/models_hog-full-20261115_oof_size_errors.png)
+
+Hình có bản dark `_dark.png`, số liệu tương đương trong CSV. Tham khảo
+[phần DT cùng giao thức](notes_dt.md#tối-ưu-hog-dt-trên-cùng-frozen-folds--2026-11-15).
+
+```powershell
+# Chủ ý chạy mới; tên run phải chưa tồn tại ở cả KNN/DT:
+& data/.venv-model3/Scripts/python.exe scripts/train_models.py preflight --dataset-dir data --run-id hog-preflight-new
+& data/.venv-model3/Scripts/python.exe scripts/train_models.py smoke --dataset-dir data --run-id hog-smoke-new
+& data/.venv-model3/Scripts/python.exe scripts/train_models.py tune --dataset-dir data --run-id hog-full-new
+& data/.venv-model3/Scripts/python.exe scripts/summarize_models.py --knn-run report/knn/hog-full-new --dt-run report/dt/hog-full-new
+# Kiểm chứng run đã có bằng nguồn lúc thực nghiệm, không train/predict:
+& data/.venv-model3/Scripts/python.exe scripts/check_model_artifacts.py --knn-run report/knn/hog-full-20261115 --dt-run report/dt/hog-full-20261115 --source-root logs/integration/20261115-canonical/source_before
+```
+
+CLI HOG chỉ preflight/smoke/tune, không có official-test mode. Tái xuất dùng `--export-id` mới.
+Pins môi trường trong [requirements_models.txt](../scripts/requirements_models.txt); chỉ nạp joblib local tin cậy.

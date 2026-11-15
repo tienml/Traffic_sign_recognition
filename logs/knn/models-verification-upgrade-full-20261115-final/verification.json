@@ -1,0 +1,65 @@
+{
+  "started_utc": "2026-11-14T21:34:05.156472+00:00",
+  "python": "D:\\ML\\Traffic_sign_recognition\\data\\.venv-model3\\Scripts\\python.exe",
+  "baseline": false,
+  "steps": {
+    "pip_check": {
+      "exit_code": 0,
+      "seconds": 1.8942771000001812,
+      "log": "logs/model3_upgrade/verification-upgrade-full-20261115-final/pip_check.log"
+    },
+    "pip_freeze": {
+      "exit_code": 0,
+      "seconds": 1.3505086999939522,
+      "log": "logs/model3_upgrade/verification-upgrade-full-20261115-final/pip_freeze.log"
+    },
+    "focused": {
+      "exit_code": 0,
+      "seconds": 15.844005399994785,
+      "log": "logs/model3_upgrade/verification-upgrade-full-20261115-final/focused_tests.log"
+    },
+    "full_suite": {
+      "exit_code": 1,
+      "seconds": 20.51084480001009,
+      "log": "logs/model3_upgrade/verification-upgrade-full-20261115-final/full_suite.log"
+    },
+    "notebook": {
+      "path": "notebooks/03_model3_upgrade.ipynb",
+      "seconds": 4.138243099994725,
+      "error": null,
+      "code_cells": 7,
+      "error_outputs": 0,
+      "exit_code": 0
+    }
+  },
+  "preservation": {
+    "tracked_before": 191,
+    "changed": [
+      {
+        "path": "AI_USAGE.md",
+        "before_sha256": "7c86bb7ead9acdeeb7ed31859ea89a9f8600866ad31ce5be1594959b6196036c",
+        "after_sha256": "bfdf6cdcfc2de3e166b7ab8376798e0a2dea37d2ac35bf9248a2b2a118286b30"
+      },
+      {
+        "path": "report/notes_dt.md",
+        "before_sha256": "3e4e6ea6dd04c340e4bbfe0968cb54873bb22476262d8251b59deb017cb68ee2",
+        "after_sha256": "adf1626efc543d5fb63819f93e386c3e7ac9ee5fe5a67f9805a1b5723801d565"
+      },
+      {
+        "path": "report/notes_knn.md",
+        "before_sha256": "b1cc87c89f45cb81cacd6306c57ac6647896892a8fe442ad8faa32208ae296bb",
+        "after_sha256": "1b9c2c59137b85159c6541189ac237c52b93990ec2e6f62fb04d8b1182f2b33a"
+      }
+    ],
+    "unexpected_changes": [],
+    "documentation_append_only": {
+      "AI_USAGE.md": true,
+      "report/notes_dt.md": true,
+      "report/notes_knn.md": true
+    },
+    "user_document_baseline": "AI_USAGE.md",
+    "protected_unchanged": true
+  },
+  "finished_utc": "2026-11-14T21:34:52.232470+00:00",
+  "all_steps_passed": false
+}

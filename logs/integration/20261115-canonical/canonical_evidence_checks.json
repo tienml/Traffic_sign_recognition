@@ -1,0 +1,69 @@
+{
+  "models_deserialized": false,
+  "fit": false,
+  "new_official_test_inference": false,
+  "canonical_module": "src.evaluate",
+  "checks": [
+    {
+      "algorithm": "knn",
+      "method": "pixel",
+      "rows": 12630,
+      "metrics_classes_groups_confusion": "matched_saved_tables"
+    },
+    {
+      "algorithm": "knn",
+      "method": "hog",
+      "rows": 12630,
+      "metrics_classes_groups_confusion": "matched_saved_tables"
+    },
+    {
+      "algorithm": "knn",
+      "method": "hog_pca",
+      "rows": 12630,
+      "metrics_classes_groups_confusion": "matched_saved_tables"
+    },
+    {
+      "algorithm": "dt",
+      "method": "pixel",
+      "rows": 12630,
+      "metrics_classes_groups_confusion": "matched_saved_tables"
+    },
+    {
+      "algorithm": "dt",
+      "method": "hog",
+      "rows": 12630,
+      "metrics_classes_groups_confusion": "matched_saved_tables"
+    },
+    {
+      "algorithm": "dt",
+      "method": "hog_pca",
+      "rows": 12630,
+      "metrics_classes_groups_confusion": "matched_saved_tables"
+    },
+    {
+      "algorithm": "knn",
+      "role": "baseline",
+      "rows": 39209,
+      "train_oof_metrics": "matched_saved_tables"
+    },
+    {
+      "algorithm": "knn",
+      "role": "selected",
+      "rows": 39209,
+      "train_oof_metrics": "matched_saved_tables"
+    },
+    {
+      "algorithm": "dt",
+      "role": "baseline",
+      "rows": 39209,
+      "train_oof_metrics": "matched_saved_tables"
+    },
+    {
+      "algorithm": "dt",
+      "role": "selected",
+      "rows": 39209,
+      "train_oof_metrics": "matched_saved_tables"
+    }
+  ],
+  "status": "passed"
+}

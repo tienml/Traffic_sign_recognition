@@ -1,0 +1,12 @@
+{
+  "model_verification_final": {
+    "exit_code": 0,
+    "seconds": 50.19204580000951,
+    "log": "logs/integration/20261115-models/model_verification_final.log"
+  },
+  "evaluation_verification_final": {
+    "exit_code": 1,
+    "seconds": 45.59296650000033,
+    "log": "logs/integration/20261115-models/evaluation_verification_final.log"
+  }
+}

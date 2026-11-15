@@ -1,0 +1,27 @@
+{
+  "authorized_changes": [
+    "README.md",
+    "AI_USAGE.md",
+    "report/notes_knn.md",
+    "report/notes_dt.md",
+    "report/notes_evaluation_tien.md",
+    "report/evaluation_scope_tien.md",
+    "report/handoff_tien.md",
+    "scripts/train_model3_upgrade.py",
+    "scripts/summarize_model3_upgrade.py",
+    "scripts/check_model3_artifacts.py",
+    "scripts/create_model3_notebook.py",
+    "scripts/verify_model3_upgrade.py",
+    "scripts/finalize_model3_upgrade.py",
+    "scripts/evaluate_saved_models.py",
+    "scripts/create_evaluation_notebook.py",
+    "scripts/verify_evaluation.py",
+    "scripts/complete_tien_evaluation.py",
+    "scripts/write_evaluation_report.py",
+    "src/tests/test_model_upgrade_runner.py",
+    "notebooks/04_evaluation_tien.ipynb"
+  ],
+  "byte_preserved_relocations": 139,
+  "no_new_training": true,
+  "no_new_test_inference": true
+}
