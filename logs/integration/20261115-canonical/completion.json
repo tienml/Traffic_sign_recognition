@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-15",
+  "finished_utc": "2026-11-15T03:20:19.612694+00:00",
+  "contributor": "Đặng Quang Tiến",
+  "member_number": 4,
+  "canonical_modules": [
+    "src/models.py",
+    "src/evaluate.py"
+  ],
+  "removed_modules": [
+    "src/model_upgrade.py",
+    "src/evaluation_saved.py"
+  ],
+  "focused_model_tests": {
+    "passed": 17,
+    "total": 17
+  },
+  "focused_evaluation_tests": {
+    "passed": 18,
+    "total": 18
+  },
+  "full_suite": {
+    "passed": 92,
+    "total": 93,
+    "exit_code": 1,
+    "all_tests_passed": false,
+    "known_failure": "test_pca_variance_curve_is_cumulative_and_capped"
+  },
+  "notebooks": {
+    "03": {
+      "code_cells": 7,
+      "error_outputs": 0
+    },
+    "04": {
+      "code_cells": 9,
+      "error_outputs": 0
+    },
+    "original_files_unchanged": true
+  },
+  "legacy_model_functions_ast_unchanged": [
+    "BatchScorer",
+    "_float32",
+    "batch_predict",
+    "classification_metrics",
+    "first_best_index",
+    "grouped_folds",
+    "knn_candidates",
+    "knn_pipeline",
+    "load_knn_bundle",
+    "save_knn_bundle",
+    "track_groups",
+    "train_and_tune",
+    "tune_grouped_knn",
+    "validate_folds"
+  ],
+  "legacy_evaluation_executable_body_unchanged": true,
+  "canonical_saved_evidence_parity": {
+    "historical_official_test_csv": 6,
+    "train_oof_csv": 4,
+    "passed": true
+  },
+  "source_snapshots_verified": 36,
+  "historical_evaluation_implementation_bytes_verified": true,
+  "model_bundle_hashes_preserved": 4,
+  "before_files": 399,
+  "authorized_changed_files": 19,
+  "all_other_recorded_files_unchanged": 380,
+  "unexpected_changes": [],
+  "local_document_links_checked": 99,
+  "missing_links": [],
+  "git_diff_check_passed": true,
+  "canonical_source_sha256": {
+    "README.md": "b2c0afec31f957999c86c4ef2e2533287d6c1cf91dcdbbd57ea8dbaf7bd8e883",
+    "AI_USAGE.md": "02e94051d9fcf231f6b2fb01165eed62fd72c120915213f4191af66dc72bed7e",
+    "src/models.py": "bfad51875ad876e379be7f13afe5a637cd93bf42bc01e1f3c9cc107cb1547a47",
+    "src/evaluate.py": "ec15e4981e911b9aae2b6bc169f3642837a2c23120b896aee1dc9cb655ce174a",
+    "scripts/train_model3_upgrade.py": "e8e1bd8070d44333342ddfa16fb540835fd790572be2d52b3c1c385aac3aea9d",
+    "scripts/evaluate_saved_models.py": "d1b44cfd920db36e51afc4c53b1b155e5d76a2ea68b1c8ffd1a8de83145d3da5",
+    "scripts/check_model3_artifacts.py": "cb68901e2f8dc6822b9fdda2ccd70137de2b4c4aeea4749f199b8d13c8568ced",
+    "scripts/verify_model3_upgrade.py": "27558594271739212b8bd1594c155c445d179c655e6353635b493e7296c69310",
+    "scripts/verify_evaluation.py": "9ce5b8dbb99845b6051346e77d86ff9126d9966f62bd75cc10bae8088559dc1d",
+    "src/tests/test_model_upgrade.py": "765f8499d99b501db7d6e0a2e5e57c02464eff64b214c337fbf33f99325db2bd",
+    "src/tests/test_model_upgrade_runner.py": "362027bcf1f82f81014e86f0b21b2c954c5061ddec946ec3b0f3365e4b179aba",
+    "src/tests/test_evaluation_saved.py": "f508f6e46f5e7cea7aaf4b7a40ca08124cab7b594a67591c59acdf191329930d",
+    "src/tests/test_evaluation_runner.py": "0891824596cc65dcf7a6280afba5421e055c2a87ab369dd53f1eb33c1f2a3939",
+    "report/notes_model3_upgrade.md": "c8dc6c965eada5377dd1f7ad86f0ffc6205c4af407c3bec152d984d78cc5899e",
+    "report/notes_evaluation_tien.md": "76bfe70bc1708cf3e6e39fca78f82c3ca1a03fa55da6f3cd574f1f8451852932",
+    "report/evaluation_scope_tien.md": "4e724e63056d98322d09a04cdeb023996781067916c03e7ee57c59fe84a62a23",
+    "report/handoff_tien.md": "84f3b59177e5ab96ff1d33b473ba5a8feed8f97271d5f5a1107e5c6ac407bae6"
+  },
+  "new_dataset_training": false,
+  "new_official_test_inference": false,
+  "historical_hashes_rewritten": false,
+  "committed": false,
+  "pushed": false,
+  "status": "completed_with_known_baseline_pca_test_failure"
+}

@@ -1,0 +1,61 @@
+# Nhật ký sử dụng công cụ AI (AI Usage Log)
+
+Nhóm khai báo việc sử dụng AI theo từng thành viên ở bảng dưới. AI có thể hỗ trợ viết code, phân tích và chạy kiểm thử; kết quả chạy tự động không đồng nghĩa thành viên đã tự kiểm tra hoặc giải thích được mọi dòng. Mỗi thành viên cần tự đọc, xác minh và chịu trách nhiệm về phần bàn giao.
+
+| Thành viên | Công cụ AI sử dụng | Mục đích sử dụng | Phần nội dung/code áp dụng |
+| :--- | :--- | :--- | :--- |
+| Cả nhóm | Gemini | Khởi tạo cấu trúc thư mục chuẩn và khung hàm I/O | `main.py`, `src/config.py` |
+| Vũ Khánh Hùng | Claude Code | Hỗ trợ viết code đọc ảnh và cache, logging, kiểm thử; vẽ biểu đồ EDA; soạn/chạy ablation;| `src/preprocessing.py`, `src/tests/test_preprocessing.py`, `notebooks/01_eda.ipynb`, `notebooks/02_preprocessing_ablation.ipynb`|
+| Thành viên 2 (Sơn) | Claude Code | Hỗ trợ viết `FeatureExtractor` (pixel/HOG/PCA), kiểm thử chống rò rỉ, script ablation và biểu đồ | `src/features.py`, `src/tests/test_features.py`, `scripts/feature_ablation.py`, `report/figures/feature_ablation.png` |
+| Nguyễn Hoàng (Người 3) | Claude Code | Hỗ trợ triển khai KNN theo track, CV/tuning và đóng băng cấu hình; tổng hợp artifact đã lưu, bảng/hình, logging, kiểm thử và tài liệu | `src/models.py`, `scripts/train_knn.py`, `scripts/summarize_knn.py`, `src/tests/test_models.py`, `src/tests/test_knn_summary.py`, `report/notes_knn.md`, các output `knn_*`, mục 5 README |
+| Đặng Quang Tiến (Người 4) | Claude Code | Nâng cấp KNN/DT, đánh giá và phân tích lỗi; tích hợp vào cấu trúc chuẩn, kiểm thử và lưu bằng chứng | `src/models.py`, `src/evaluate.py`, scripts/tests liên quan, notebooks03/04, reports/tables/figures/logs mới |
+
+### Vũ Khánh Hùng — kiểm chứng và trách nhiệm cá nhân
+
+- Trợ lý AI đã hỗ trợ thực thi kiểm thử/notebook trên dữ liệu local; bằng chứng nằm trong output notebook và `logs/`. Không coi đó là bằng chứng người học đã tự thực hiện các bước.
+- **Nguồn tham khảo:** GTSRB/IJCNN 2011 và các trang tải được dẫn ở README, mục 0 notebook EDA. Giấy phép bản dữ liệu local còn cần xác minh; không tự khẳng định quyền tái phân phối.
+- **Giới hạn:** KNN trong EDA/ablation là thăm dò test con, không phải kết quả cuối; giữ nguyên mô-đun đặc trưng, mô hình và đánh giá 
+- **Bổ sung ngày 2026-11-12:** hệ thống hóa 3 giả thuyết từ kết quả đã có, diễn giải các hình và trường hợp đặc biệt, làm rõ việc giữ nhãn/hướng biển trái–phải và không lật ảnh. Không chạy thí nghiệm mới để chứng minh lợi ích của việc không lật; không coi phần diễn giải này là kiểm chứng cá nhân của thành viên.
+
+### Nguyễn Hoàng — phần KNN và trách nhiệm xác minh
+
+- AI hỗ trợ code KNN/CV theo `(ClassId, TrackId)`, kiểm thử pipeline và đóng băng selection; báo cáo dựa trên full run `report/knn/full-knn-01` và test run `report/knn/20261113T194939Z-test-adf82d0d`. Lượt cập nhật tài liệu này không retrain/tune/inference hoặc chọn lại theo official test.
+- AI tạo helper `scripts/summarize_knn.py` đọc artifacts, xác minh selection SHA256/claim, so khớp cấu hình và tính lại metrics từ predictions đã lưu; xuất CSV `report/tables/knn_*`, hình `report/figures/knn_cv_test.png`, provenance/log tại `logs/knn/`. Đây không phải điểm số do mô hình ngôn ngữ ước lượng. Kết quả HOG winner: CV macro-F1 0,809718 ± 0,016981, test Accuracy 0,818369 / macro-F1 0,789750.
+- AI chạy 12 focused tests: pass; full suite 50 tests: 49 pass, 1 fail float32 cumulative variance tại `src/tests/test_features.py:149`. Nhật ký trước đó là 9/9 modeling và 46/47 toàn suite. Giữ nguyên phần nguồn/test người 1/2; không tuyên bố toàn bộ kiểm thử đạt. Log thực thi mới lưu ở `logs/knn/knn_focused_tests.log` và `knn_full_suite.log`.
+- Giữ loader log lịch sử bằng bản sao từ run, không xóa nguồn. Sao chép console full training/testing từ thư mục tạm bị hệ thống quyền từ chối; không tạo console giả hoặc chạy lại official test để lấy log. Các console lịch sử có legacy encoding/escape; không tuyên bố đã khôi phục Unicode.
+- Giới hạn được AI ghi rõ trong `report/notes_knn.md`: test từng được EDA thăm dò, một seed/ba fold, grid 12 candidates, hash metadata không chứng minh độc lập nội dung ảnh, chi phí lưu vector/tra cứu KNN, PCA dimensions theo từng fit, lớp recall thấp và cặp nhầm chỉ suy ra từ labels/predictions. Không suy đoán mờ/ánh sáng khi chưa xem ảnh, không thay phân tích lỗi người 4, không tuyên bố đã làm Decision Tree.
+- Nguyễn Hoàng cần tự đọc, chạy/xác minh và giải thích phần bàn giao trước khi nộp. Những kiểm tra do trợ lý thực thi **không phải bằng chứng người học đã tự thực hiện hoặc hiểu mọi dòng**. Không sửa các mục người 1/2 trong README và nhật ký AI này; không commit/push trong lượt cập nhật.
+
+### Nguyễn Hoàng — bổ sung Decision Tree (2026-11-14)
+
+- Claude Code hỗ trợ viết `src/decision_tree.py`, `scripts/train_dt.py`, `scripts/summarize_dt.py`, `src/tests/test_decision_tree.py`, `report/notes_dt.md` và mục6 README. Giữ nguyên KNN và phần người1/2/4; không commit/push/xuất bản bên ngoài.
+- AI chạy preflight/smoke rồi **full144 CV fits +3 refit** trên39.209 ảnh/1.307 tracks,16 candidates mỗi biểu diễn, cùng frozen manifest KNN, không sampling. `full-dt-01` đóng băng winner HOG(entropy/depth20/split5), CV macro-F1 0,614898 ±0,011907 trước test. `test-dt-01` đánh giá một lần mỗi biểu diễn trên12.630 ảnh: HOG Accuracy0,656770/F1 0,594987; Pixel0,635313/0,563179; HOG+PCA0,591607/0,536760. Không retune/chọn lại theo test hoặc chạy lại KNN.
+- Smoke đầu bị lỗi ghi JSON do numpy.int64 tree statistics; AI sửa cast int, thêm test orchestration synthetic rồi chạy run v2 mới. Giữ run lỗi; không tạo log giả, không ghi đè hoặc chạy official test để xử lý lỗi.
+- AI sửa reviewer defect: test gate so metadata.config.hog_params/image_contract với extraction hiện tại trước claim/Test.csv; regression HOG cùng dimensions nhưng block_norm drift và ROI contract drift. **20/20 focused pass**, full suite **57/58**, còn cùng lỗi float32 PCA người2 tại `src/tests/test_features.py:149`, không sửa code/tolerance người2. Logs `logs/dt/focused_tests_contract.log`, `full_suite_contract.log`; run JSON/CSV `report/dt/`, bundles ignored `data/models/dt/`.
+- AI xuất đủ5 bảng full `report/tables/dt_full-dt-01_*` và hình từ saved artifacts, xác minh count12.630/method, alignment và recomputed metrics, không inference lại. Console full tune/test, export log và provenance nằm `logs/dt/`; console ngoài tune có legacy encoding/escape, console nội UTF-8 giữ CV. Viewer ảnh trả rỗng, chưa xác nhận trực quan. Tổng search+refit đo thật13246,755s (~3,68h), không gồm load/extract; chưa đo peak RAM. Báo cáo ghi timing boundaries, lớp recall thấp/cặp nhầm quan sát và so sánh KNN không retune: DT HOG F1 thấp hơn KNN HOG0,194763 trên test này, không suy ra significance.
+- Test đã từng được EDA thăm dò; hash CSV không xác minh toàn bộ ảnh; một seed/3fold/grid hẹp và cây đơn có giới hạn. Nguyễn Hoàng cần tự đọc, chạy/xác minh, giải thích và chịu trách nhiệm; kết quả trợ lý chạy không phải xác nhận người học tự thực hiện.
+
+### Đặng Quang Tiến — nâng cấp phần mô hình người 3 (2026-11-15)
+
+- **Người phụ trách phần nâng cấp: Đặng Quang Tiến (người 4)**, có Claude Code hỗ trợ triển khai/thực thi. Phần KNN/DT gốc và các kết quả lịch sử vẫn thuộc công việc của Nguyễn Hoàng (người 3). Tên kỹ thuật `model3_upgrade` chỉ đối tượng được nâng cấp, không phải người thực hiện.
+- Trợ lý hỗ trợ bổ sung `src/model_upgrade.py`, scripts train/export/verify/notebook riêng và tests; giữ nguyên HOG/nguồn/test người2, các phần công việc khác, main/config/requirements và mọi kết quả/claim cũ. Các báo cáo KNN/DT chỉ nối thêm mục nâng cấp; báo cáo chi tiết ở `report/notes_model3_upgrade.md`.
+- Nâng cấp chỉ học máy truyền thống: mở rộng KNN k đến31 và thử leaf/class_weight/pruning cho DT trên cùng frozen track CV, không thêm mạng nơ-ron hay thay biểu diễn. Lưu OOF để đối chiếu H2/H3 của EDA; không mở official test ở luồng mới, không tuyên bố CV/OOF selected là nested/unbiased evaluation.
+- Kiểm thử nền57/58, sau triển khai13/13 tests mới và70/71 toàn suite; giữ nguyên lỗi PCA float32 người2. Bằng chứng thực chạy và môi trường ở `logs/model3_upgrade/`, kết quả full sẽ được ghi từ artifacts thực tế thay vì suy từ smoke. Model/joblib và venv mới ở `data/` đã ignore; notebook chỉ đọc artifacts khi Run All để tránh retrain ngoài ý muốn.
+- Thành viên cần tự kiểm tra, giải thích và chịu trách nhiệm; các kiểm tra do trợ lý thực hiện không thay xác minh cá nhân. Không commit/push hoặc đưa nội dung/dữ liệu dự án lên dịch vụ bên ngoài trong lượt nâng cấp.
+
+### Đặng Quang Tiến — hoàn thiện đánh giá và phân tích lỗi (2026-11-15)
+
+- Người phụ trách: **Đặng Quang Tiến (người4)**. Trợ lý hỗ trợ module đánh giá saved predictions, confusion43lớp, per-class/paired/group diagnostics, ảnh lỗi, audit trùng byte, tests, logs/report và notebook04. Giữ nguyên phần gốc của người1/2/3 và hàm evaluate_and_analyze cũ; chỉ thêm files/output có namespace mới.
+- Đối chiếu sáu bộ predictions lịch sử với Test.csv hiện tại, selection/claim và metrics; không fit/predict, không nạp joblib hoặc chạy official test mới. Kết quả OOF nâng cấp tách riêng, có selection bias, không gọi là nested/unbiased estimate hoặc điểm test mới.
+- Log và verification thực chạy nằm logs/evaluation/, báo cáo report/notes_evaluation_tien.md, bảng/ảnh evaluation_<run-id>_* và notebook notebooks/04_evaluation_tien.ipynb đã lưu output. Giữ nguyên lỗi PCA float32 người2; không tuyên bố toàn suite pass.
+- Phân tích lỗi/ảnh minh họa chỉ mô tả, không khẳng định nguyên nhân mờ/tối hoặc significance. Test đã xem ở EDA; trùng byte không chứng minh ảnh hưởng đến metrics và không loại trừ near-duplicate. Người học tự xác minh và chịu trách nhiệm; không commit/push hoặc xuất bản ra dịch vụ ngoài.
+- **Kết quả hoàn tất:** train-CV upgrade39209 ảnh/1307tracks: KNN baseline F1=0,809718 → k15/distance/Manhattan=0,812096; DT baseline0,614898 → ccp_alpha0,0005=0,621998. Chưa official-test evaluation model mới. Notebook03 chạy7 code cells, notebook04 chạy9 code cells, đều0 lỗi; tests nâng cấp14/14 và evaluation16/16 pass, toàn suite87/88 còn đúng lỗi PCA cũ. Full-run nâng cấp xuất8 bảng/6 hình; đánh giá xuất12 bảng/20 hình. Completion/verification và SHA256 preservation xác nhận không sửa nguồn/kết quả lịch sử của người1/2/3; giữ bản nhật ký người dùng đã sửa rồi chỉ nối thêm khai báo này.
+
+### Đặng Quang Tiến — tích hợp vào cấu trúc repo (2026-11-15)
+
+- Theo yêu cầu mới, trợ lý chuyển logic nâng cấp trực tiếp vào `src/models.py` và logic đánh giá vào `src/evaluate.py`, bỏ hai module bổ sung `src/model_upgrade.py`/`src/evaluation_saved.py`. Giữ API/grid cũ để không phá scripts KNN/DT lịch sử; phần Tiến có tên API riêng rõ ràng, không dùng shim hoặc module model core song song.
+- Cập nhật imports/tests, fingerprint cho run tương lai, README/phân công và tài liệu liên quan. Không sửa source/tests/EDA/features người1/2, main.py, cấu hình/requirements chung, dữ liệu, model bundles hoặc kết quả/claim/provenance lịch sử.
+- Có snapshot hash/toàn bộ source trước chuyển tại `logs/integration/20261115-canonical/`. Audit source lịch sử dùng exact bytes bản lưu, báo drift source hiện tại riêng; không thay hash trong config cũ. Kiểm tra preservation mới liệt kê chính xác file refactor được phép đổi, không gọi chúng là chưa thay đổi.
+- Verifier lưu bản notebook executed dưới thư mục verification tag mới thay vì ghi đè notebook gốc. Lượt tích hợp chỉ chạy tests synthetic, đọc lại predictions/artifacts và notebook; không full training/retune hoặc official-test inference mới. Kết quả thực thi mới được ghi trong verification/completion tại thư mục log tích hợp, không sửa log cũ.
+- **Verification thực chạy sau tích hợp:** model17/17 và evaluation18/18 pass; toàn suite92/93, chỉ lỗi PCA có sẵn. Notebook03/04 chạy7/9 code cells,0 error outputs, lưu executed copy thay vì overwrite bản gốc. Canonical evaluation tính lại sáu CSV official-test và bốn CSV OOF khớp bảng đã lưu; kiểm tra model hashes và source archive pass, current-source drift được báo rõ. Logs mới ở `logs/integration/20261115-canonical/` và hai tag `verification-canonical-20261115`, không sửa log thực nghiệm trước đó.
+- Phần nâng cấp/tích hợp thuộc Đặng Quang Tiến (người4), đóng góp model gốc Nguyễn Hoàng được giữ rõ. Trợ lý không commit/push hoặc xuất bản nội dung lên dịch vụ ngoài; thành viên tự xác minh và chịu trách nhiệm.

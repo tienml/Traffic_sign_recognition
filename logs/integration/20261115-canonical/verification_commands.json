@@ -1,0 +1,17 @@
+{
+  "artifact_check": {
+    "exit_code": 0,
+    "seconds": 4.878676799999084,
+    "log": "logs/integration/20261115-canonical/artifact_check.log"
+  },
+  "models_verification": {
+    "exit_code": 0,
+    "seconds": 46.10758219999843,
+    "log": "logs/integration/20261115-canonical/models_verification.log"
+  },
+  "evaluation_verification": {
+    "exit_code": 0,
+    "seconds": 42.01043629999913,
+    "log": "logs/integration/20261115-canonical/evaluation_verification.log"
+  }
+}

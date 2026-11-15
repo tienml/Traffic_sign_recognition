@@ -1,0 +1,31 @@
+{
+  "path": "notebooks/03_models.ipynb",
+  "executed_copy": "logs/knn/verification-merged-20261115/03_models.ipynb",
+  "source_notebook_overwritten": false,
+  "seconds": 5.01216490000661,
+  "error": null,
+  "code_cells": 7,
+  "error_outputs": 0,
+  "exit_code": 0
+}
+
+CELL 2, execution_count=1
+Saved train-CV runs: {'knn': WindowsPath('D:/ML/Traffic_sign_recognition/report/knn/hog-full-20261115'), 'dt': WindowsPath('D:/ML/Traffic_sign_recognition/report/dt/hog-full-20261115')}
+No automatic training or model inference.
+
+CELL 4, execution_count=2
+
+CELL 6, execution_count=3
+
+CELL 8, execution_count=4
+KNN
+DT
+
+CELL 10, execution_count=5
+KNN weakest classes
+DT weakest classes
+
+CELL 12, execution_count=6
+
+CELL 14, execution_count=7
+Recorded-source hashes verified; no models deserialized.

@@ -1,0 +1,57 @@
+{
+  "train_models": {
+    "exit_code": 0,
+    "help": "usage: train_models.py [-h] [--dataset-dir DATASET_DIR]\n                       [--fold-manifest FOLD_MANIFEST] [--run-id RUN_ID]\n                       [--batch-size BATCH_SIZE]\n                       {preflight,smoke,tune}\n\nKNN/DT HOG training in the existing algorithm-specific run directories. Run\nfrom the repository root with data/.venv-model3/Scripts/python.exe. Existing\nfeatures, models, selections, test claims and reports are not overwritten.\n\npositional arguments:\n  {preflight,smoke,tune}\n\noptions:\n  -h, --help            show this help message and exit\n  --dataset-dir DATASET_DIR\n  --fold-manifest FOLD_MANIFEST\n  --run-id RUN_ID\n  --batch-size BATCH_SIZE\n",
+    "stderr": ""
+  },
+  "summarize_models": {
+    "exit_code": 0,
+    "help": "usage: summarize_models.py [-h] --knn-run KNN_RUN --dt-run DT_RUN\n                           [--export-id EXPORT_ID]\n\nExport saved KNN/DT train-CV results, without models or official-test\ninference.\n\noptions:\n  -h, --help            show this help message and exit\n  --knn-run KNN_RUN\n  --dt-run DT_RUN\n  --export-id EXPORT_ID\n                        Optional new suffix to re-export without overwriting\n",
+    "stderr": ""
+  },
+  "check_model_artifacts": {
+    "exit_code": 0,
+    "help": "usage: check_model_artifacts.py [-h] --knn-run KNN_RUN --dt-run DT_RUN\n                                [--source-root SOURCE_ROOT]\n\nAudit completed KNN/DT train-CV runs without official test or model pickle.\n\noptions:\n  -h, --help            show this help message and exit\n  --knn-run KNN_RUN\n  --dt-run DT_RUN\n  --source-root SOURCE_ROOT\n                        Verify historical source hashes against an archived\n                        source tree; working-tree drift is reported separately\n                        (default: strict current source)\n",
+    "stderr": ""
+  },
+  "create_model_notebook": {
+    "exit_code": 0,
+    "help": "usage: create_model_notebook.py [-h] --knn-run KNN_RUN --dt-run DT_RUN\n                                [--output OUTPUT]\n\nCreate notebook03 from saved KNN/DT runs; never train or infer automatically.\n\noptions:\n  -h, --help         show this help message and exit\n  --knn-run KNN_RUN\n  --dt-run DT_RUN\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  "verify_models": {
+    "exit_code": 0,
+    "help": "usage: verify_models.py [-h] --tag TAG [--baseline] [--notebook NOTEBOOK]\n                        [--preservation-snapshot PRESERVATION_SNAPSHOT]\n                        [--relocations RELOCATIONS]\n                        [--allowed-change ALLOWED_CHANGE]\n\nRecord actual test/environment/notebook execution and preservation evidence.\nOnly new logs under logs/knn/verification-<tag> are written. The baseline\nsuite is not silently fixed if a historical person-2 test fails.\n\noptions:\n  -h, --help            show this help message and exit\n  --tag TAG\n  --baseline\n  --notebook NOTEBOOK\n  --preservation-snapshot PRESERVATION_SNAPSHOT\n  --relocations RELOCATIONS\n  --allowed-change ALLOWED_CHANGE\n                        Explicit authorized refactor path; repeat for each\n                        changed file\n",
+    "stderr": ""
+  },
+  "finalize_models": {
+    "exit_code": 0,
+    "help": "usage: finalize_models.py [-h] --knn-run KNN_RUN --dt-run DT_RUN\n                          --verification-tag VERIFICATION_TAG\n                          [--notebook NOTEBOOK] [--source-root SOURCE_ROOT]\n                          --preservation-snapshot PRESERVATION_SNAPSHOT\n                          [--allowed-change ALLOWED_CHANGE]\n\nAudit/export a new KNN/DT train-CV run and append results to their reports.\nOne-shot command: existing export/notebook/report markers are rejected. It\nnever trains, infers, removes claims, rewrites historical hashes, or edits\nAI_USAGE.md.\n\noptions:\n  -h, --help            show this help message and exit\n  --knn-run KNN_RUN\n  --dt-run DT_RUN\n  --verification-tag VERIFICATION_TAG\n  --notebook NOTEBOOK\n  --source-root SOURCE_ROOT\n  --preservation-snapshot PRESERVATION_SNAPSHOT\n  --allowed-change ALLOWED_CHANGE\n",
+    "stderr": ""
+  },
+  "complete_tien_evaluation": {
+    "exit_code": 0,
+    "help": "usage: complete_tien_evaluation.py [-h] --knn-run KNN_RUN --dt-run DT_RUN\n                                   --run-id RUN_ID [--notebook NOTEBOOK]\n                                   --preservation-snapshot\n                                   PRESERVATION_SNAPSHOT\n                                   [--allowed-change ALLOWED_CHANGE]\n\nOne-shot saved-prediction evaluation after completed KNN/DT train-CV runs. No\ntraining or new inference. Existing outputs and AI_USAGE.md are not\noverwritten.\n\noptions:\n  -h, --help            show this help message and exit\n  --knn-run KNN_RUN\n  --dt-run DT_RUN\n  --run-id RUN_ID\n  --notebook NOTEBOOK\n  --preservation-snapshot PRESERVATION_SNAPSHOT\n  --allowed-change ALLOWED_CHANGE\n",
+    "stderr": ""
+  },
+  "evaluate_saved_models": {
+    "exit_code": 0,
+    "help": "usage: evaluate_saved_models.py [-h] [--dataset-dir DATASET_DIR] --knn-run\n                                KNN_RUN --dt-run DT_RUN [--run-id RUN_ID]\n\nĐặng Quang Tiến (member 4): complete evaluation from saved predictions only.\nNo estimator is loaded, fit or asked to predict. Historical official test and\nnew training OOF remain separate. Existing sources, claims and outputs are\nread-only.\n\noptions:\n  -h, --help            show this help message and exit\n  --dataset-dir DATASET_DIR\n  --knn-run KNN_RUN\n  --dt-run DT_RUN\n  --run-id RUN_ID\n",
+    "stderr": ""
+  },
+  "create_evaluation_notebook": {
+    "exit_code": 0,
+    "help": "usage: create_evaluation_notebook.py [-h] --run-dir RUN_DIR [--output OUTPUT]\n\nBuild member4's saved-artifact evaluation notebook with no model execution.\n\noptions:\n  -h, --help         show this help message and exit\n  --run-dir RUN_DIR\n  --output OUTPUT\n",
+    "stderr": ""
+  },
+  "verify_evaluation": {
+    "exit_code": 0,
+    "help": "usage: verify_evaluation.py [-h] --run-dir RUN_DIR --tag TAG\n                            [--notebook NOTEBOOK]\n                            [--preservation-snapshot PRESERVATION_SNAPSHOT]\n                            [--relocations RELOCATIONS]\n                            [--allowed-change ALLOWED_CHANGE]\n\nVerify member4 evaluation: focused tests, original suite, notebook and\nartifacts.\n\noptions:\n  -h, --help            show this help message and exit\n  --run-dir RUN_DIR\n  --tag TAG\n  --notebook NOTEBOOK\n  --preservation-snapshot PRESERVATION_SNAPSHOT\n  --relocations RELOCATIONS\n  --allowed-change ALLOWED_CHANGE\n                        Explicit authorized refactor path; repeat for each\n                        changed file\n",
+    "stderr": ""
+  },
+  "write_evaluation_report": {
+    "exit_code": 0,
+    "help": "usage: write_evaluation_report.py [-h] --run-dir RUN_DIR --verification-dir\n                                  VERIFICATION_DIR [--output OUTPUT]\n\nWrite a new member4 report from verified evaluation tables (no model calls).\n\noptions:\n  -h, --help            show this help message and exit\n  --run-dir RUN_DIR\n  --verification-dir VERIFICATION_DIR\n  --output OUTPUT\n",
+    "stderr": ""
+  }
+}

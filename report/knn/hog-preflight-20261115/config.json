@@ -1,0 +1,414 @@
+{
+  "run_id": "upgrade-preflight-20261115",
+  "mode": "preflight",
+  "dataset_root": "D:\\ML\\Traffic_sign_recognition\\data",
+  "train_sha256": "4e00ce71e4bdd9fc424d93f81ff82056c6b5cb9bbc48269741e628a134c4712b",
+  "source_manifest_sha256": "c5453353dbe7fdf77013f978e61a20b5c55a95f299eacac70a33676b0c43a1fb",
+  "environment": {
+    "python": "3.12.10",
+    "executable": "D:\\ML\\Traffic_sign_recognition\\data\\.venv-model3\\Scripts\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.9.1",
+      "scikit-image": "0.26.0",
+      "opencv-python": "5.0.0.93",
+      "scipy": "1.18.1",
+      "joblib": "1.6.0",
+      "threadpoolctl": "3.7.0",
+      "matplotlib": "3.11.2",
+      "nbformat": "5.11.1",
+      "nbclient": "0.11.0"
+    }
+  },
+  "seed": 42,
+  "n_jobs": 1,
+  "numeric_threads": 2,
+  "batch_size": 256,
+  "hog_params": {
+    "orientations": 9,
+    "pixels_per_cell": [
+      8,
+      8
+    ],
+    "cells_per_block": [
+      2,
+      2
+    ],
+    "block_norm": "L2-Hys"
+  },
+  "image_contract": {
+    "size": [
+      32,
+      32
+    ],
+    "color": "RGB",
+    "roi": true,
+    "scale": "divide255",
+    "augmentation": false
+  },
+  "representations": [
+    "hog"
+  ],
+  "person2_unchanged": true,
+  "knn_candidates": [
+    {
+      "candidate_id": "knn_baseline",
+      "params": {
+        "n_neighbors": 7,
+        "weights": "distance",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k3_uniform_euclidean",
+      "params": {
+        "n_neighbors": 3,
+        "weights": "uniform",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k3_uniform_manhattan",
+      "params": {
+        "n_neighbors": 3,
+        "weights": "uniform",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k3_distance_euclidean",
+      "params": {
+        "n_neighbors": 3,
+        "weights": "distance",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k3_distance_manhattan",
+      "params": {
+        "n_neighbors": 3,
+        "weights": "distance",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k5_uniform_euclidean",
+      "params": {
+        "n_neighbors": 5,
+        "weights": "uniform",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k5_uniform_manhattan",
+      "params": {
+        "n_neighbors": 5,
+        "weights": "uniform",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k5_distance_euclidean",
+      "params": {
+        "n_neighbors": 5,
+        "weights": "distance",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k5_distance_manhattan",
+      "params": {
+        "n_neighbors": 5,
+        "weights": "distance",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k7_uniform_euclidean",
+      "params": {
+        "n_neighbors": 7,
+        "weights": "uniform",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k7_uniform_manhattan",
+      "params": {
+        "n_neighbors": 7,
+        "weights": "uniform",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k7_distance_euclidean",
+      "params": {
+        "n_neighbors": 7,
+        "weights": "distance",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k11_uniform_euclidean",
+      "params": {
+        "n_neighbors": 11,
+        "weights": "uniform",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k11_uniform_manhattan",
+      "params": {
+        "n_neighbors": 11,
+        "weights": "uniform",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k11_distance_euclidean",
+      "params": {
+        "n_neighbors": 11,
+        "weights": "distance",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k11_distance_manhattan",
+      "params": {
+        "n_neighbors": 11,
+        "weights": "distance",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k15_uniform_euclidean",
+      "params": {
+        "n_neighbors": 15,
+        "weights": "uniform",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k15_uniform_manhattan",
+      "params": {
+        "n_neighbors": 15,
+        "weights": "uniform",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k15_distance_euclidean",
+      "params": {
+        "n_neighbors": 15,
+        "weights": "distance",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k15_distance_manhattan",
+      "params": {
+        "n_neighbors": 15,
+        "weights": "distance",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k21_uniform_euclidean",
+      "params": {
+        "n_neighbors": 21,
+        "weights": "uniform",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k21_uniform_manhattan",
+      "params": {
+        "n_neighbors": 21,
+        "weights": "uniform",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k21_distance_euclidean",
+      "params": {
+        "n_neighbors": 21,
+        "weights": "distance",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k21_distance_manhattan",
+      "params": {
+        "n_neighbors": 21,
+        "weights": "distance",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k31_uniform_euclidean",
+      "params": {
+        "n_neighbors": 31,
+        "weights": "uniform",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k31_uniform_manhattan",
+      "params": {
+        "n_neighbors": 31,
+        "weights": "uniform",
+        "metric": "manhattan"
+      }
+    },
+    {
+      "candidate_id": "knn_k31_distance_euclidean",
+      "params": {
+        "n_neighbors": 31,
+        "weights": "distance",
+        "metric": "euclidean"
+      }
+    },
+    {
+      "candidate_id": "knn_k31_distance_manhattan",
+      "params": {
+        "n_neighbors": 31,
+        "weights": "distance",
+        "metric": "manhattan"
+      }
+    }
+  ],
+  "dt_candidates": [
+    {
+      "candidate_id": "dt_baseline",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 1,
+        "class_weight": null,
+        "ccp_alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "dt_leaf1_balanced",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 1,
+        "class_weight": "balanced",
+        "ccp_alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "dt_leaf2_none",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 2,
+        "class_weight": null,
+        "ccp_alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "dt_leaf2_balanced",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 2,
+        "class_weight": "balanced",
+        "ccp_alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "dt_leaf5_none",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 5,
+        "class_weight": null,
+        "ccp_alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "dt_leaf5_balanced",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 5,
+        "class_weight": "balanced",
+        "ccp_alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "dt_leaf10_none",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 10,
+        "class_weight": null,
+        "ccp_alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "dt_leaf10_balanced",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 10,
+        "class_weight": "balanced",
+        "ccp_alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "dt_alpha_1e-4",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 1,
+        "class_weight": null,
+        "ccp_alpha": 0.0001
+      }
+    },
+    {
+      "candidate_id": "dt_alpha_5e-4",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 1,
+        "class_weight": null,
+        "ccp_alpha": 0.0005
+      }
+    },
+    {
+      "candidate_id": "dt_alpha_1e-3",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 1,
+        "class_weight": null,
+        "ccp_alpha": 0.001
+      }
+    }
+  ],
+  "source_sha256": {
+    "scripts/train_model3_upgrade.py": "33154cabb6d2273f89af4a1cf0d2d65fd9b83bc536c6040e0992cfc5bd6a0713",
+    "src/model_upgrade.py": "7a647057160223232689be857d0a417ad74640f572de0865494698db4278d120",
+    "src/models.py": "ba958570df6372016a48b5896696a56f090398a6ae101edcb8c9a95ab3755084",
+    "src/decision_tree.py": "743ca4ddcc02c69aca3e926c88ecc70db134dd6f0a6da32ae4beab56e701da02",
+    "src/features.py": "e36d2ca98ac410e92ee0916c5f434e6f856e30e6c00cb2fde700b2d336f5b325",
+    "src/preprocessing.py": "a7d90f0cd654a12362ca2255a8a83c6c1ff9e7377cee58aac75dc4a52d53aa87",
+    "src/config.py": "da8189feef82e564f7ebbb26c057167fdab3a34ee3f43fef901649c03faf9e08"
+  },
+  "official_test_read": false
+}

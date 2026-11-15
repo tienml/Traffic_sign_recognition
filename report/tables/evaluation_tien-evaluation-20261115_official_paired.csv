@@ -1,0 +1,4 @@
+split,method,name_first,name_second,n,both_correct,first_only_correct,second_only_correct,both_wrong,accuracy_difference_first_minus_second,discordant
+historical_official_test,pixel,knn,dt,12630,5392,1646,2632,2960,-0.07806809184481393,4278
+historical_official_test,hog,knn,dt,12630,7696,2640,599,1695,0.1615993665874901,3239
+historical_official_test,hog_pca,knn,dt,12630,6969,3093,503,2065,0.20506730007917656,3596

@@ -1,0 +1,37 @@
+{
+  "exit_code": 0,
+  "error": null,
+  "errors": 0,
+  "seconds": 3.6497732999996515,
+  "code_cells": 9,
+  "executed_copy": "logs/evaluation/verification-merged-20261115/04_evaluation_tien.ipynb",
+  "source_notebook_overwritten": false
+}
+
+CELL 2, execution_count=1
+Contributor: Đặng Quang Tiến member 4
+All recorded input/output SHA256 checks passed, including relocated KNN/DT evidence.
+Historical hashes are unchanged; directory relocation does not create new experiment results.
+
+CELL 4, execution_count=2
+
+CELL 6, execution_count=3
+Các hình còn lại: knn_pixel, knn_hog_pca, dt_pixel, dt_hog_pca; xem report/figures.
+
+CELL 8, execution_count=4
+KNN weakest classes
+DT weakest classes
+
+CELL 10, execution_count=5
+KNN top confusion pairs
+DT top confusion pairs
+
+CELL 12, execution_count=6
+
+CELL 14, execution_count=7
+
+CELL 16, execution_count=8
+Exact byte pairs: 8 — split unchanged
+
+CELL 18, execution_count=9
+No new official-test score for upgraded models.

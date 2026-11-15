@@ -1,0 +1,2 @@
+candidate_id,params,mean_f1_macro,mean_accuracy,mean_precision_macro,mean_recall_macro,std_f1_macro,cv_seconds_sum,timing_scope
+knn_baseline,"{""metric"": ""manhattan"", ""n_neighbors"": 7, ""weights"": ""distance""}",0.6238194585710118,0.6385012919896641,0.669105035818795,0.6385012919896641,0.04904917573370322,0.03591240005334839,candidate_only_excludes_shared_scaler_and_neighbors

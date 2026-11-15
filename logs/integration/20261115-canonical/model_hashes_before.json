@@ -1,0 +1,6 @@
+{
+  "data/models/model3_upgrade/upgrade-full-20261115/hog_dt.joblib": "027ede62770339e5c729582d05fd596e34c3fda841fd72258d6154b25d03632f",
+  "data/models/model3_upgrade/upgrade-full-20261115/hog_knn.joblib": "62a81c88052539d2b17187e063d7a53e811c4da5f9b32bff9222326fbb2eb0b3",
+  "data/models/model3_upgrade/upgrade-smoke-20261115/hog_dt.joblib": "f1714191e8b45767f64c28c99465a7dbe6a7daba5dd913e273b9422a659febc8",
+  "data/models/model3_upgrade/upgrade-smoke-20261115/hog_knn.joblib": "2ff3374466822d82d86c686d90ee5f7366ea358821fce8e9cb09661c7ac4d668"
+}

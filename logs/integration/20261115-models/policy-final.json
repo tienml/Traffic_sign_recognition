@@ -1,0 +1,29 @@
+{
+  "authorized_changes": [
+    "README.md",
+    "AI_USAGE.md",
+    "report/notes_knn.md",
+    "report/notes_dt.md",
+    "report/notes_evaluation_tien.md",
+    "report/evaluation_scope_tien.md",
+    "report/handoff_tien.md",
+    "scripts/train_model3_upgrade.py",
+    "scripts/summarize_model3_upgrade.py",
+    "scripts/check_model3_artifacts.py",
+    "scripts/create_model3_notebook.py",
+    "scripts/verify_model3_upgrade.py",
+    "scripts/finalize_model3_upgrade.py",
+    "scripts/requirements_model3_upgrade.txt",
+    "scripts/evaluate_saved_models.py",
+    "scripts/create_evaluation_notebook.py",
+    "scripts/verify_evaluation.py",
+    "scripts/complete_tien_evaluation.py",
+    "scripts/write_evaluation_report.py",
+    "src/tests/test_model_upgrade_runner.py",
+    "notebooks/04_evaluation_tien.ipynb"
+  ],
+  "policy_revision": "Final scope includes the renamed requirements file whose version pins are unchanged and whose two header comments now name KNN/DT logs.",
+  "previous_verification_notice": "The first final evaluation verification rejected this comment-only change because the initial explicit allowlist omitted the renamed requirements file. Its failure log is preserved. No historical hash or test failure was changed to hide the rejection.",
+  "no_new_training": true,
+  "no_new_test_inference": true
+}

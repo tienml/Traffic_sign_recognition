@@ -82,3 +82,71 @@ Chạy tuần tự n_jobs1, numeric threads2, batch128. Một mảng ảnh/pixel
 **Không chạy lại tune/test các id trên, không xóa claim.** Nếu chỉ tái xuất từ artifacts, dùng export-id mới (ví dụ `full-dt-review-02`), không inference lại.
 
 Giới hạn: cây đơn dễ overfit/không ổn định, một seed/3fold/grid hẹp, không pruning/class weights hay nested evaluation, test đã thăm dò trước đó và hash metadata không xác minh mọi ảnh. Đây chỉ là phân loại biển đã định vị, không phát hiện biển trong toàn cảnh. Thành viên cần tự đọc, kiểm chứng, giải thích và chịu trách nhiệm; tests do AI chạy không chứng minh người học tự thực hiện.
+
+---
+
+## Tối ưu HOG DT trên cùng frozen folds — 2026-11-15
+
+Phần này được gộp vào công việc mô hình người3: Nguyễn Hoàng thực hiện DT gốc;
+**Đặng Quang Tiến (người4)** thực hiện phần regularization, có AI hỗ trợ.
+Kết quả full-run/official-test/claims gốc phía trên giữ nguyên, không chuyển quyền đóng góp.
+
+### Giao thức và grid
+
+Giữ HOG324 và StandardScaler fit fold-train trên39.209 ảnh/1.307 tracks, đúng frozen3fold seed42
+của KNN. Không sửa source/test người1/2, không thay đặc trưng/PCA hoặc thêm học sâu.
+EDA H2 cho thấy mất cân bằng10,71 lần nhưng ít frame không tất yếu F1 thấp; vì vậy thử
+class_weight là giả thuyết cần đo, không mặc định cân bằng lớp sẽ tốt hơn.
+
+Grid11 giữ criterion=entropy, max_depth20, min_samples_split5:
+- Leaf={1,2,5,10} × class_weight={None,balanced}, ccp_alpha0:8 cấu hình.
+- Thêm alpha={0,0001;0,0005;0,001} tại leaf1/weightNone:3 cấu hình.
+- Baseline leaf1/weightNone/alpha0 đứng đầu; chọn mean macro-F1, hòa lấy candidate đầu.
+  Đây là search có mục tiêu, chưa exhaustive interactions hoặc mọi criterion/depth.
+
+### Kết quả thực chạy
+
+| Vai trò | CV macro-F1 mean ± SD | Pooled OOF F1 | Mean train F1 | Cấu hình |
+|---|---:|---:|---:|---|
+| Baseline | 0.614898 ± 0.011907 | 0.616536 | 0.958216 | entropy / depth20 / split5 / leaf1 / alpha0 |
+| Selected | 0.621998 ± 0.013418 | 0.623811 | 0.870078 | như baseline, ccp_alpha0,0005 |
+
+Mean CV F1 tăng **0,7100 điểm phần trăm**; delta từng fold **+0,005655; +0,010867; +0,004779**.
+CV wall toàn11candidates **3410,951s**, refit toàn train **149,248s**, bundle **0,113MiB**.
+Candidate timing gồm fit+validation/train predict, không gồm shared scaler. Chạy một job/2 numeric threads;
+không so tốc độ với máy/môi trường lịch sử, chưa đo peak RAM.
+
+Train F1 giảm và validation F1 tăng trong protocol này phù hợp tác động regularization,
+nhưng chưa đủ chứng minh tổng quát hóa ngoài các folds. **Chưa có official-test score của model mới.**
+Selected OOF dùng cùng folds chọn tham số nên có selection bias; mean fold khác pooled OOF,
+SD3fold không phải CI/significance. Không suy overfit/nhân quả chỉ từ test gap.
+
+### Artifacts và chẩn đoán
+
+- Logic trong [src/models.py](../src/models.py); helper DT gốc trong [src/decision_tree.py](../src/decision_tree.py)
+  giữ tương thích. CLI chung [train_models.py](../scripts/train_models.py) ghi vào đúng `dt/` và `knn/`.
+- [Run DT](dt/hog-full-20261115/), [candidates](dt/hog-full-20261115/dt_candidates.csv),
+  [fold scores](dt/hog-full-20261115/dt_fold_scores.csv),
+  [OOF selected](dt/hog-full-20261115/oof_dt_selected.csv),
+  [console](../logs/dt/hog-full-20261115/console.log), [notebook03](../notebooks/03_models.ipynb).
+- [Bảng tổng hợp](tables/models_hog-full-20261115_summary.csv),
+  [delta folds](tables/models_hog-full-20261115_fold_deltas.csv),
+  [OOF lớp](tables/models_hog-full-20261115_oof_classes.csv),
+  [nhóm](tables/models_hog-full-20261115_oof_groups.csv),
+  [cặp nhầm](tables/models_hog-full-20261115_oof_error_pairs.csv).
+- Nhóm nhỏ32 từ EDA; brightness/contrast trên resized ROI32, quartiles fit fold-train;
+  chỉ mô tả, chưa class/track confounding hoặc blur. Chi tiết giao thức chung/timing KNN,
+  tái lập và giới hạn ở [mục tương ứng báo cáo KNN](notes_knn.md#tối-ưu-hog-knn-trên-cùng-frozen-folds--2026-11-15).
+- Smoke3.870 ảnh chỉ baseline, không dùng suy full. API old grids/benchmark results/claims không bị ghi đè.
+  Model17/17 và evaluation18/18 pass sau tích hợp core, suite92/93 chỉ lỗi PCA float32 người2;
+  logs lịch sử giữ nguyên, không sửa tolerance cho đẹp điểm. Sau gộp folders model20/20,
+  evaluation18/18 pass, suite95/96 cùng lỗi PCA; notebook03/04 chạy7/9cells,0 lỗi.
+- Gộp thư mục là di chuyển byte-preserving, không retrain/inference; source/config/model hashes
+  kiểm tra bằng [bản đồ relocation](../logs/integration/20261115-models/relocations.json).
+
+![Baseline/selected — SD không phải CI](figures/models_hog-full-20261115_cv_comparison.png)
+
+![OOF theo kích thước — chỉ mô tả](figures/models_hog-full-20261115_oof_size_errors.png)
+
+Hình có bản dark, CSV equivalents trong tables. Môi trường Python3.12 theo
+[requirements_models.txt](../scripts/requirements_models.txt); chỉ load joblib local tin cậy.

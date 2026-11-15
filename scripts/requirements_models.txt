@@ -1,0 +1,14 @@
+# Isolated KNN/DT experiment environment; does not replace ../requirements.txt.
+# Python 3.12; actual tested versions are recorded in logs/knn/ and logs/dt/.
+numpy==2.5.3
+pandas==2.3.3
+opencv-python==5.0.0.93
+scikit-image==0.26.0
+scikit-learn==1.9.1
+scipy==1.18.1
+matplotlib==3.11.2
+joblib==1.6.0
+threadpoolctl==3.7.0
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.3.0

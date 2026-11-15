@@ -1,0 +1,2 @@
+candidate_id,params,mean_f1_macro,mean_accuracy,mean_precision_macro,mean_recall_macro,std_f1_macro,cv_seconds_sum,timing_scope,mean_train_f1_macro
+dt_baseline,"{""ccp_alpha"": 0.0, ""class_weight"": null, ""criterion"": ""entropy"", ""max_depth"": 20, ""min_samples_leaf"": 1, ""min_samples_split"": 5}",0.4425384391573832,0.4550387596899225,0.4609002450353679,0.4550387596899225,0.014782861253997937,20.833186100018793,fit_and_train_valid_predict_excludes_shared_scaler,0.9615067640109535

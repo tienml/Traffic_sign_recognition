@@ -1,0 +1,9 @@
+{
+  "train_images": 39209,
+  "tracks": 1307,
+  "folds": 3,
+  "raw_features": 324,
+  "knn_candidates": 28,
+  "dt_candidates": 11,
+  "official_test_read": false
+}
