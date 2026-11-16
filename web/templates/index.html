@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Signal Lab — Nhận diện và tra cứu biển báo giao thông GTSRB bằng học máy.">
+  <meta name="color-scheme" content="light dark">
+  <title>Signal Lab</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+  <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Đến nội dung chính</a>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-sign" viewBox="0 0 24 24"><path d="M12 3 3 12l9 9 9-9-9-9Z"/><path d="M8 12h8m-3-3 3 3-3 3"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m13-5v3a2 2 0 0 1-2 2h-3M7 12h10"/><path d="m9 9 3-3 3 3m-6 6 3 3 3-3"/></symbol>
+    <symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10m6-10v10"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m-4 4 4-4 4 4M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></symbol>
+    <symbol id="i-theme" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 7a7 7 0 0 1 11.6-1L20 9M4 15l2.3 3A7 7 0 0 0 18 17"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 4 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3L13.7 4a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4m0 3v.1"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M10 2v4m4-4v4m-4 12v4m4-4v4M2 10h4m-4 4h4m12-4h4m-4 4h4"/><rect x="10" y="10" width="4" height="4" rx=".5"/></symbol>
+  </svg>
+
+  <aside class="sidebar" aria-label="Điều hướng ứng dụng">
+    <a class="brand" href="#nhan-dien" aria-label="Signal Lab, trang nhận diện">
+      <span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-sign"/></svg></span>
+      <span class="brand-name">Signal Lab<span>Traffic sign recognition</span></span>
+    </a>
+    <div class="sidebar-section-label">NHẬN DIỆN & TRA CỨU</div>
+    <nav class="main-nav" aria-label="Chức năng chính">
+      <a class="nav-link is-active" href="#nhan-dien" data-view="nhan-dien" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-scan"/></svg><span>Nhận diện</span></a>
+      <a class="nav-link" href="#danh-muc" data-view="danh-muc" aria-label="Danh mục 43 biển báo"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><span>Danh mục</span><span class="nav-count">43</span></a>
+    </nav>
+    <div class="sidebar-bottom"><span class="sidebar-caption">KNN & Decision Tree</span></div>
+  </aside>
+
+  <div class="app-shell">
+    <header class="page-header">
+      <div class="header-copy"><p class="eyebrow">SIGNAL LAB / GTSRB</p><h1 id="page-title">Nhận diện biển báo</h1><p id="page-subtitle" class="page-subtitle">Từ một ảnh biển báo đến một dự đoán có thể kiểm tra.</p></div>
+      <div class="header-tools">
+        <span class="local-badge" title="Ảnh được xử lý bởi máy chủ Flask của ứng dụng, không gửi tới dịch vụ AI bên thứ ba."><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Chạy cục bộ</span>
+        <div class="theme-control"><svg class="icon" aria-hidden="true"><use href="#i-theme"/></svg><label class="sr-only" for="theme-select">Giao diện</label><select id="theme-select" aria-label="Chọn giao diện"><option value="system">Hệ thống</option><option value="light">Sáng</option><option value="dark">Tối</option></select></div>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section id="view-nhan-dien" class="app-view" aria-label="Nhận diện biển báo">
+        <div class="info-banner"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p><strong>Mỗi lần một biển báo.</strong> Chọn ảnh đã cắt sát biển hoặc nhập vùng ROI. Ứng dụng phân loại biển báo, không tự phát hiện biển trong ảnh đường phố.</p></div>
+
+        <form id="prediction-form" class="workspace" enctype="multipart/form-data" novalidate>
+          <section class="panel upload-panel" aria-labelledby="upload-heading">
+            <div class="panel-heading"><div class="heading-with-icon"><svg class="icon" aria-hidden="true"><use href="#i-image"/></svg><h2 id="upload-heading">Ảnh đầu vào</h2></div><span class="subtle-label">PNG, JPG, WEBP</span></div>
+            <div class="panel-body upload-body">
+              <label id="dropzone" class="dropzone" for="image-file">
+                <input id="image-file" type="file" name="image" accept="image/png,image/jpeg,image/webp,.png,.jpg,.jpeg,.webp" aria-describedby="file-help clipboard-help file-error">
+                <span class="upload-icon"><svg class="icon" aria-hidden="true"><use href="#i-upload"/></svg></span>
+                <strong>Kéo ảnh biển báo vào đây</strong><span>hoặc <span class="link-text">chọn từ thiết bị</span></span><span id="file-help" class="dropzone-help">Một biển báo rõ nét · Tối đa 10 MB</span>
+              </label>
+              <div id="image-preview-panel" class="image-preview-panel" hidden>
+                <div id="input-image-area" class="preview-stage" tabindex="0" role="group" aria-label="Ảnh đầu vào, nhấn Ctrl+C hoặc Command+C để sao chép ảnh" aria-describedby="clipboard-help"><img id="upload-preview" alt="Ảnh biển báo đã chọn để nhận diện"><span class="preview-tag">Ảnh đầu vào</span></div>
+                <div class="preview-meta"><div class="file-details"><strong id="file-name"></strong><span id="image-dimensions" class="subtle-label"></span></div><div class="preview-actions"><button id="change-image" type="button" class="button button-quiet">Đổi ảnh</button><button id="remove-image" type="button" class="icon-button" aria-label="Bỏ ảnh đã chọn" title="Bỏ ảnh"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button></div></div>
+              </div>
+              <div class="clipboard-controls"><p id="clipboard-help" class="help-text">Ctrl+V dán ảnh; chọn ảnh xem trước rồi Ctrl+C sao chép. Trên Mac dùng ⌘ thay Ctrl.</p><button id="copy-image-button" type="button" class="button button-secondary" aria-describedby="clipboard-help" disabled><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>Sao chép ảnh</button><p id="clipboard-status" class="help-text" role="status" aria-live="polite" aria-atomic="true"></p></div>
+              <p id="file-error" class="inline-error" role="alert" hidden></p>
+
+              <details id="roi-details" class="roi-details">
+                <summary><svg class="icon" aria-hidden="true"><use href="#i-scan"/></svg><span>Chọn vùng biển báo <span class="subtle-label">(tùy chọn)</span></span><svg class="icon details-chevron" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+                <div class="roi-body"><label class="check-label" for="roi-enabled"><input id="roi-enabled" type="checkbox">Dùng vùng chọn ROI</label><p class="help-text">Tọa độ trên ảnh gốc, tính cả hai điểm biên. Để tắt nếu ảnh đã cắt sát biển.</p><div class="roi-grid"><div><label for="roi-x1">X trái</label><input id="roi-x1" type="number" min="0" step="1" value="0" inputmode="numeric" disabled></div><div><label for="roi-y1">Y trên</label><input id="roi-y1" type="number" min="0" step="1" value="0" inputmode="numeric" disabled></div><div><label for="roi-x2">X phải</label><input id="roi-x2" type="number" min="0" step="1" value="0" inputmode="numeric" disabled></div><div><label for="roi-y2">Y dưới</label><input id="roi-y2" type="number" min="0" step="1" value="0" inputmode="numeric" disabled></div></div><p id="roi-help" class="help-text">Chọn ảnh để biết giới hạn tọa độ.</p><p id="roi-error" class="inline-error" role="alert" hidden></p></div>
+              </details>
+
+              <section class="samples-section" aria-labelledby="samples-heading"><div class="section-heading"><h3 id="samples-heading">Thử ảnh có sẵn</h3><button id="reload-samples" class="button button-text" type="button" hidden>Thử lại</button></div><div id="sample-list" class="sample-list" aria-busy="true"></div><p id="sample-status" class="help-text" role="status">Đang tìm ảnh minh họa…</p><p class="sample-disclaimer">Ảnh từ tập train, chỉ dùng minh họa.</p></section>
+
+              <div class="model-control"><div class="section-heading"><label for="model-select">Mô hình nhận diện</label><span id="model-status" class="model-status" role="status">Đang kiểm tra</span></div><select id="model-select" disabled aria-describedby="model-description"><option value="">Đang tìm mô hình…</option></select><p id="model-description" class="help-text">Chỉ sử dụng mô hình thực tế được lưu trong dự án.</p></div>
+              <div id="model-setup" class="model-setup" hidden><div class="setup-heading"><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg><strong id="setup-title">Chưa có mô hình sẵn sàng</strong></div><p id="setup-description">Mở terminal tại thư mục dự án và chạy lệnh bên dưới để huấn luyện. Sau đó kiểm tra lại.</p><div class="command-line"><label class="sr-only" for="train-command">Lệnh huấn luyện</label><input id="train-command" value="python main.py train" readonly spellcheck="false"><button id="copy-command" type="button" class="icon-button" aria-label="Sao chép lệnh huấn luyện" title="Sao chép lệnh"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div><div class="setup-footer"><span id="copy-status" class="help-text" role="status"></span><button id="reload-models" type="button" class="button button-text"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg>Kiểm tra lại</button></div></div>
+              <div class="submit-area"><button id="recognize-button" class="button button-primary" type="submit" disabled><svg class="icon" aria-hidden="true"><use href="#i-scan"/></svg><span id="predict-button-text">Nhận diện biển báo</span><svg class="icon button-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button><p id="predict-hint" class="help-text">Chọn một ảnh và mô hình sẵn sàng để bắt đầu.</p></div>
+            </div>
+          </section>
+
+          <section id="result-panel" class="panel result-panel" aria-labelledby="result-heading" aria-busy="false" data-state="idle">
+            <div class="panel-heading"><div class="heading-with-icon"><svg class="icon" aria-hidden="true"><use href="#i-scan"/></svg><h2 id="result-heading">Kết quả nhận diện</h2></div><span id="result-status" class="status-pill">Chưa nhận diện</span></div>
+            <div class="panel-body result-body">
+              <div id="result-empty" class="result-empty"><div id="empty-icon" class="empty-icon"><svg class="icon" aria-hidden="true"><use href="#i-sign"/></svg></div><span id="result-spinner" class="spinner" aria-hidden="true" hidden></span><h3 id="empty-title">Kết quả sẽ xuất hiện ở đây</h3><p id="empty-description">Chọn ảnh biển báo và mô hình, sau đó bấm Nhận diện để xem dự đoán cùng điểm hỗ trợ.</p><span class="empty-caption">Không có dự đoán giả lập</span></div>
+              <div id="request-error" class="request-error" role="alert" hidden><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><h3>Chưa thể nhận diện ảnh</h3><p id="request-error-text"></p><div class="action-row"><button id="retry-predict" type="button" class="button button-secondary"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg>Thử lại</button><button id="error-change-image" type="button" class="button button-quiet">Đổi ảnh</button></div></div>
+              <div id="prediction-result" class="prediction-result" hidden>
+                <div class="prediction-summary"><div class="predicted-sign"><img id="predicted-icon" alt="" hidden><span id="predicted-icon-fallback" aria-hidden="true"></span></div><div class="prediction-label"><span class="eyebrow">DỰ ĐOÁN HÀNG ĐẦU</span><h3 id="prediction-label"></h3><p id="prediction-label-en" class="help-text"></p><span id="prediction-class-id" class="class-id"></span></div></div>
+                <div class="prediction-score"><span>Điểm hỗ trợ của mô hình</span><strong id="prediction-score"></strong></div>
+                <dl class="inference-meta"><div><dt>Mô hình</dt><dd id="prediction-model"></dd></div><div><dt>Thời gian suy luận</dt><dd id="prediction-latency"></dd></div></dl>
+                <section class="top-predictions" aria-labelledby="top-heading"><div class="section-heading"><h3 id="top-heading">5 lớp có điểm cao nhất</h3><button id="score-table-toggle" type="button" class="button button-text" aria-expanded="false" aria-controls="top-table-wrapper"><svg class="icon" aria-hidden="true"><use href="#i-table"/></svg><span id="score-toggle-text">Xem bảng</span></button></div><div id="score-chart"><ol id="top-list" class="score-list"></ol><div class="score-scale" aria-hidden="true"><span>0%</span><span>100%</span></div></div><div id="top-table-wrapper" class="table-scroll" hidden><table class="score-table"><caption class="sr-only">Điểm hỗ trợ các lớp dự đoán, không phải độ chính xác.</caption><thead><tr><th scope="col">Lớp</th><th scope="col">Biển báo</th><th scope="col" class="numeric">Điểm hỗ trợ</th></tr></thead><tbody id="top-table-body"></tbody></table></div><p class="score-disclaimer"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Điểm hỗ trợ chưa được hiệu chỉnh, không phải độ chính xác hay mức chắc chắn của dự đoán.</span></p></section>
+                <ul id="prediction-warnings" class="prediction-warnings" hidden></ul>
+                <details id="processed-details" class="processed-details" hidden><summary>Ảnh sau tiền xử lý<svg class="icon details-chevron" aria-hidden="true"><use href="#i-chevron"/></svg></summary><div class="processed-body"><img id="processed-image" alt="Ảnh RGB 32 × 32 sau khi cắt vùng ROI nếu có"><p class="help-text">Ảnh RGB 32 × 32 được đưa vào bước trích xuất đặc trưng.</p></div></details>
+                <div class="result-actions"><button id="predict-again" type="button" class="button button-quiet"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg>Nhận diện lại</button></div>
+              </div>
+            </div>
+            <div class="result-panel-footer"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Ảnh ngoài 43 lớp GTSRB vẫn có thể bị gán nhầm vào một lớp.</span></div>
+          </section>
+        </form>
+      </section>
+
+      <section id="view-danh-muc" class="app-view" aria-label="Danh mục 43 biển báo" hidden>
+        <div class="catalog-toolbar"><div class="search-field"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><label class="sr-only" for="class-search">Tìm biển báo</label><input id="class-search" type="search" placeholder="Tìm tên biển báo hoặc mã lớp…" autocomplete="off"></div><div class="category-control"><label class="sr-only" for="category-filter">Lọc nhóm biển báo</label><select id="category-filter"><option value="">Tất cả nhóm biển</option></select></div><button id="reload-classes" type="button" class="icon-button" title="Tải lại danh mục" aria-label="Tải lại danh mục"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg></button></div>
+        <div class="catalog-heading"><p id="class-count" class="help-text" role="status">Đang tải danh mục…</p><span class="subtle-label">Nhãn lớp theo bộ dữ liệu GTSRB</span></div><div id="class-grid" class="class-grid" aria-busy="true"></div><div id="catalog-empty" class="catalog-empty" hidden><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><h2 id="catalog-empty-title">Không tìm thấy biển báo</h2><p id="catalog-empty-description">Thử tên khác, mã lớp từ 0 đến 42 hoặc bỏ bộ lọc nhóm.</p><button id="clear-class-filters" type="button" class="button button-secondary">Xóa bộ lọc</button></div>
+      </section>
+
+      <footer class="page-footer"><div class="pipeline"><span class="pipeline-label">LUỒNG XỬ LÝ</span><p>RGB <span aria-hidden="true">→</span> ROI <span aria-hidden="true">→</span> 32 × 32 <span aria-hidden="true">→</span> Pixel / HOG <span aria-hidden="true">→</span> Scaler / PCA <span aria-hidden="true">→</span> KNN / DT</p></div><p>Công cụ minh họa học thuật. Không dùng cho điều khiển xe hoặc quyết định an toàn thời gian thực.</p></footer>
+    </main>
+  </div>
+  <div id="result-live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript><div class="noscript-message">Bật JavaScript để tải danh mục mô hình, chọn ảnh và nhận diện biển báo. Máy chủ Flask vẫn cần được chạy tại máy của bạn.</div></noscript>
+</body>
+</html>
