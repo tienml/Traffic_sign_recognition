@@ -219,6 +219,58 @@ lại Flask rồi nhấn Ctrl+F5 để tránh cache JavaScript cũ.
 Dự đoán trên ảnh train chỉ xác nhận tích hợp, **không phải** accuracy
 mới của model. Các kiểm thử giới hạn upload có ResourceWarning tạm thời từ
 Werkzeug test client, không làm thất bại test.
+=======
+
+| Model | Pixel Accuracy / F1 macro | HOG Accuracy / F1 macro | HOG+PCA Accuracy / F1 macro |
+|---|---:|---:|---:|
+| KNN | 0,557245 / 0,493948 | **0,818369 / 0,789750** | 0,796675 / 0,763063 |
+| DT | 0,635313 / 0,563179 | **0,656770 / 0,594987** | 0,591607 / 0,536760 |
+
+### Tuning HOG mở rộng trong cùng phần mô hình
+
+| Model | Baseline CV F1 | Selected CV F1 | Cấu hình selected |
+|---|---:|---:|---|
+| KNN | 0,809718 | 0,812096 | k15 / distance / Manhattan |
+| DT | 0,614898 | 0,621998 | entropy / depth20 / split5 / ccp_alpha0,0005 |
+
+Kết quả tuning chỉ là **train-CV**, chưa có official-test score cho models mới.
+OOF selected có selection bias; SD3fold không phải CI. Test đã từng được EDA thăm dò,
+không phải holdout hoàn toàn mù. Audit phát hiện8 cặp ảnh trùng byte train–test;
+không loại ảnh hoặc đổi benchmark. Phân tích nhóm/ảnh lỗi không chứng minh nhân quả.
+
+## 4. Cách chạy
+
+### Đọc kết quả đã có — không train lại
+
+Mở notebooks trong VS Code và chọn đúng kernel:
+- [01_eda.ipynb](notebooks/01_eda.ipynb): dữ liệu và giả thuyết EDA.
+- [02_preprocessing_ablation.ipynb](notebooks/02_preprocessing_ablation.ipynb): ablation tiền xử lý.
+- [03_models.ipynb](notebooks/03_models.ipynb): kết quả KNN/DT, grid/CV/OOF và timing.
+- [04_evaluation_tien.ipynb](notebooks/04_evaluation_tien.ipynb): metrics/confusions/phân tích lỗi.
+
+Notebook03/04 chỉ đọc saved artifacts khi Run All. Notebook01/02 có thăm dò dữ liệu/test
+và chi phí thực thi riêng, không xem đó là điểm benchmark cuối.
+
+### Chạy thí nghiệm mới có chủ ý
+
+```powershell
+# HOG KNN/DT, dùng lại frozen train folds; run-id phải mới ở cả hai thuật toán:
+python scripts/train_models.py preflight --dataset-dir data --run-id hog-preflight-new
+python scripts/train_models.py tune --dataset-dir data --run-id hog-full-new
+# Xuất bảng/hình từ kết quả đã lưu; thêm --export-id mới nếu đã export:
+python scripts/summarize_models.py --knn-run report/knn/hog-full-new --dt-run report/dt/hog-full-new
+# Đánh giá bằng saved predictions, không load/fit/predict model:
+python scripts/evaluate_saved_models.py --dataset-dir data --knn-run report/knn/hog-full-20261115 --dt-run report/dt/hog-full-20261115 --run-id evaluation-new
+# Kiểm thử:
+python -B -m unittest discover -s src/tests -v
+```
+
+CLI gốc [train_knn.py](scripts/train_knn.py)/[train_dt.py](scripts/train_dt.py) và exporters
+vẫn tương thích; protocol chi tiết trong báo cáo. **Không chạy lại official test cho
+selection đã có claim hoặc xóa claim để chạy lại.** CLI `train_models.py` không có mode test.
+
+[main.py](main.py) là pipeline khung legacy: CV chưa group track, scaler/PCA được tính
+trước CV. Không dùng `python main.py` để tái tạo các điểm đã audit hoặc inference test lần nữa.
 
 ## 5. Cấu trúc và tài liệu
 
