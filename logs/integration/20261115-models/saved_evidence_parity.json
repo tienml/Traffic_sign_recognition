@@ -1,0 +1,70 @@
+{
+  "fit": false,
+  "predict": false,
+  "models_deserialized": false,
+  "checked": [
+    {
+      "algorithm": "knn",
+      "method": "pixel",
+      "rows": 12630,
+      "metrics_match": true
+    },
+    {
+      "algorithm": "knn",
+      "method": "hog",
+      "rows": 12630,
+      "metrics_match": true
+    },
+    {
+      "algorithm": "knn",
+      "method": "hog_pca",
+      "rows": 12630,
+      "metrics_match": true
+    },
+    {
+      "algorithm": "knn",
+      "role": "baseline",
+      "rows": 39209,
+      "metrics_match": true
+    },
+    {
+      "algorithm": "knn",
+      "role": "selected",
+      "rows": 39209,
+      "metrics_match": true
+    },
+    {
+      "algorithm": "dt",
+      "method": "pixel",
+      "rows": 12630,
+      "metrics_match": true
+    },
+    {
+      "algorithm": "dt",
+      "method": "hog",
+      "rows": 12630,
+      "metrics_match": true
+    },
+    {
+      "algorithm": "dt",
+      "method": "hog_pca",
+      "rows": 12630,
+      "metrics_match": true
+    },
+    {
+      "algorithm": "dt",
+      "role": "baseline",
+      "rows": 39209,
+      "metrics_match": true
+    },
+    {
+      "algorithm": "dt",
+      "role": "selected",
+      "rows": 39209,
+      "metrics_match": true
+    }
+  ],
+  "historical_provenance_sha256_entries": 66,
+  "duplicate_evidence_copies_verified": 36,
+  "status": "passed"
+}

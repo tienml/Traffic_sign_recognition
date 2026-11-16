@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "smoke_only",
+  "winner": "hog_pca",
+  "methods": [
+    {
+      "method": "pixel",
+      "candidate_index": 0,
+      "params": {
+        "knn__metric": "euclidean",
+        "knn__n_neighbors": 3,
+        "knn__weights": "uniform"
+      },
+      "cv_f1_macro": 0.15983179083481422,
+      "cv_f1_std": 0.03065987547192318,
+      "cv_accuracy": 0.18397932816537468,
+      "pca_refit_dimensions": null,
+      "model_file": "pixel.joblib",
+      "train_images": 3870,
+      "model_sha256": "115726de29a1969b33cc36391b10783bf4f2131df301b6db3c82c86cdb3236bf"
+    },
+    {
+      "method": "hog",
+      "candidate_index": 0,
+      "params": {
+        "knn__metric": "euclidean",
+        "knn__n_neighbors": 3,
+        "knn__weights": "uniform"
+      },
+      "cv_f1_macro": 0.563831426103432,
+      "cv_f1_std": 0.05570877237072761,
+      "cv_accuracy": 0.5803617571059431,
+      "pca_refit_dimensions": null,
+      "model_file": "hog.joblib",
+      "train_images": 3870,
+      "model_sha256": "d6cf21fb8505b71aabff23a3edc354ca6193f1d1e85d79df0ea5a67bba9116ca"
+    },
+    {
+      "method": "hog_pca",
+      "candidate_index": 0,
+      "params": {
+        "knn__metric": "euclidean",
+        "knn__n_neighbors": 3,
+        "knn__weights": "uniform"
+      },
+      "cv_f1_macro": 0.5682464352210924,
+      "cv_f1_std": 0.056986347588588976,
+      "cv_accuracy": 0.5847545219638243,
+      "pca_refit_dimensions": 104,
+      "model_file": "hog_pca.joblib",
+      "train_images": 3870,
+      "model_sha256": "b674a7f3c6a824acb13c154cdbe5ca6eea69912862096ea0622055cd70d9cb91"
+    }
+  ],
+  "tie_break": "first ParameterGrid candidate, then pixel/hog/hog_pca",
+  "train_sha256": "4e00ce71e4bdd9fc424d93f81ff82056c6b5cb9bbc48269741e628a134c4712b",
+  "dataset_root": "C:\\btlcotrang\\Traffic_sign_recognition\\data",
+  "model_dir": "C:\\btlcotrang\\Traffic_sign_recognition\\data\\models\\knn\\implementation-smoke-20261113",
+  "run_id": "implementation-smoke-20261113",
+  "test_previously_explored": true,
+  "warning": "Earlier EDA inspected a test subset; do not describe test as never seen."
+}

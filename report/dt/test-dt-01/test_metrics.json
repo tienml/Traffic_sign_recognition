@@ -1,0 +1,32 @@
+{
+  "selection_sha256": "e52936b14783e35db93cf348b702aa1274b242496b3d34efd004361019ea7632",
+  "test_sha256": "7d67912235e4570d19fb6bc96e9b227b4d89e4cd2ed47e14b8e8d976e1eb82b1",
+  "winner_fixed_by_cv": "hog",
+  "load_test_seconds": 26.990493299999798,
+  "methods": {
+    "pixel": {
+      "accuracy": 0.6353127474267617,
+      "precision_macro": 0.5786208120864246,
+      "recall_macro": 0.5586200500899693,
+      "f1_macro": 0.5631788676934659,
+      "feature_seconds": 2.9099999665049836e-05,
+      "predict_seconds": 0.10725129999991623
+    },
+    "hog": {
+      "accuracy": 0.6567695961995249,
+      "precision_macro": 0.6141622825277093,
+      "recall_macro": 0.5850531002439495,
+      "f1_macro": 0.594986696009047,
+      "feature_seconds": 11.39322489999904,
+      "predict_seconds": 0.13024440000299364
+    },
+    "hog_pca": {
+      "accuracy": 0.5916072842438638,
+      "precision_macro": 0.5606853476230182,
+      "recall_macro": 0.5224571719521163,
+      "f1_macro": 0.5367599017615237,
+      "feature_seconds": 2.0000006770715117e-06,
+      "predict_seconds": 0.15655269999842858
+    }
+  }
+}

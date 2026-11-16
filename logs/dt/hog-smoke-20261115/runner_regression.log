@@ -1,0 +1,17 @@
+COMMAND: D:\ML\Traffic_sign_recognition\data\.venv-model3\Scripts\python.exe -B -m unittest src.tests.test_model_upgrade_runner -v
+
+test_cli_has_no_official_test_mode (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_cli_has_no_official_test_mode) ... usage: python.exe -m unittest [-h] [--dataset-dir DATASET_DIR]
+                              [--fold-manifest FOLD_MANIFEST]
+                              [--run-id RUN_ID] [--batch-size BATCH_SIZE]
+                              {preflight,smoke,tune}
+python.exe -m unittest: error: argument mode: invalid choice: 'test' (choose from preflight, smoke, tune)
+ok
+test_export_validates_oof_no_model_or_test_access (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_export_validates_oof_no_model_or_test_access) ... ok
+test_manifest_validation_reads_only_train_metadata (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_manifest_validation_reads_only_train_metadata) ... ok
+test_run_is_exclusive_and_old_artifacts_untouched (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_run_is_exclusive_and_old_artifacts_untouched) ... ok
+test_stream_extraction_calls_unchanged_public_hog (src.tests.test_model_upgrade_runner.UpgradeRunnerTests.test_stream_extraction_calls_unchanged_public_hog) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.172s
+
+OK

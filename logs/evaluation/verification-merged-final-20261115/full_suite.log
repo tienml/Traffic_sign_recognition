@@ -1,0 +1,169 @@
+COMMAND: D:\ML\Traffic_sign_recognition\data\.venv-model3\Scripts\python.exe -B -m unittest discover -s src/tests -v
+
+test_exact_saved_folds_and_whole_track_smoke (test_decision_tree.DecisionTreeTests.test_exact_saved_folds_and_whole_track_smoke) ... ok
+test_export_saved_only_and_no_overwrite (test_decision_tree.DecisionTreeTests.test_export_saved_only_and_no_overwrite) ... ok
+test_extraction_contract_drift_rejected_before_test_claim (test_decision_tree.DecisionTreeTests.test_extraction_contract_drift_rejected_before_test_claim) ... ok
+test_fold_local_transforms_and_roundtrip_all_methods (test_decision_tree.DecisionTreeTests.test_fold_local_transforms_and_roundtrip_all_methods) ... ok
+test_grid_defaults_and_tie_break (test_decision_tree.DecisionTreeTests.test_grid_defaults_and_tie_break) ... ok
+test_new_run_exclusive_and_namespace_preservation (test_decision_tree.DecisionTreeTests.test_new_run_exclusive_and_namespace_preservation) ... ok
+test_smoke_gate_before_official_test_access (test_decision_tree.DecisionTreeTests.test_smoke_gate_before_official_test_access) ... ok
+test_training_selection_is_json_serializable_and_smoke_only (test_decision_tree.DecisionTreeTests.test_training_selection_is_json_serializable_and_smoke_only) ... {
+  "tables": [
+    "C:\\Users\\tienml\\AppData\\Local\\Temp\\tmpm87he3ut\\report\\tables\\dt_run_summary.csv",
+    "C:\\Users\\tienml\\AppData\\Local\\Temp\\tmpm87he3ut\\report\\tables\\dt_run_candidates.csv",
+    "C:\\Users\\tienml\\AppData\\Local\\Temp\\tmpm87he3ut\\report\\tables\\dt_run_timings.csv"
+  ],
+  "figure": "C:\\Users\\tienml\\AppData\\Local\\Temp\\tmpm87he3ut\\report\\figures\\dt_run_cv_test.png"
+}
+pixel: 0.040s, CV macro-F1=0.011635
+hog: 0.053s, CV macro-F1=0.011635
+hog_pca: 0.052s, CV macro-F1=0.015622
+ok
+test_exact_overlap_hashes_and_split_left_unchanged (test_evaluation_runner.EvaluationRunnerTests.test_exact_overlap_hashes_and_split_left_unchanged) ... ok
+test_incomplete_upgrade_rejected_before_evaluation_output (test_evaluation_runner.EvaluationRunnerTests.test_incomplete_upgrade_rejected_before_evaluation_output) ... ok
+test_modified_claim_or_saved_metric_is_rejected (test_evaluation_runner.EvaluationRunnerTests.test_modified_claim_or_saved_metric_is_rejected) ... ok
+test_saved_only_metrics_claim_and_current_row_alignment (test_evaluation_runner.EvaluationRunnerTests.test_saved_only_metrics_claim_and_current_row_alignment) ... ok
+test_all_correct_examples_and_errors_have_expected_empty_schema (test_evaluation_saved.SavedEvaluationTests.test_all_correct_examples_and_errors_have_expected_empty_schema) ... ok
+test_canonical_api_keeps_legacy_adapter_available (test_evaluation_saved.SavedEvaluationTests.test_canonical_api_keeps_legacy_adapter_available) ... ok
+test_confusion_zero_rows_error_order_and_custom_labels (test_evaluation_saved.SavedEvaluationTests.test_confusion_zero_rows_error_order_and_custom_labels) ... ok
+test_error_examples_stable_top_pairs_and_no_mutation (test_evaluation_saved.SavedEvaluationTests.test_error_examples_stable_top_pairs_and_no_mutation) ... ok
+test_exact_keys_row_order_and_duplicate_rejection (test_evaluation_saved.SavedEvaluationTests.test_exact_keys_row_order_and_duplicate_rejection) ... ok
+test_group_sizes_inclusive_roi_speed_family_and_categories (test_evaluation_saved.SavedEvaluationTests.test_group_sizes_inclusive_roi_speed_family_and_categories) ... ok
+test_metrics_match_sklearn_fixed_43_labels (test_evaluation_saved.SavedEvaluationTests.test_metrics_match_sklearn_fixed_43_labels) ... ok
+test_oof_accepts_missing_classes_but_requires_frozen_manifest_identity (test_evaluation_saved.SavedEvaluationTests.test_oof_accepts_missing_classes_but_requires_frozen_manifest_identity) ... ok
+test_oof_rejects_whole_track_leakage_missing_or_invalid_fold_ids (test_evaluation_saved.SavedEvaluationTests.test_oof_rejects_whole_track_leakage_missing_or_invalid_fold_ids) ... ok
+test_paired_counts_and_exact_alignment (test_evaluation_saved.SavedEvaluationTests.test_paired_counts_and_exact_alignment) ... ok
+test_path_strings_split_traversal_and_absolute_guards (test_evaluation_saved.SavedEvaluationTests.test_path_strings_split_traversal_and_absolute_guards) ... ok
+test_saved_metrics_do_not_infer_or_access_models_files_or_plotting (test_evaluation_saved.SavedEvaluationTests.test_saved_metrics_do_not_infer_or_access_models_files_or_plotting) ... ok
+test_strict_integer_labels_and_rows (test_evaluation_saved.SavedEvaluationTests.test_strict_integer_labels_and_rows) ... ok
+test_validation_returns_copy_and_checks_split_size_and_empty (test_evaluation_saved.SavedEvaluationTests.test_validation_returns_copy_and_checks_split_size_and_empty) ... ok
+test_configure_logging_writes_file_without_touching_global_logging (test_features.FeatureExtractionTests.test_configure_logging_writes_file_without_touching_global_logging) ... ok
+test_extract_hog_merges_partial_overrides (test_features.FeatureExtractionTests.test_extract_hog_merges_partial_overrides)
+Chỉ đổi một tham số vẫn giữ mặc định cho các tham số còn lại. ... ok
+test_extract_hog_uses_defaults_when_no_params_given (test_features.FeatureExtractionTests.test_extract_hog_uses_defaults_when_no_params_given)
+Gọi thẳng extract_hog không tham số phải dùng HOG_DEFAULTS, không crash. ... ok
+test_hog_pca_reduces_dimensions_versus_hog (test_features.FeatureExtractionTests.test_hog_pca_reduces_dimensions_versus_hog) ... ok
+test_hog_shape_and_determinism (test_features.FeatureExtractionTests.test_hog_shape_and_determinism) ... ok
+test_invalid_shapes_raise (test_features.FeatureExtractionTests.test_invalid_shapes_raise) ... ok
+test_outputs_are_finite_float32 (test_features.FeatureExtractionTests.test_outputs_are_finite_float32) ... ok
+test_pca_keeps_requested_variance_and_shrinks_dimensions (test_features.FeatureExtractionTests.test_pca_keeps_requested_variance_and_shrinks_dimensions) ... ok
+test_pca_variance_curve_is_cumulative_and_capped (test_features.FeatureExtractionTests.test_pca_variance_curve_is_cumulative_and_capped) ... FAIL
+test_pixel_matches_flatten_and_has_3072_dims (test_features.FeatureExtractionTests.test_pixel_matches_flatten_and_has_3072_dims) ... ok
+test_scaler_and_pca_are_fitted_on_train_only (test_features.FeatureExtractionTests.test_scaler_and_pca_are_fitted_on_train_only) ... ok
+test_test_rows_do_not_depend_on_batch_composition (test_features.FeatureExtractionTests.test_test_rows_do_not_depend_on_batch_composition) ... ok
+test_transform_before_fit_raises (test_features.FeatureExtractionTests.test_transform_before_fit_raises) ... ok
+test_unknown_method_raises (test_features.FeatureExtractionTests.test_unknown_method_raises) ... ok
+test_existing_artifacts_export_without_mutation (test_knn_summary.SummaryTests.test_existing_artifacts_export_without_mutation) ... ok
+test_future_loader_log_is_under_logs (test_knn_summary.SummaryTests.test_future_loader_log_is_under_logs) ... ok
+test_metrics_keep_all_43_labels (test_knn_summary.SummaryTests.test_metrics_keep_all_43_labels) ... ok
+test_boundary_tie_fallback_is_exact_for_every_candidate_and_batching (test_model_upgrade.UpgradeTests.test_boundary_tie_fallback_is_exact_for_every_candidate_and_batching) ... ok
+test_canonical_api_preserves_historical_parameter_grid_contract (test_model_upgrade.UpgradeTests.test_canonical_api_preserves_historical_parameter_grid_contract) ... ok
+test_dt_full_grid_matches_reference_training_scores_and_progress (test_model_upgrade.UpgradeTests.test_dt_full_grid_matches_reference_training_scores_and_progress) ... ok
+test_exact_grids_baseline_first_and_smoke (test_model_upgrade.UpgradeTests.test_exact_grids_baseline_first_and_smoke) ... ok
+test_invalid_inputs_and_crossing_tracks_fail_before_fitting (test_model_upgrade.UpgradeTests.test_invalid_inputs_and_crossing_tracks_fail_before_fitting) ... ok
+test_knn_full_grid_matches_reference_and_queries_are_bounded_and_shared (test_model_upgrade.UpgradeTests.test_knn_full_grid_matches_reference_and_queries_are_bounded_and_shared) ... ok
+test_no_dataset_access_extraction_serialization_or_global_logging (test_model_upgrade.UpgradeTests.test_no_dataset_access_extraction_serialization_or_global_logging) ... ok
+test_scalers_fit_only_training_rows_frozen_indices_unchanged_and_float_cast (test_model_upgrade.UpgradeTests.test_scalers_fit_only_training_rows_frozen_indices_unchanged_and_float_cast) ... ok
+test_selection_finite_stable_and_refit_pipeline_parity (test_model_upgrade.UpgradeTests.test_selection_finite_stable_and_refit_pipeline_parity) ... ok
+test_voting_sklearn_parity_zero_distance_and_sorted_ties (test_model_upgrade.UpgradeTests.test_voting_sklearn_parity_zero_distance_and_sorted_ties) ... ok
+test_cli_has_no_official_test_mode (test_model_upgrade_runner.UpgradeRunnerTests.test_cli_has_no_official_test_mode) ... usage: python.exe -m unittest [-h] [--dataset-dir DATASET_DIR]
+                              [--fold-manifest FOLD_MANIFEST]
+                              [--run-id RUN_ID] [--batch-size BATCH_SIZE]
+                              {preflight,smoke,tune}
+python.exe -m unittest: error: argument mode: invalid choice: 'test' (choose from preflight, smoke, tune)
+ok
+test_export_validates_oof_no_model_or_test_access (test_model_upgrade_runner.UpgradeRunnerTests.test_export_validates_oof_no_model_or_test_access) ... ok
+test_manifest_validation_reads_only_train_metadata (test_model_upgrade_runner.UpgradeRunnerTests.test_manifest_validation_reads_only_train_metadata) ... ok
+test_preservation_reports_authorized_edits_and_rejects_unlisted_changes (test_model_upgrade_runner.UpgradeRunnerTests.test_preservation_reports_authorized_edits_and_rejects_unlisted_changes) ... ok
+test_relocated_evidence_requires_exact_hash_and_rejects_path_escape (test_model_upgrade_runner.UpgradeRunnerTests.test_relocated_evidence_requires_exact_hash_and_rejects_path_escape) ... ok
+test_run_is_exclusive_and_old_artifacts_untouched (test_model_upgrade_runner.UpgradeRunnerTests.test_run_is_exclusive_and_old_artifacts_untouched) ... ok
+test_shared_run_loader_filters_each_algorithm_and_rejects_audit_drift (test_model_upgrade_runner.UpgradeRunnerTests.test_shared_run_loader_filters_each_algorithm_and_rejects_audit_drift) ... ok
+test_source_audit_distinguishes_verified_history_and_current_refactor (test_model_upgrade_runner.UpgradeRunnerTests.test_source_audit_distinguishes_verified_history_and_current_refactor) ... ok
+test_stream_extraction_calls_unchanged_public_hog (test_model_upgrade_runner.UpgradeRunnerTests.test_stream_extraction_calls_unchanged_public_hog) ... ok
+test_train_runner_writes_selected_algorithm_into_each_existing_area (test_model_upgrade_runner.UpgradeRunnerTests.test_train_runner_writes_selected_algorithm_into_each_existing_area) ... {
+  "tables": [
+    "knn_summary.csv",
+    "knn_candidates.csv",
+    "knn_timings.csv",
+    "knn_class_summary.csv",
+    "knn_error_pairs.csv"
+  ],
+  "figure": "C:\\Users\\tienml\\AppData\\Local\\Temp\\tmprurpartz\\report\\figures\\knn_cv_test.png",
+  "verified_prediction_rows_per_method": 12630,
+  "winner_unchanged": "hog"
+}
+START knn: 258 images, 3 frozen track folds
+DONE knn: baseline F1=1.000000, selected F1=1.000000, delta=+0.000000, CV=0.0s
+START dt: 258 images, 3 frozen track folds
+DONE dt: baseline F1=1.000000, selected F1=1.000000, delta=+0.000000, CV=0.0s
+ok
+test_group_identity_alignment_and_fail_closed (test_models.GroupTests.test_group_identity_alignment_and_fail_closed) ... ok
+test_shared_folds_reproducible_complete_and_disjoint (test_models.GroupTests.test_shared_folds_reproducible_complete_and_disjoint) ... ok
+test_smoke_selects_whole_tracks_all_classes (test_models.GroupTests.test_smoke_selects_whole_tracks_all_classes) ... ok
+test_direct_archive_ambiguous_and_explicit (test_models.LayoutTests.test_direct_archive_ambiguous_and_explicit) ... ok
+test_smoke_selection_rejected_before_test_access (test_models.LayoutTests.test_smoke_selection_rejected_before_test_access) ... ok
+test_bundle_roundtrip_and_no_overwrite (test_models.PipelineTests.test_bundle_roundtrip_and_no_overwrite) ... ok
+test_candidates_ties_metrics_and_batches (test_models.PipelineTests.test_candidates_ties_metrics_and_batches) ... ok
+test_grid_fold_local_scaler_and_error_propagation (test_models.PipelineTests.test_grid_fold_local_scaler_and_error_propagation) ... ok
+test_person2_equivalence_and_validation_cannot_mutate_fit (test_models.PipelineTests.test_person2_equivalence_and_validation_cannot_mutate_fit) ... ok
+test_cache_cleanup_failure (test_preprocessing.PreprocessingTests.test_cache_cleanup_failure)
+Lỗi ghi và xóa tệp cache tạm chỉ cảnh báo, không mất dữ liệu. ... ok
+test_cache_concurrent_writers (test_preprocessing.PreprocessingTests.test_cache_concurrent_writers)
+Hai lượt ghi đồng thời dùng file tạm riêng, không xóa lẫn nhau. ... ok
+test_cache_corrupt_deflate (test_preprocessing.PreprocessingTests.test_cache_corrupt_deflate)
+Luồng DEFLATE hỏng trong NPZ phải được bỏ qua và cảnh báo. ... ok
+test_cache_directory_unavailable (test_preprocessing.PreprocessingTests.test_cache_directory_unavailable)
+Không tạo được thư mục cache vẫn trả các mảng đã tiền xử lý. ... ok
+test_cache_disabled (test_preprocessing.PreprocessingTests.test_cache_disabled)
+Tắt cache không tạo file và vẫn trả đúng hợp đồng. ... ok
+test_cache_invalidation (test_preprocessing.PreprocessingTests.test_cache_invalidation)
+Cấu hình size/ROI, CSV đổi và cache hỏng đều buộc đọc lại. ... ok
+test_cache_malformed_metadata (test_preprocessing.PreprocessingTests.test_cache_malformed_metadata)
+Cache có IMAGE_SIZE dạng scalar phải bị bỏ thay vì gây TypeError. ... ok
+test_clipped_and_invalid_roi (test_preprocessing.PreprocessingTests.test_clipped_and_invalid_roi)
+Kẹp ngoài biên và bỏ qua ROI đảo cận, NaN hoặc không giao ảnh. ... ok
+test_grayscale_and_augmentation (test_preprocessing.PreprocessingTests.test_grayscale_and_augmentation)
+Grayscale một kênh; augmentation tắt và tái lập đúng seed. ... ok
+test_logging_directory_unavailable (test_preprocessing.PreprocessingTests.test_logging_directory_unavailable)
+Thư mục log không ghi được chỉ cảnh báo một lần, loader vẫn chạy. ... ok
+test_logging_error_counts_fail_fast (test_preprocessing.PreprocessingTests.test_logging_error_counts_fail_fast)
+Ảnh lỗi dừng ngay, ghi loaded/errors/skipped, không báo hoàn tất. ... ok
+test_logging_failure_with_warnings_as_errors (test_preprocessing.PreprocessingTests.test_logging_failure_with_warnings_as_errors)
+Bộ lọc warning thành exception không làm lỗi log phá loader. ... ok
+test_logging_metadata_failure (test_preprocessing.PreprocessingTests.test_logging_metadata_failure)
+CSV thiếu cũng có thời gian và trạng thái lỗi của lượt pipeline. ... ok
+test_logging_reuses_handlers_without_root_changes (test_preprocessing.PreprocessingTests.test_logging_reuses_handlers_without_root_changes)
+Gọi lặp hoặc đồng thời không thêm handler, không đổi root logger. ... ok
+test_logging_source_cache_hit_and_disabled (test_preprocessing.PreprocessingTests.test_logging_source_cache_hit_and_disabled)
+Mỗi lượt có cấu hình, metadata, trạng thái cache và thời gian. ... ok
+test_logging_write_failure (test_preprocessing.PreprocessingTests.test_logging_write_failure)
+Lỗi stream sau khi mở file không phá loader hoặc spam cảnh báo. ... ok
+test_missing_and_corrupt_image (test_preprocessing.PreprocessingTests.test_missing_and_corrupt_image)
+Ảnh thiếu/hỏng phải báo lỗi kèm tên file, không bỏ qua mẫu. ... ok
+test_official_split_and_cache_hit (test_preprocessing.PreprocessingTests.test_official_split_and_cache_hit)
+Nhãn hai tập không bị chia lại; cache không đọc lại ảnh. ... ok
+test_resize_invalid_size (test_preprocessing.PreprocessingTests.test_resize_invalid_size)
+Từ chối size sai cấu trúc, boolean, phân số, âm hoặc vượt int32. ... ok
+test_resize_options_and_default_equality (test_preprocessing.PreprocessingTests.test_resize_options_and_default_equality)
+Đổi size/nội suy cho ablation nhưng mặc định khớp từng pixel cũ. ... ok
+test_resize_runtime_default (test_preprocessing.PreprocessingTests.test_resize_runtime_default)
+IMAGE_SIZE lấy lúc gọi, tương thích các test patch cấu hình. ... ok
+test_rgb_roi_and_dtype (test_preprocessing.PreprocessingTests.test_rgb_roi_and_dtype)
+ROI đóng giữ đủ biên, màu RGB không bị đảo thành BGR. ... ok
+test_split_validation (test_preprocessing.PreprocessingTests.test_split_validation)
+Giữ nhãn gốc và từ chối nhãn phân số hay Path vượt thư mục. ... ok
+test_unicode_filename_collision (test_preprocessing.PreprocessingTests.test_unicode_filename_collision)
+Không đọc nhầm file có tên là bản chuyển mã lỗi của tên Unicode. ... ok
+
+======================================================================
+FAIL: test_pca_variance_curve_is_cumulative_and_capped (test_features.FeatureExtractionTests.test_pca_variance_curve_is_cumulative_and_capped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\ML\Traffic_sign_recognition\src\tests\test_features.py", line 149, in test_pca_variance_curve_is_cumulative_and_capped
+    self.assertAlmostEqual(cumulative[-1], pca.explained_variance_ratio_.sum())
+AssertionError: np.float32(0.81248105) != np.float32(0.812481) within 7 places (np.float32(5.9604645e-08) difference)
+
+----------------------------------------------------------------------
+Ran 96 tests in 18.911s
+
+FAILED (failures=1)

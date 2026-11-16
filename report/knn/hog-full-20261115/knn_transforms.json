@@ -1,0 +1,83 @@
+[
+  {
+    "fold": 0,
+    "n_train": 26129,
+    "n_valid": 13080,
+    "scaler_fit_samples": 26129,
+    "mean_checksum": "cb80b48cc9860b3a61d4ad8a2bec20e3d9bed8fa5f83da52bab4bcb3e42ad547",
+    "scaler_fit_seconds": 0.14203109999652952,
+    "scaler_transform_seconds": 0.05757209999137558,
+    "neighbor_searches": [
+      {
+        "metric": "manhattan",
+        "n_neighbors": 32,
+        "fit_seconds": 0.007420000009005889,
+        "query_seconds": 95.3075600000011,
+        "query_batches": 52,
+        "timing_scope": "shared_once_per_metric_per_fold"
+      },
+      {
+        "metric": "euclidean",
+        "n_neighbors": 32,
+        "fit_seconds": 0.008482000004732981,
+        "query_seconds": 11.382264499989105,
+        "query_batches": 52,
+        "timing_scope": "shared_once_per_metric_per_fold"
+      }
+    ]
+  },
+  {
+    "fold": 1,
+    "n_train": 26130,
+    "n_valid": 13079,
+    "scaler_fit_samples": 26130,
+    "mean_checksum": "22a4dfadd1d59aac58bd36a8528a25f1f78e6d124be804dba71e80c5bc876d53",
+    "scaler_fit_seconds": 0.12452570001187269,
+    "scaler_transform_seconds": 0.06643150000309106,
+    "neighbor_searches": [
+      {
+        "metric": "manhattan",
+        "n_neighbors": 32,
+        "fit_seconds": 0.009046300008776598,
+        "query_seconds": 75.00082220003242,
+        "query_batches": 52,
+        "timing_scope": "shared_once_per_metric_per_fold"
+      },
+      {
+        "metric": "euclidean",
+        "n_neighbors": 32,
+        "fit_seconds": 0.006029899988789111,
+        "query_seconds": 7.950077800051076,
+        "query_batches": 52,
+        "timing_scope": "shared_once_per_metric_per_fold"
+      }
+    ]
+  },
+  {
+    "fold": 2,
+    "n_train": 26159,
+    "n_valid": 13050,
+    "scaler_fit_samples": 26159,
+    "mean_checksum": "a426e9c37838bdaf3a3a92451d873e2c1476a89def40402bac0770b2a9258df3",
+    "scaler_fit_seconds": 0.10888850000628736,
+    "scaler_transform_seconds": 0.058779800005140714,
+    "neighbor_searches": [
+      {
+        "metric": "manhattan",
+        "n_neighbors": 32,
+        "fit_seconds": 0.006715599985909648,
+        "query_seconds": 72.43263779999688,
+        "query_batches": 51,
+        "timing_scope": "shared_once_per_metric_per_fold"
+      },
+      {
+        "metric": "euclidean",
+        "n_neighbors": 32,
+        "fit_seconds": 0.007259899997734465,
+        "query_seconds": 6.992618000062066,
+        "query_batches": 51,
+        "timing_scope": "shared_once_per_metric_per_fold"
+      }
+    ]
+  }
+]

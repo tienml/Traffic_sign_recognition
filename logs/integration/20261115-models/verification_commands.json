@@ -1,0 +1,17 @@
+{
+  "artifact_check": {
+    "exit_code": 0,
+    "seconds": 5.585340399993584,
+    "log": "logs/integration/20261115-models/artifact_check.log"
+  },
+  "model_verification": {
+    "exit_code": 0,
+    "seconds": 61.30601250000473,
+    "log": "logs/integration/20261115-models/model_verification.log"
+  },
+  "evaluation_verification": {
+    "exit_code": 0,
+    "seconds": 40.81290629999421,
+    "log": "logs/integration/20261115-models/evaluation_verification.log"
+  }
+}

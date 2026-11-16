@@ -1,0 +1,28 @@
+.......{
+  "tables": [
+    "C:\\Users\\pc\\AppData\\Local\\Temp\\tmpkywe4ghx\\report\\tables\\dt_run_summary.csv",
+    "C:\\Users\\pc\\AppData\\Local\\Temp\\tmpkywe4ghx\\report\\tables\\dt_run_candidates.csv",
+    "C:\\Users\\pc\\AppData\\Local\\Temp\\tmpkywe4ghx\\report\\tables\\dt_run_timings.csv"
+  ],
+  "figure": "C:\\Users\\pc\\AppData\\Local\\Temp\\tmpkywe4ghx\\report\\figures\\dt_run_cv_test.png"
+}
+pixel: 0.019s, CV macro-F1=0.011635
+hog: 0.026s, CV macro-F1=0.011635
+hog_pca: 0.027s, CV macro-F1=0.015622
+.............
+----------------------------------------------------------------------
+Ran 20 tests in 1.065s
+
+OK
+{
+  "tables": [
+    "knn_summary.csv",
+    "knn_candidates.csv",
+    "knn_timings.csv",
+    "knn_class_summary.csv",
+    "knn_error_pairs.csv"
+  ],
+  "figure": "C:\\Users\\pc\\AppData\\Local\\Temp\\tmph6yxoi03\\report\\figures\\knn_cv_test.png",
+  "verified_prediction_rows_per_method": 12630,
+  "winner_unchanged": "hog"
+}

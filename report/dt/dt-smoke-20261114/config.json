@@ -1,0 +1,60 @@
+{
+  "run_id": "dt-smoke-20261114",
+  "mode": "smoke",
+  "algorithm": "decision_tree",
+  "train_sha256": "4e00ce71e4bdd9fc424d93f81ff82056c6b5cb9bbc48269741e628a134c4712b",
+  "dataset_root": "C:\\btlcotrang\\Traffic_sign_recognition\\data",
+  "fold_manifest": "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\full-knn-01\\fold_manifest.csv",
+  "fold_manifest_sha256": "c5453353dbe7fdf77013f978e61a20b5c55a95f299eacac70a33676b0c43a1fb",
+  "source_config_sha256": "e3c74d9e9d267a7e5a54b770d8f1a82c37e110ffd4576662237212ebb294bb7a",
+  "versions": {
+    "python": "3.13.2",
+    "executable": "C:\\btlcotrang\\Traffic_sign_recognition\\.venv\\Scripts\\python.exe",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "opencv-python": "5.0.0.93",
+      "scikit-image": "0.26.0",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0",
+      "scipy": "1.18.1",
+      "threadpoolctl": "3.8.0",
+      "tqdm": null
+    }
+  },
+  "seed": 42,
+  "n_jobs": 1,
+  "numeric_threads": 2,
+  "batch_size": 128,
+  "hog_params": {
+    "orientations": 9,
+    "pixels_per_cell": [
+      8,
+      8
+    ],
+    "cells_per_block": [
+      2,
+      2
+    ],
+    "block_norm": "L2-Hys"
+  },
+  "pca_variance": 0.95,
+  "image_contract": {
+    "size": [
+      32,
+      32
+    ],
+    "color": "RGB",
+    "roi": true,
+    "scale": "divide255"
+  },
+  "source_sha256": {
+    "scripts/train_dt.py": "e5cfab21ef8033a3d1f3808987ad134caf1bb8946582bacf9a1dbd5914ed62bd",
+    "src/decision_tree.py": "59b7c0108da7adf60e0efdd0a92a4924e1c617b14c3dfeab017f10a7f77d83e6",
+    "scripts/train_knn.py": "7d9c9c763f00d195bc41fb6d75052abe0533750b4ee5310ec797d33bcfb112a9",
+    "src/models.py": "ba958570df6372016a48b5896696a56f090398a6ae101edcb8c9a95ab3755084",
+    "src/features.py": "e36d2ca98ac410e92ee0916c5f434e6f856e30e6c00cb2fde700b2d336f5b325",
+    "src/preprocessing.py": "a7d90f0cd654a12362ca2255a8a83c6c1ff9e7377cee58aac75dc4a52d53aa87",
+    "src/config.py": "da8189feef82e564f7ebbb26c057167fdab3a34ee3f43fef901649c03faf9e08"
+  }
+}

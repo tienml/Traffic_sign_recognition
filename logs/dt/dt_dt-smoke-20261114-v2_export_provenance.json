@@ -1,0 +1,12 @@
+{
+  "operation": "saved_artifacts_no_fit_no_predict",
+  "sources": {
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\dt-smoke-20261114-v2\\selection.json": "484e743f51158751d33c0758db4b279d54de6d5d830757816e29621c2609450e",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\dt-smoke-20261114-v2\\timings.json": "bf32e2e864577e1e06f20131ad014e49c7dd3a3612a887f6592c6a09ba99ed8f",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\dt-smoke-20261114-v2\\cv_pixel.csv": "f98729446b400d155dfa4551b0acd829cb5945c183b2f447d1e647bee427ec3f",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\dt-smoke-20261114-v2\\cv_hog.csv": "5fc2a0d32dd38633354351b8f0f2de62e5c6671ad2f2d13b1de7e1c787c0d7bd",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\dt-smoke-20261114-v2\\cv_hog_pca.csv": "54f677e052cbc78ea64b64cffe935d2237b1cfb4661a85c9e59be6f042067e82"
+  },
+  "official_test_included": false,
+  "timing_warning": "HOG train time is shared. Search includes refit. Predict time excludes metrics."
+}

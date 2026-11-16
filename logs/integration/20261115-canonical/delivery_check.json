@@ -1,0 +1,6 @@
+{
+  "completion_json_verified": true,
+  "canonical_hashes_match": true,
+  "audit_console_notice": "The previous final-audit command wrote completion.json and passed all assertions, then hit Windows cp1252 console encoding while printing Vietnamese. This follow-up uses UTF-8; no source or evidence was changed to suppress the error.",
+  "status": "completed_with_known_baseline_pca_test_failure"
+}

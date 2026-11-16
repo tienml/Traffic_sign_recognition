@@ -1,0 +1,7 @@
+knn pixel canonical metrics/classes/groups/confusions match stored evidence
+knn hog canonical metrics/classes/groups/confusions match stored evidence
+knn hog_pca canonical metrics/classes/groups/confusions match stored evidence
+dt pixel canonical metrics/classes/groups/confusions match stored evidence
+dt hog canonical metrics/classes/groups/confusions match stored evidence
+dt hog_pca canonical metrics/classes/groups/confusions match stored evidence
+Paired outcomes, deterministic galleries and four OOF summaries passed.

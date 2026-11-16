@@ -1,0 +1,17 @@
+{
+  "operation": "saved_artifacts_no_fit_no_predict",
+  "sources": {
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\full-dt-01\\selection.json": "e52936b14783e35db93cf348b702aa1274b242496b3d34efd004361019ea7632",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\full-dt-01\\timings.json": "8087ac18d1cff4e444dc0b84e57d5bc1d5305005d1af0572d1ec2e4f0483e8ff",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\test-dt-01\\test_metrics.json": "e75c746de3574016243aabf6be30fd9883946abff0e55be37c2506efeb25cb2a",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\full-dt-01\\official_test_claim.json": "4a70b47992a408ca232ed74dc400428bb625c4b821f4dd48a84e4fdab46114d8",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\full-dt-01\\cv_pixel.csv": "53363df8483a97b04a326d268e2a12a4a15a8535cf996f9e7ea8f5d6294f6a9e",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\test-dt-01\\predictions_pixel.csv": "6f2588e417b0f5684c80f713f2c8070d7ac444e3d5750fc54e612dee51cb1879",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\full-dt-01\\cv_hog.csv": "e42bd87b522986beb051ee3ccfa57908f99d50d1f2cb48d589f8d8f81acd23a5",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\test-dt-01\\predictions_hog.csv": "0e9eb85f12eb3c19793d27fcf3f416ae6b164fe4c76dba946a7c016486f979bd",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\full-dt-01\\cv_hog_pca.csv": "6ba3bedd99131df8847db1772727d9bf7b668b50fe7e099fe3dbd8bf9098f931",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\dt\\test-dt-01\\predictions_hog_pca.csv": "ba6dbf2827759beb42f0c4d4e80898b1c22273861f8ea75b9e6f2aed510e2b3c"
+  },
+  "official_test_included": true,
+  "timing_warning": "HOG train time is shared. Search includes refit. Predict time excludes metrics."
+}

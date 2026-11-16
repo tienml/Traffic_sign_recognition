@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "algorithm": "decision_tree",
+  "status": "smoke_only",
+  "methods": [
+    {
+      "method": "pixel",
+      "candidate_index": 0,
+      "params": {
+        "dt__criterion": "gini",
+        "dt__max_depth": 10,
+        "dt__min_samples_split": 2
+      },
+      "cv_f1_macro": 0.14208735259248273,
+      "cv_f1_std": 0.025401152787813113,
+      "cv_accuracy": 0.1591731266149871,
+      "pca_refit_dimensions": null,
+      "tree_depth": 10,
+      "tree_nodes": 215,
+      "tree_leaves": 

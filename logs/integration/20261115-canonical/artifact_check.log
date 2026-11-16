@@ -1,0 +1,68 @@
+COMMAND: D:\ML\Traffic_sign_recognition\data\.venv-model3\Scripts\python.exe -B scripts/check_model3_artifacts.py --run-dir report/model3_upgrade/upgrade-full-20261115 --source-root D:\ML\Traffic_sign_recognition\logs\integration\20261115-canonical\source_before
+
+knn: candidates, OOF alignment, metrics, source and model hashes passed
+dt: candidates, OOF alignment, metrics, source and model hashes passed
+{
+  "run_id": "upgrade-full-20261115",
+  "train_rows": 39209,
+  "tracks": 1307,
+  "official_test_read": false,
+  "joblib_deserialized": false,
+  "status": "passed",
+  "source_audit": {
+    "verified_from": "D:\\ML\\Traffic_sign_recognition\\logs\\integration\\20261115-canonical\\source_before",
+    "historical_source_verified": true,
+    "current_source_matches": false,
+    "checks": [
+      {
+        "path": "scripts/train_model3_upgrade.py",
+        "expected_sha256": "33154cabb6d2273f89af4a1cf0d2d65fd9b83bc536c6040e0992cfc5bd6a0713",
+        "verified_sha256": "33154cabb6d2273f89af4a1cf0d2d65fd9b83bc536c6040e0992cfc5bd6a0713",
+        "current_sha256": "e8e1bd8070d44333342ddfa16fb540835fd790572be2d52b3c1c385aac3aea9d",
+        "current_source_matches": false
+      },
+      {
+        "path": "src/model_upgrade.py",
+        "expected_sha256": "7a647057160223232689be857d0a417ad74640f572de0865494698db4278d120",
+        "verified_sha256": "7a647057160223232689be857d0a417ad74640f572de0865494698db4278d120",
+        "current_sha256": null,
+        "current_source_matches": false
+      },
+      {
+        "path": "src/models.py",
+        "expected_sha256": "ba958570df6372016a48b5896696a56f090398a6ae101edcb8c9a95ab3755084",
+        "verified_sha256": "ba958570df6372016a48b5896696a56f090398a6ae101edcb8c9a95ab3755084",
+        "current_sha256": "bfad51875ad876e379be7f13afe5a637cd93bf42bc01e1f3c9cc107cb1547a47",
+        "current_source_matches": false
+      },
+      {
+        "path": "src/decision_tree.py",
+        "expected_sha256": "743ca4ddcc02c69aca3e926c88ecc70db134dd6f0a6da32ae4beab56e701da02",
+        "verified_sha256": "743ca4ddcc02c69aca3e926c88ecc70db134dd6f0a6da32ae4beab56e701da02",
+        "current_sha256": "743ca4ddcc02c69aca3e926c88ecc70db134dd6f0a6da32ae4beab56e701da02",
+        "current_source_matches": true
+      },
+      {
+        "path": "src/features.py",
+        "expected_sha256": "e36d2ca98ac410e92ee0916c5f434e6f856e30e6c00cb2fde700b2d336f5b325",
+        "verified_sha256": "e36d2ca98ac410e92ee0916c5f434e6f856e30e6c00cb2fde700b2d336f5b325",
+        "current_sha256": "e36d2ca98ac410e92ee0916c5f434e6f856e30e6c00cb2fde700b2d336f5b325",
+        "current_source_matches": true
+      },
+      {
+        "path": "src/preprocessing.py",
+        "expected_sha256": "a7d90f0cd654a12362ca2255a8a83c6c1ff9e7377cee58aac75dc4a52d53aa87",
+        "verified_sha256": "a7d90f0cd654a12362ca2255a8a83c6c1ff9e7377cee58aac75dc4a52d53aa87",
+        "current_sha256": "a7d90f0cd654a12362ca2255a8a83c6c1ff9e7377cee58aac75dc4a52d53aa87",
+        "current_source_matches": true
+      },
+      {
+        "path": "src/config.py",
+        "expected_sha256": "da8189feef82e564f7ebbb26c057167fdab3a34ee3f43fef901649c03faf9e08",
+        "verified_sha256": "da8189feef82e564f7ebbb26c057167fdab3a34ee3f43fef901649c03faf9e08",
+        "current_sha256": "da8189feef82e564f7ebbb26c057167fdab3a34ee3f43fef901649c03faf9e08",
+        "current_source_matches": true
+      }
+    ]
+  }
+}

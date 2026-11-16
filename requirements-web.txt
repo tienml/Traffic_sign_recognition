@@ -1,0 +1,5 @@
+# Web + pipeline học máy. Python >= 3.12.
+# Giữ nguyên các phiên bản thí nghiệm của nhóm trong requirements.txt.
+-r requirements.txt
+Flask==3.1.3
+Pillow==11.1.0

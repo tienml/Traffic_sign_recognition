@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-15",
+  "finished_utc": "2026-11-15T04:05:05.190074+00:00",
+  "contributor": "Đặng Quang Tiến",
+  "member_number": 4,
+  "organization": "All modeling results in existing KNN/DT areas",
+  "model_runs": {
+    "knn": "report/knn/hog-full-20261115",
+    "dt": "report/dt/hog-full-20261115"
+  },
+  "standalone_upgrade_directories_removed": true,
+  "standalone_upgrade_report_merged": true,
+  "original_contributions_preserved": true,
+  "experiment_metadata_and_hashes_rewritten": false,
+  "relocations": 145,
+  "byte_identical_relocations": 138,
+  "shared_evidence_copies": 36,
+  "focused_tests": {
+    "models": {
+      "passed": 20,
+      "total": 20
+    },
+    "evaluation": {
+      "passed": 18,
+      "total": 18
+    }
+  },
+  "full_suite": {
+    "passed": 95,
+    "total": 96,
+    "exit_code": 1,
+    "all_tests_passed": false,
+    "known_failure": "test_pca_variance_curve_is_cumulative_and_capped"
+  },
+  "notebooks": [
+    {
+      "path": "notebooks/03_models.ipynb",
+      "code_cells": 7,
+      "error_outputs": 0,
+      "sha256": "16c2cdbdf347858327d83b6871ecf17231d55f386079fcb70cda894649236205"
+    },
+    {
+      "path": "notebooks/04_evaluation_tien.ipynb",
+      "code_cells": 9,
+      "error_outputs": 0,
+      "sha256": "e21b22408b03d821cc57bb9dfac553a8c02a25725079aa9ab3602d6187880ebf"
+    }
+  ],
+  "historical_notebook_versions_archived": true,
+  "saved_prediction_parity": {
+    "official_test_csv": 6,
+    "oof_csv": 4,
+    "passed": true
+  },
+  "new_dataset_training": false,
+  "new_official_test_inference": false,
+  "model_deserialization": false,
+  "all_model_bundle_hashes_preserved": true,
+  "core_source_unchanged_this_reorganization": true,
+  "requirements_version_pins_unchanged": true,
+  "unexpected_changes": [],
+  "local_document_links_checked": 155,
+  "missing_links": [],
+  "git_diff_check_passed": true,
+  "document_simplification": {
+    "README.md": {
+      "before_characters": 15431,
+      "after_characters": 6817,
+      "before_lines": 231,
+      "after_lines": 128
+    },
+    "AI_USAGE.md": {
+      "before_characters": 12302,
+      "after_characters": 3897,
+      "before_lines": 61,
+      "after_lines": 54
+    }
+  },
+  "committed": false,
+  "pushed": false,
+  "status": "completed_with_known_baseline_pca_test_failure"
+}

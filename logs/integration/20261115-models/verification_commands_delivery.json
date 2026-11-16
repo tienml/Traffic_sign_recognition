@@ -1,0 +1,12 @@
+{
+  "model_verification_delivery": {
+    "exit_code": 0,
+    "seconds": 52.03685069999483,
+    "log": "logs/integration/20261115-models/model_verification_delivery.log"
+  },
+  "evaluation_verification_delivery": {
+    "exit_code": 0,
+    "seconds": 46.37473029999819,
+    "log": "logs/integration/20261115-models/evaluation_verification_delivery.log"
+  }
+}

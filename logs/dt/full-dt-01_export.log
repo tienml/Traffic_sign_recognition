@@ -1,0 +1,10 @@
+{
+  "tables": [
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\tables\\dt_full-dt-01_summary.csv",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\tables\\dt_full-dt-01_candidates.csv",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\tables\\dt_full-dt-01_timings.csv",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\tables\\dt_full-dt-01_class_summary.csv",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\tables\\dt_full-dt-01_error_pairs.csv"
+  ],
+  "figure": "C:\\btlcotrang\\Traffic_sign_recognition\\report\\figures\\dt_full-dt-01_cv_test.png"
+}

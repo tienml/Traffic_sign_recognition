@@ -6,6 +6,7 @@ data/*
 __pycache__/
 *.py[cod]
 venv/
+.venv/
 .env/
 .ipynb_checkpoints/
 

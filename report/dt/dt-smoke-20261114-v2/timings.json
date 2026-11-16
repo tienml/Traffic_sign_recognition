@@ -1,0 +1,27 @@
+{
+  "load_train_seconds": 3.1381375999999364,
+  "methods": {
+    "pixel": {
+      "feature_seconds": 3.0499999411404133e-05,
+      "search_and_refit_seconds": 16.059327899999516,
+      "refit_seconds": 5.36937689781189,
+      "candidates": 1,
+      "folds": 3
+    },
+    "hog": {
+      "feature_seconds": 0.8435929000006581,
+      "search_and_refit_seconds": 3.407003400000576,
+      "refit_seconds": 1.15336012840271,
+      "candidates": 1,
+      "folds": 3
+    },
+    "hog_pca": {
+      "feature_seconds": 0.8435929000006581,
+      "search_and_refit_seconds": 1.319436499999938,
+      "refit_seconds": 0.3791840076446533,
+      "candidates": 1,
+      "folds": 3
+    }
+  },
+  "extract_hog_seconds": 0.8435929000006581
+}

@@ -1,0 +1,32 @@
+Collecting opencv-python==5.0.0.93
+  Downloading opencv_python-5.0.0.93-cp37-abi3-win_amd64.whl.metadata (20 kB)
+Collecting scikit-image==0.26.0
+  Downloading scikit_image-0.26.0-cp312-cp312-win_amd64.whl.metadata (15 kB)
+Requirement already satisfied: numpy>=2 in c:\users\tienml\appdata\local\programs\python\python312\lib\site-packages (from opencv-python==5.0.0.93) (2.5.3)
+Requirement already satisfied: scipy>=1.11.4 in c:\users\tienml\appdata\local\programs\python\python312\lib\site-packages (from scikit-image==0.26.0) (1.18.1)
+Collecting networkx>=3.0 (from scikit-image==0.26.0)
+  Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+Requirement already satisfied: pillow>=10.1 in c:\users\tienml\appdata\local\programs\python\python312\lib\site-packages (from scikit-image==0.26.0) (12.3.0)
+Collecting imageio!=2.35.0,>=2.33 (from scikit-image==0.26.0)
+  Downloading imageio-2.38.1-py3-none-any.whl.metadata (9.7 kB)
+Collecting tifffile>=2022.8.12 (from scikit-image==0.26.0)
+  Downloading tifffile-2026.11.12-py3-none-any.whl.metadata (33 kB)
+Requirement already satisfied: packaging>=21 in c:\users\tienml\appdata\local\programs\python\python312\lib\site-packages (from scikit-image==0.26.0) (26.3)
+Collecting lazy-loader>=0.4 (from scikit-image==0.26.0)
+  Downloading lazy_loader-0.6-py3-none-any.whl.metadata (6.0 kB)
+Downloading opencv_python-5.0.0.93-cp37-abi3-win_amd64.whl (44.0 MB)
+   ---------------------------------------- 44.0/44.0 MB 11.5 MB/s eta 0:00:00
+Downloading scikit_image-0.26.0-cp312-cp312-win_amd64.whl (11.9 MB)
+   ---------------------------------------- 11.9/11.9 MB 9.6 MB/s eta 0:00:00
+Downloading imageio-2.38.1-py3-none-any.whl (328 kB)
+Downloading lazy_loader-0.6-py3-none-any.whl (8.8 kB)
+Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+   ---------------------------------------- 2.1/2.1 MB 4.6 MB/s eta 0:00:00
+Downloading tifffile-2026.11.12-py3-none-any.whl (277 kB)
+Installing collected packages: tifffile, opencv-python, networkx, lazy-loader, imageio, scikit-image
+Successfully installed imageio-2.38.1 lazy-loader-0.6 networkx-3.7 opencv-python-5.0.0.93 scikit-image-0.26.0 tifffile-2026.11.12
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: D:\ML\Traffic_sign_recognition\data\.venv-model3\Scripts\python.exe -m pip install --upgrade pip
+
+[exited with code 0]

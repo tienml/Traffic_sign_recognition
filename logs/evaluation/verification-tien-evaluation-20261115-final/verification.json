@@ -1,0 +1,66 @@
+{
+  "started_utc": "2026-11-14T21:38:18.493676+00:00",
+  "contributor": "Đặng Quang Tiến",
+  "member_number": 4,
+  "steps": {
+    "focused": {
+      "exit_code": 0,
+      "seconds": 8.933035099995323,
+      "log": "logs/evaluation/verification-tien-evaluation-20261115-final/focused_tests.log"
+    },
+    "full_suite": {
+      "exit_code": 1,
+      "seconds": 20.417461100005312,
+      "log": "logs/evaluation/verification-tien-evaluation-20261115-final/full_suite.log"
+    },
+    "pip_check": {
+      "exit_code": 0,
+      "seconds": 1.5936477000068408,
+      "log": "logs/evaluation/verification-tien-evaluation-20261115-final/pip_check.log"
+    },
+    "pip_freeze": {
+      "exit_code": 0,
+      "seconds": 1.4042049999989104,
+      "log": "logs/evaluation/verification-tien-evaluation-20261115-final/pip_freeze.log"
+    },
+    "notebook": {
+      "exit_code": 0,
+      "error": null,
+      "errors": 0,
+      "seconds": 3.536777200002689,
+      "code_cells": 9
+    }
+  },
+  "run_id": "tien-evaluation-20261115",
+  "known_baseline_failure_only": true,
+  "preservation": {
+    "tracked_before": 191,
+    "changed": [
+      {
+        "path": "AI_USAGE.md",
+        "before_sha256": "7c86bb7ead9acdeeb7ed31859ea89a9f8600866ad31ce5be1594959b6196036c",
+        "after_sha256": "bfdf6cdcfc2de3e166b7ab8376798e0a2dea37d2ac35bf9248a2b2a118286b30"
+      },
+      {
+        "path": "report/notes_dt.md",
+        "before_sha256": "3e4e6ea6dd04c340e4bbfe0968cb54873bb22476262d8251b59deb017cb68ee2",
+        "after_sha256": "2d7db826accfb6e4650c1c45a0a42d3624421862ebbf96526bc2133a8998f86f"
+      },
+      {
+        "path": "report/notes_knn.md",
+        "before_sha256": "b1cc87c89f45cb81cacd6306c57ac6647896892a8fe442ad8faa32208ae296bb",
+        "after_sha256": "5227f7aace98cab96260d417087be5ff432425d0967491ceda64277db85bc75c"
+      }
+    ],
+    "unexpected_changes": [],
+    "documentation_append_only": {
+      "AI_USAGE.md": true,
+      "report/notes_dt.md": true,
+      "report/notes_knn.md": true
+    },
+    "user_document_baseline": "AI_USAGE.md",
+    "protected_unchanged": true
+  },
+  "finished_utc": "2026-11-14T21:38:57.214998+00:00",
+  "new_work_passed": true
+}

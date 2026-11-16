@@ -1,0 +1,26 @@
+Run: upgrade-smoke-20261115; mode=smoke; official test access DISABLED
+HOG train 256/3870; elapsed=11.7s
+HOG train 3870/3870; elapsed=113.1s
+START knn: 3870 images, 3 frozen track folds
+knn fold=0 scaler
+knn fold=0 metric=manhattan shared_neighbors
+knn fold=0 metric=manhattan candidate=knn_baseline complete
+knn fold=1 scaler
+knn fold=1 metric=manhattan shared_neighbors
+knn fold=1 metric=manhattan candidate=knn_baseline complete
+knn fold=2 scaler
+knn fold=2 metric=manhattan shared_neighbors
+knn fold=2 metric=manhattan candidate=knn_baseline complete
+DONE knn: baseline F1=0.623819, selected F1=0.623819, delta=+0.000000, CV=3.0s
+START dt: 3870 images, 3 frozen track folds
+dt fold=0 scaler
+dt fold=0 candidate=dt_baseline fit
+dt fold=0 candidate=dt_baseline complete
+dt fold=1 scaler
+dt fold=1 candidate=dt_baseline fit
+dt fold=1 candidate=dt_baseline complete
+dt fold=2 scaler
+dt fold=2 candidate=dt_baseline fit
+dt fold=2 candidate=dt_baseline complete
+DONE dt: baseline F1=0.442538, selected F1=0.442538, delta=+0.000000, CV=20.9s
+Run completed.

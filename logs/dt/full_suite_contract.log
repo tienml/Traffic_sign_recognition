@@ -1,0 +1,121 @@
+test_exact_saved_folds_and_whole_track_smoke (test_decision_tree.DecisionTreeTests.test_exact_saved_folds_and_whole_track_smoke) ... ok
+test_export_saved_only_and_no_overwrite (test_decision_tree.DecisionTreeTests.test_export_saved_only_and_no_overwrite) ... ok
+test_extraction_contract_drift_rejected_before_test_claim (test_decision_tree.DecisionTreeTests.test_extraction_contract_drift_rejected_before_test_claim) ... ok
+test_fold_local_transforms_and_roundtrip_all_methods (test_decision_tree.DecisionTreeTests.test_fold_local_transforms_and_roundtrip_all_methods) ... ok
+test_grid_defaults_and_tie_break (test_decision_tree.DecisionTreeTests.test_grid_defaults_and_tie_break) ... ok
+test_new_run_exclusive_and_namespace_preservation (test_decision_tree.DecisionTreeTests.test_new_run_exclusive_and_namespace_preservation) ... ok
+test_smoke_gate_before_official_test_access (test_decision_tree.DecisionTreeTests.test_smoke_gate_before_official_test_access) ... ok
+test_training_selection_is_json_serializable_and_smoke_only (test_decision_tree.DecisionTreeTests.test_training_selection_is_json_serializable_and_smoke_only) ... {
+  "tables": [
+    "C:\\Users\\pc\\AppData\\Local\\Temp\\tmp6uty61q1\\report\\tables\\dt_run_summary.csv",
+    "C:\\Users\\pc\\AppData\\Local\\Temp\\tmp6uty61q1\\report\\tables\\dt_run_candidates.csv",
+    "C:\\Users\\pc\\AppData\\Local\\Temp\\tmp6uty61q1\\report\\tables\\dt_run_timings.csv"
+  ],
+  "figure": "C:\\Users\\pc\\AppData\\Local\\Temp\\tmp6uty61q1\\report\\figures\\dt_run_cv_test.png"
+}
+pixel: 0.019s, CV macro-F1=0.011635
+hog: 0.024s, CV macro-F1=0.011635
+hog_pca: 0.075s, CV macro-F1=0.015622
+ok
+test_configure_logging_writes_file_without_touching_global_logging (test_features.FeatureExtractionTests.test_configure_logging_writes_file_without_touching_global_logging) ... ok
+test_extract_hog_merges_partial_overrides (test_features.FeatureExtractionTests.test_extract_hog_merges_partial_overrides)
+Ch\u1ec9 ð\u1ed5i m\u1ed9t tham s\u1ed1 v\u1eabn gi\u1eef m\u1eb7c ð\u1ecbnh cho các tham s\u1ed1 c\xf2n l\u1ea1i. ... ok
+test_extract_hog_uses_defaults_when_no_params_given (test_features.FeatureExtractionTests.test_extract_hog_uses_defaults_when_no_params_given)
+G\u1ecdi th\u1eb3ng extract_hog không tham s\u1ed1 ph\u1ea3i dùng HOG_DEFAULTS, không crash. ... ok
+test_hog_pca_reduces_dimensions_versus_hog (test_features.FeatureExtractionTests.test_hog_pca_reduces_dimensions_versus_hog) ... ok
+test_hog_shape_and_determinism (test_features.FeatureExtractionTests.test_hog_shape_and_determinism) ... ok
+test_invalid_shapes_raise (test_features.FeatureExtractionTests.test_invalid_shapes_raise) ... ok
+test_outputs_are_finite_float32 (test_features.FeatureExtractionTests.test_outputs_are_finite_float32) ... ok
+test_pca_keeps_requested_variance_and_shrinks_dimensions (test_features.FeatureExtractionTests.test_pca_keeps_requested_variance_and_shrinks_dimensions) ... ok
+test_pca_variance_curve_is_cumulative_and_capped (test_features.FeatureExtractionTests.test_pca_variance_curve_is_cumulative_and_capped) ... FAIL
+test_pixel_matches_flatten_and_has_3072_dims (test_features.FeatureExtractionTests.test_pixel_matches_flatten_and_has_3072_dims) ... ok
+test_scaler_and_pca_are_fitted_on_train_only (test_features.FeatureExtractionTests.test_scaler_and_pca_are_fitted_on_train_only) ... ok
+test_test_rows_do_not_depend_on_batch_composition (test_features.FeatureExtractionTests.test_test_rows_do_not_depend_on_batch_composition) ... ok
+test_transform_before_fit_raises (test_features.FeatureExtractionTests.test_transform_before_fit_raises) ... ok
+test_unknown_method_raises (test_features.FeatureExtractionTests.test_unknown_method_raises) ... ok
+test_existing_artifacts_export_without_mutation (test_knn_summary.SummaryTests.test_existing_artifacts_export_without_mutation) ... ok
+test_future_loader_log_is_under_logs (test_knn_summary.SummaryTests.test_future_loader_log_is_under_logs) ... ok
+test_metrics_keep_all_43_labels (test_knn_summary.SummaryTests.test_metrics_keep_all_43_labels) ... ok
+test_group_identity_alignment_and_fail_closed (test_models.GroupTests.test_group_identity_alignment_and_fail_closed) ... ok
+test_shared_folds_reproducible_complete_and_disjoint (test_models.GroupTests.test_shared_folds_reproducible_complete_and_disjoint) ... ok
+test_smoke_selects_whole_tracks_all_classes (test_models.GroupTests.test_smoke_selects_whole_tracks_all_classes) ... ok
+test_direct_archive_ambiguous_and_explicit (test_models.LayoutTests.test_direct_archive_ambiguous_and_explicit) ... ok
+test_smoke_selection_rejected_before_test_access (test_models.LayoutTests.test_smoke_selection_rejected_before_test_access) ... ok
+test_bundle_roundtrip_and_no_overwrite (test_models.PipelineTests.test_bundle_roundtrip_and_no_overwrite) ... ok
+test_candidates_ties_metrics_and_batches (test_models.PipelineTests.test_candidates_ties_metrics_and_batches) ... ok
+test_grid_fold_local_scaler_and_error_propagation (test_models.PipelineTests.test_grid_fold_local_scaler_and_error_propagation) ... ok
+test_person2_equivalence_and_validation_cannot_mutate_fit (test_models.PipelineTests.test_person2_equivalence_and_validation_cannot_mutate_fit) ... ok
+test_cache_cleanup_failure (test_preprocessing.PreprocessingTests.test_cache_cleanup_failure)
+L\u1ed7i ghi và xóa t\u1ec7p cache t\u1ea1m ch\u1ec9 c\u1ea3nh báo, không m\u1ea5t d\u1eef li\u1ec7u. ... ok
+test_cache_concurrent_writers (test_preprocessing.PreprocessingTests.test_cache_concurrent_writers)
+Hai lý\u1ee3t ghi ð\u1ed3ng th\u1eddi dùng file t\u1ea1m riêng, không xóa l\u1eabn nhau. ... ok
+test_cache_corrupt_deflate (test_preprocessing.PreprocessingTests.test_cache_corrupt_deflate)
+Lu\u1ed3ng DEFLATE h\u1ecfng trong NPZ ph\u1ea3i ðý\u1ee3c b\u1ecf qua và c\u1ea3nh báo. ... ok
+test_cache_directory_unavailable (test_preprocessing.PreprocessingTests.test_cache_directory_unavailable)
+Không t\u1ea1o ðý\u1ee3c thý m\u1ee5c cache v\u1eabn tr\u1ea3 các m\u1ea3ng ð\xe3 ti\u1ec1n x\u1eed l\xfd. ... ok
+test_cache_disabled (test_preprocessing.PreprocessingTests.test_cache_disabled)
+T\u1eaft cache không t\u1ea1o file và v\u1eabn tr\u1ea3 ðúng h\u1ee3p ð\u1ed3ng. ... ok
+test_cache_invalidation (test_preprocessing.PreprocessingTests.test_cache_invalidation)
+C\u1ea5u h\xecnh size/ROI, CSV ð\u1ed5i và cache h\u1ecfng ð\u1ec1u bu\u1ed9c ð\u1ecdc l\u1ea1i. ... ok
+test_cache_malformed_metadata (test_preprocessing.PreprocessingTests.test_cache_malformed_metadata)
+Cache có IMAGE_SIZE d\u1ea1ng scalar ph\u1ea3i b\u1ecb b\u1ecf thay v\xec gây TypeError. ... ok
+test_clipped_and_invalid_roi (test_preprocessing.PreprocessingTests.test_clipped_and_invalid_roi)
+K\u1eb9p ngoài biên và b\u1ecf qua ROI ð\u1ea3o c\u1eadn, NaN ho\u1eb7c không giao \u1ea3nh. ... ok
+test_grayscale_and_augmentation (test_preprocessing.PreprocessingTests.test_grayscale_and_augmentation)
+Grayscale m\u1ed9t kênh; augmentation t\u1eaft và tái l\u1eadp ðúng seed. ... ok
+test_logging_directory_unavailable (test_preprocessing.PreprocessingTests.test_logging_directory_unavailable)
+Thý m\u1ee5c log không ghi ðý\u1ee3c ch\u1ec9 c\u1ea3nh báo m\u1ed9t l\u1ea7n, loader v\u1eabn ch\u1ea1y. ... ok
+test_logging_error_counts_fail_fast (test_preprocessing.PreprocessingTests.test_logging_error_counts_fail_fast)
+\u1ea2nh l\u1ed7i d\u1eebng ngay, ghi loaded/errors/skipped, không báo hoàn t\u1ea5t. ... ok
+test_logging_failure_with_warnings_as_errors (test_preprocessing.PreprocessingTests.test_logging_failure_with_warnings_as_errors)
+B\u1ed9 l\u1ecdc warning thành exception không làm l\u1ed7i log phá loader. ... ok
+test_logging_metadata_failure (test_preprocessing.PreprocessingTests.test_logging_metadata_failure)
+CSV thi\u1ebfu c\u0169ng có th\u1eddi gian và tr\u1ea1ng thái l\u1ed7i c\u1ee7a lý\u1ee3t pipeline. ... ok
+test_logging_reuses_handlers_without_root_changes (test_preprocessing.PreprocessingTests.test_logging_reuses_handlers_without_root_changes)
+G\u1ecdi l\u1eb7p ho\u1eb7c ð\u1ed3ng th\u1eddi không thêm handler, không ð\u1ed5i root logger. ... ok
+test_logging_source_cache_hit_and_disabled (test_preprocessing.PreprocessingTests.test_logging_source_cache_hit_and_disabled)
+M\u1ed7i lý\u1ee3t có c\u1ea5u h\xecnh, metadata, tr\u1ea1ng thái cache và th\u1eddi gian. ... ok
+test_logging_write_failure (test_preprocessing.PreprocessingTests.test_logging_write_failure)
+L\u1ed7i stream sau khi m\u1edf file không phá loader ho\u1eb7c spam c\u1ea3nh báo. ... ok
+test_missing_and_corrupt_image (test_preprocessing.PreprocessingTests.test_missing_and_corrupt_image)
+\u1ea2nh thi\u1ebfu/h\u1ecfng ph\u1ea3i báo l\u1ed7i kèm tên file, không b\u1ecf qua m\u1eabu. ... ok
+test_official_split_and_cache_hit (test_preprocessing.PreprocessingTests.test_official_split_and_cache_hit)
+Nh\xe3n hai t\u1eadp không b\u1ecb chia l\u1ea1i; cache không ð\u1ecdc l\u1ea1i \u1ea3nh. ... ok
+test_resize_invalid_size (test_preprocessing.PreprocessingTests.test_resize_invalid_size)
+T\u1eeb ch\u1ed1i size sai c\u1ea5u trúc, boolean, phân s\u1ed1, âm ho\u1eb7c vý\u1ee3t int32. ... ok
+test_resize_options_and_default_equality (test_preprocessing.PreprocessingTests.test_resize_options_and_default_equality)
+Ð\u1ed5i size/n\u1ed9i suy cho ablation nhýng m\u1eb7c ð\u1ecbnh kh\u1edbp t\u1eebng pixel c\u0169. ... ok
+test_resize_runtime_default (test_preprocessing.PreprocessingTests.test_resize_runtime_default)
+IMAGE_SIZE l\u1ea5y lúc g\u1ecdi, týõng thích các test patch c\u1ea5u h\xecnh. ... ok
+test_rgb_roi_and_dtype (test_preprocessing.PreprocessingTests.test_rgb_roi_and_dtype)
+ROI ðóng gi\u1eef ð\u1ee7 biên, màu RGB không b\u1ecb ð\u1ea3o thành BGR. ... ok
+test_split_validation (test_preprocessing.PreprocessingTests.test_split_validation)
+Gi\u1eef nh\xe3n g\u1ed1c và t\u1eeb ch\u1ed1i nh\xe3n phân s\u1ed1 hay Path vý\u1ee3t thý m\u1ee5c. ... ok
+test_unicode_filename_collision (test_preprocessing.PreprocessingTests.test_unicode_filename_collision)
+Không ð\u1ecdc nh\u1ea7m file có tên là b\u1ea3n chuy\u1ec3n m\xe3 l\u1ed7i c\u1ee7a tên Unicode. ... ok
+
+======================================================================
+FAIL: test_pca_variance_curve_is_cumulative_and_capped (test_features.FeatureExtractionTests.test_pca_variance_curve_is_cumulative_and_capped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\btlcotrang\Traffic_sign_recognition\src\tests\test_features.py", line 149, in test_pca_variance_curve_is_cumulative_and_capped
+    self.assertAlmostEqual(cumulative[-1], pca.explained_variance_ratio_.sum())
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: np.float32(0.81248105) != np.float32(0.812481) within 7 places (np.float32(5.9604645e-08) difference)
+
+----------------------------------------------------------------------
+Ran 58 tests in 3.277s
+
+FAILED (failures=1)
+{
+  "tables": [
+    "knn_summary.csv",
+    "knn_candidates.csv",
+    "knn_timings.csv",
+    "knn_class_summary.csv",
+    "knn_error_pairs.csv"
+  ],
+  "figure": "C:\\Users\\pc\\AppData\\Local\\Temp\\tmpi_t2peq7\\report\\figures\\knn_cv_test.png",
+  "verified_prediction_rows_per_method": 12630,
+  "winner_unchanged": "hog"
+}

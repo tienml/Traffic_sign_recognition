@@ -1,0 +1,23 @@
+{
+  "operation": "export_saved_artifacts_no_fit_no_predict",
+  "tune_dir": "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\full-knn-01",
+  "test_dir": "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\20261113T194939Z-test-adf82d0d",
+  "sources": {
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\full-knn-01\\selection.json": "21d0c25fd42a91e218a530343e647f6f6def3efb29211e2c0e5c17d3a4b6b0e0",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\20261113T194939Z-test-adf82d0d\\test_metrics.json": "c90534b9fc4bd7bd590b0b474bd802bd3c6bc2bd98add7dfd506ab2f31f2a17d",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\full-knn-01\\timings.json": "e5507bea88edb29bbab7c81ff3130d4a2b4ec353902d93c820b9b88ea1f585e3",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\full-knn-01\\official_test_claim.json": "72a6245f917d9e502dc799991f717c230dff7062bad0df6c430f86ecb0b0f864",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\full-knn-01\\cv_pixel.csv": "6e7a00dac10a71d1fd2dc9e54d5084076a2eb5ee5657556c53e7306e182f98d8",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\20261113T194939Z-test-adf82d0d\\predictions_pixel.csv": "13b0c0362d5699246e9097de266827d41667f51f65a47fc9521e088f44118d34",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\full-knn-01\\cv_hog.csv": "2329b17935730fcf6fe5c487be3520f62fd5fe1decd7f1028474092919eaf9a5",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\20261113T194939Z-test-adf82d0d\\predictions_hog.csv": "a8001d9e6453a4e17ca9d9791581f0f77ef44ec7ee002d6445202d8c341f0994",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\full-knn-01\\cv_hog_pca.csv": "7b19074e510bf8198cc5286c8533bbd85487d04c8cc62b5fb942c48c766919fa",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\20261113T194939Z-test-adf82d0d\\predictions_hog_pca.csv": "d7f6509e86b36150cd7ba6e810faf5b820aa26dbce369cd956f3803532d566f1",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\full-knn-01\\preprocessing.log": "58463ce5d1d106e815f6ae4ff6ea0eb4141ba5ebc396f643c9c252a7a8e9a5e0",
+    "C:\\btlcotrang\\Traffic_sign_recognition\\report\\knn\\20261113T194939Z-test-adf82d0d\\preprocessing.log": "a52cd81eb099cab5492a8bb7a620f93d01a2b76878c3399081a29e8db824fbc8"
+  },
+  "shared_load_train_seconds": 714.5100927999883,
+  "shared_extract_hog_train_seconds": 33.638440399983665,
+  "shared_load_test_seconds": 255.36306770000374,
+  "timing_warning": "HOG train feature time is shared, not twice. HOG+PCA test reuses HOG. Historical predict_seconds includes batch prediction, pipeline transforms, label validation and metrics computation; excludes decode/ROI/resize, raw feature extraction and bundle loading. It is not pure prediction time."
+}

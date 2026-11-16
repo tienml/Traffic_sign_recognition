@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-11-14T20:11:25.165259+00:00",
+  "python": "D:\\ML\\Traffic_sign_recognition\\data\\.venv-model3\\Scripts\\python.exe",
+  "baseline": true,
+  "steps": {
+    "pip_check": {
+      "exit_code": 0,
+      "seconds": 1.7385256999987178,
+      "log": "logs/model3_upgrade/verification-baseline-20261115/pip_check.log"
+    },
+    "pip_freeze": {
+      "exit_code": 0,
+      "seconds": 1.4246088000072632,
+      "log": "logs/model3_upgrade/verification-baseline-20261115/pip_freeze.log"
+    },
+    "full_suite": {
+      "exit_code": 1,
+      "seconds": 9.566183699993417,
+      "log": "logs/model3_upgrade/verification-baseline-20261115/full_suite.log"
+    }
+  },
+  "preservation": {
+    "tracked_before": 191,
+    "changed": [],
+    "unexpected_changes": [],
+    "documentation_append_only": {},
+    "protected_unchanged": true
+  },
+  "finished_utc": "2026-11-14T20:11:39.236269+00:00",
+  "all_steps_passed": false
+}

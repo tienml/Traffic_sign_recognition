@@ -1,0 +1,12 @@
+Đặng Quang Tiến — member4 evaluation: saved predictions only
+Validated knn: 3 x 12630 saved predictions and historical metrics
+Validated dt: 3 x 12630 saved predictions and historical metrics
+Exact byte overlap: 8 train/test pairs. Official split unchanged.
+algorithm  method  accuracy  precision_macro  recall_macro  f1_macro
+      knn   pixel  0.557245         0.513669      0.490561  0.493948
+      knn     hog  0.818369         0.813760      0.777906  0.789750
+      knn hog_pca  0.796675         0.792526      0.747460  0.763063
+       dt   pixel  0.635313         0.578621      0.558620  0.563179
+       dt     hog  0.656770         0.614162      0.585053  0.594987
+       dt hog_pca  0.591607         0.560685      0.522457  0.536760
+Evaluation complete: 12 tables, 20 figures; original files untouched.

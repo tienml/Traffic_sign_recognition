@@ -1,0 +1,3 @@
+split,algorithm,name_first,name_second,n,both_correct,first_only_correct,second_only_correct,both_wrong,accuracy_difference_first_minus_second,discordant
+train_oof_same_fold_selection,knn,selected,baseline,39209,31438,989,804,5978,0.0047183044709122905,1793
+train_oof_same_fold_selection,dt,selected,baseline,39209,24793,1357,1037,12022,0.008161391517253692,2394

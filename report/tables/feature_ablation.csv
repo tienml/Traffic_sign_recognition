@@ -1,0 +1,4 @@
+﻿Phương pháp,Mô tả,Số chiều,Trích đặc trưng (s),KNN fit+predict (s),Accuracy,Macro-F1,Thành phần PCA,Phương sai giữ
+pixel,Pixel thô (baseline),3072,0.0,3.64,0.4766666666666667,0.4076122260666667,,
+hog,HOG + chuẩn hóa,324,3.14,0.17,0.7373333333333333,0.6920252888340293,,
+hog_pca,HOG + PCA 95%,107,3.23,0.09,0.7426666666666667,0.7001988605945249,107.0,0.9507760405540466

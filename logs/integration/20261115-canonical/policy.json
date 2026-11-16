@@ -1,0 +1,31 @@
+{
+  "authorized_changes": [
+    "README.md",
+    "AI_USAGE.md",
+    "src/models.py",
+    "src/evaluate.py",
+    "src/model_upgrade.py",
+    "src/evaluation_saved.py",
+    "scripts/train_model3_upgrade.py",
+    "scripts/evaluate_saved_models.py",
+    "scripts/check_model3_artifacts.py",
+    "scripts/verify_model3_upgrade.py",
+    "scripts/verify_evaluation.py",
+    "src/tests/test_model_upgrade.py",
+    "src/tests/test_model_upgrade_runner.py",
+    "src/tests/test_evaluation_saved.py",
+    "src/tests/test_evaluation_runner.py",
+    "report/notes_model3_upgrade.md",
+    "report/notes_evaluation_tien.md",
+    "report/evaluation_scope_tien.md",
+    "report/handoff_tien.md"
+  ],
+  "removed_modules": [
+    "src/model_upgrade.py",
+    "src/evaluation_saved.py"
+  ],
+  "unchanged_recorded_files": 380,
+  "historical_artifacts_and_notebooks_unchanged": true,
+  "new_official_test_inference": false,
+  "full_retraining": false
+}

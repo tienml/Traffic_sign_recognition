@@ -1,0 +1,43 @@
+{
+  "exported_utc": "2026-11-14T20:20:51.043573+00:00",
+  "run_id": "upgrade-smoke-20261115",
+  "status": "smoke_only",
+  "official_test_read": false,
+  "models_loaded": false,
+  "fit_or_predict": false,
+  "sources_sha256": {
+    "report/model3_upgrade/upgrade-smoke-20261115/selection.json": "fa3e1d8e15a333106df05fb97f46a4b357e09e9970ca47c02222ef3fb4ad52b6",
+    "report/model3_upgrade/upgrade-smoke-20261115/config.json": "c98b98f0360d0e068239da067c07b490a2bb3fb8f0ce1b1ab29d8ebfb913bcb9",
+    "report/model3_upgrade/upgrade-smoke-20261115/fold_manifest.csv": "2d4f7292310782e1e02d6555d55fca80c4ea2740839e01f565b9916902fb000f",
+    "report/model3_upgrade/upgrade-smoke-20261115/feature_audit.json": "fdb746cb8e79fcad12c7ae4264202d86b14f953e82109a731d7748d80ab88650",
+    "report/model3_upgrade/upgrade-smoke-20261115/train_image_audit.csv": "e56e6830ee846f74e2a953288330fa295ee533930804e478be73b635412ef3e5",
+    "report/model3_upgrade/upgrade-smoke-20261115/knn_candidates.csv": "677d9e7135ce124300f2cbaea122e1641cb4b7b9d8b976a6bbb8ca04db656d27",
+    "report/model3_upgrade/upgrade-smoke-20261115/knn_fold_scores.csv": "bd7ed91f96a7f888a66c80619af1a27a928a2ed8e6fed0246e633b25b17951b3",
+    "report/model3_upgrade/upgrade-smoke-20261115/knn_transforms.json": "f29c72684f39222fa7484c55d7acd1bf4c75199696449d89f8d4c61aa1ef37ea",
+    "report/model3_upgrade/upgrade-smoke-20261115/oof_knn_baseline.csv": "d769aa85c601261b1a523da259e75e17ce1620fddb12cd4c7586fc05c2e72f2f",
+    "report/model3_upgrade/upgrade-smoke-20261115/oof_knn_selected.csv": "d769aa85c601261b1a523da259e75e17ce1620fddb12cd4c7586fc05c2e72f2f",
+    "report/model3_upgrade/upgrade-smoke-20261115/dt_candidates.csv": "9bc3625323c08d6343c7bfe23805bb33b405356697d3b3d60b4781c578948025",
+    "report/model3_upgrade/upgrade-smoke-20261115/dt_fold_scores.csv": "5d6039a955f3ea52a0b6d1bbfacff3875bb98a9e97165782296cf33a4e87487c",
+    "report/model3_upgrade/upgrade-smoke-20261115/dt_transforms.json": "64be370c0dccdf5e37f7e5344b6aa53ba0556c5f9804f9f513835b58d9e958bd",
+    "report/model3_upgrade/upgrade-smoke-20261115/oof_dt_baseline.csv": "1b09a6df4b4d1b01a149849082211564ed79b02c03c8d4e547903e6f3b75529a",
+    "report/model3_upgrade/upgrade-smoke-20261115/oof_dt_selected.csv": "1b09a6df4b4d1b01a149849082211564ed79b02c03c8d4e547903e6f3b75529a"
+  },
+  "outputs": [
+    "report/tables/model3_upgrade-smoke-20261115_summary.csv",
+    "report/tables/model3_upgrade-smoke-20261115_candidates.csv",
+    "report/tables/model3_upgrade-smoke-20261115_fold_scores.csv",
+    "report/tables/model3_upgrade-smoke-20261115_oof_classes.csv",
+    "report/tables/model3_upgrade-smoke-20261115_oof_groups.csv",
+    "report/tables/model3_upgrade-smoke-20261115_oof_error_pairs.csv",
+    "report/tables/model3_upgrade-smoke-20261115_quality_thresholds.csv",
+    "report/tables/model3_upgrade-smoke-20261115_fold_deltas.csv",
+    "report/figures/model3_upgrade-smoke-20261115_cv_comparison.png",
+    "report/figures/model3_upgrade-smoke-20261115_cv_comparison_dark.png",
+    "report/figures/model3_upgrade-smoke-20261115_knn_k_curve.png",
+    "report/figures/model3_upgrade-smoke-20261115_knn_k_curve_dark.png",
+    "report/figures/model3_upgrade-smoke-20261115_oof_size_errors.png",
+    "report/figures/model3_upgrade-smoke-20261115_oof_size_errors_dark.png"
+  ],
+  "timing_caveat": "CV wall time includes shared work once; candidate-only timing must not be summed as full pipeline latency.",
+  "statistical_caveat": "Selection and OOF share folds; descriptive, not nested/unbiased evaluation. SD is not CI."
+}

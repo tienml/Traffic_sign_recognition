@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "run_id": "upgrade-smoke-20261115",
+  "mode": "smoke",
+  "status": "smoke_only",
+  "algorithms": [
+    {
+      "algorithm": "knn",
+      "baseline": {
+        "candidate_id": "knn_baseline",
+        "params": {
+          "n_neighbors": 7,
+          "weights": "distance",
+          "metric": "manhattan"
+        },
+        "mean_f1_macro": 0.6238194585710118,
+        "mean_accuracy": 0.6385012919896641,
+        "mean_precision_macro": 0.669105035818795,
+        "mean_recall_macro": 0.6385012919896641,
+        "std_f1_macro": 0.04904917573370322,
+        "cv_seconds_sum": 0.03591240005334839,
+        "timing_scope": "candidate_only_excludes_shared_scaler_and_neighbors"
+      },
+      "selected": {
+        "candidate_id": "knn_baseline",
+        "params": {
+          "n_neighbors": 7,
+          "weights": "distance",
+          "metric": "manhattan"
+        },
+        "mean_f1_macro": 0.6238194585710118,
+        "mean_accuracy": 0.6385012919896641,
+        "mean_precision_macro": 0.669105035818795,
+        "mean_recall_macro": 0.6385012919896641,
+        "std_f1_macro": 0.04904917573370322,
+        "cv_seconds_sum": 0.03591240005334839,
+        "timing_scope": "candidate_only_excludes_shared_scaler_and_neighbors"
+      },
+      "delta_cv_f1_macro": 0.0,
+      "cv_wall_seconds": 2.9894918000063626,
+      "refit_seconds": 0.07285710000724066,
+      "model_file": "data/models/model3_upgrade/upgrade-smoke-20261115/hog_knn.joblib",
+      "model_sha256": "2ff3374466822d82d86c686d90ee5f7366ea358821fce8e9cb09661c7ac4d668",
+      "model_bytes": 4459989,
+      "n_train": 3870,
+      "n_tracks": 129,
+      "candidate_count": 1
+    },
+    {
+      "algorithm": "dt",
+      "baseline": {
+        "candidate_id": "dt_baseline",
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 20,
+          "min_samples_split": 5,
+          "min_samples_leaf": 1,
+          "class_weight": null,
+          "ccp_alpha": 0.0
+        },
+        "mean_f1_macro": 0.4425384391573832,
+        "mean_accuracy": 0.4550387596899225,
+        "mean_precision_macro": 0.4609002450353679,
+        "mean_recall_macro": 0.4550387596899225,
+        "std_f1_macro": 0.014782861253997937,
+        "cv_seconds_sum": 20.833186100018793,
+        "timing_scope": "fit_and_train_valid_predict_excludes_shared_scaler",
+        "mean_train_f1_macro": 0.9615067640109535
+      },
+      "selected": {
+        "candidate_id": "dt_baseline",
+        "params": {
+          "criterion": "entropy",
+          "max_depth": 20,
+          "min_samples_split": 5,
+          "min_samples_leaf": 1,
+          "class_weight": null,
+          "ccp_alpha": 0.0
+        },
+        "mean_f1_macro": 0.4425384391573832,
+        "mean_accuracy": 0.4550387596899225,
+        "mean_precision_macro": 0.4609002450353679,
+        "mean_recall_macro": 0.4550387596899225,
+        "std_f1_macro": 0.014782861253997937,
+        "cv_seconds_sum": 20.833186100018793,
+        "timing_scope": "fit_and_train_valid_predict_excludes_shared_scaler",
+        "mean_train_f1_macro": 0.9615067640109535
+      },
+      "delta_cv_f1_macro": 0.0,
+      "cv_wall_seconds": 20.935803899992607,
+      "refit_seconds": 13.543221600004472,
+      "model_file": "data/models/model3_upgrade/upgrade-smoke-20261115/hog_dt.joblib",
+      "model_sha256": "f1714191e8b45767f64c28c99465a7dbe6a7daba5dd913e273b9422a659febc8",
+      "model_bytes": 35763,
+      "n_train": 3870,
+      "n_tracks": 129,
+      "candidate_count": 1
+    }
+  ],
+  "train_images": 3870,
+  "feature_audit_sha256": "fdb746cb8e79fcad12c7ae4264202d86b14f953e82109a731d7748d80ab88650",
+  "fold_manifest_sha256": "2d4f7292310782e1e02d6555d55fca80c4ea2740839e01f565b9916902fb000f",
+  "official_test_read": false,
+  "official_test_evaluated": false,
+  "selection_caveat": "OOF of candidates selected on these same folds is not nested/unbiased evaluation.",
+  "historical_test_caveat": "Earlier EDA and model reports explored official test; this upgrade does not read it."
+}
